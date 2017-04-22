@@ -59,3 +59,11 @@ $(window).scroll(function() {
         });
     }
 });
+
+ function codeAddress() {
+            //alert('ok');
+        }
+        window.onload = codeAddress;
+
+
+
