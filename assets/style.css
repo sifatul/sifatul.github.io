@@ -126,6 +126,9 @@ table {
     line-height: 30px;
     font-size: 16px;
 }
+.introduction >h6 span{
+    font-size: 20px;
+}
 
 .menu {
     display: none;
