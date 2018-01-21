@@ -22,7 +22,7 @@ $(window).scroll(function() {
         $('.menu').css({
             'display': 'block',
         });
-        if (wScroll < 350) {
+        if (wScroll < 150) {
             $('#about_me').css({
                 'background': '#424242',
             });
@@ -32,7 +32,7 @@ $(window).scroll(function() {
             $('#portfolio').css({
                 'background': 'transparent',
             });
-        } else if (wScroll >= 350 && wScroll < 1200) {
+        } else if (wScroll >= 150 && wScroll < 500) {
             $('#about_me').css({
                 'background': 'transparent',
             });
@@ -42,7 +42,7 @@ $(window).scroll(function() {
             $('#portfolio').css({
                 'background': 'transparent',
             });
-        } else if (wScroll >= 1200) {
+        } else if (wScroll >= 500) {
             $('#about_me').css({
                 'background': 'transparent',
             });
@@ -59,11 +59,6 @@ $(window).scroll(function() {
         });
     }
 });
-
- function codeAddress() {
-            //alert('ok');
-        }
-        window.onload = codeAddress;
 
 
 

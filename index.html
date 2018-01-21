@@ -3,303 +3,345 @@
 <head>
 
 
-<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/fonts">
 <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/style.css">
+<link rel="stylesheet" type="text/css" href="assets/tic_tac_toe.css">
 <script src="assets/myscripts.js"></script>
 <script src="assets/tic_tac_toe.js"></script>
 </head>
 
 <body>
 
-	<div class="cover">
-	
-	    <div id="game_board">
-			<div class="row">
-				<div class="col-xs-6 col-sm-4">X</div>
-				<div class="col-xs-6 col-sm-4">0</div>
-				<!-- Optional: clear the XS cols if their content doesn't match in height -->
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-xs-6 col-sm-4">0</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-4">0</div>
-				<div class="col-xs-6 col-sm-4">X</div>
-				<!-- Optional: clear the XS cols if their content doesn't match in height -->
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-xs-6 col-sm-4">0</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-4">0</div>
-				<div class="col-xs-6 col-sm-4">0</div>
-				<!-- Optional: clear the XS cols if their content doesn't match in height -->
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-xs-6 col-sm-4">X</div>
-			</div>
-	
-	    </div>
-		
-	</div>
-	<article id="about">
-	
-		<div class="photo">
-			<img src="assets/me.jpg">
-			</img>
-		</div>
-		<h1 class="title">MD.SIFATUL ISLAM |<SPAN>Web Developer</SPAN></h1>
-		
-		<div class="introduction ">
-				<h5> <span>HELLO</span>  WORLD</h5>
-				<br>
-				
-				<h6>I am SIFATUL ISLAM, I am a masters student at Chungbuk National University, Cheongju, South Korea- in Information and Communication Department. Working in Web is my hobby  and all the following skills are self taught.<span>I would love to be a part of your projects <span> learn more and grow</h6>
-				
-			
-		</div>
-	 <div class="introduction social">
-                <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
-
-                <a href="https://www.facebook.com/md.sifatulislam"  target="_blank"><i aria-hidden="true" class="fa fa-facebook"></i></a>
-
-                <a href="https://twitter.com/sifii2013"  target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a>
-
-                <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a>
-
-                <a href="https://github.com/Sifatul"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-
-                <a href="http://codepen.io/sifii2013/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-            </div>
-		
-		
-		
-	</article>
-	<!-- <section >
-	
-		<blockquote cite="https://www.goodreads.com/author/quotes/36913.Rabindranath_Tagore" class="quotes">
-		
-           You can't cross the sea merely by standing and staring at the water. <span> - Rabindranath Tagore</span>
-        </blockquote>
-	 </section> -->
-	 <div class="menu">
+<div class="container">
+	<div class="menu">
 		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">SIFII</a>
+		<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">SIFII</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		  <ul class="nav navbar-nav navbar-right">
+		  <li id="about_me" onclick="scroll_top()" ><a href="#">About Me</a></li>
+		   <li id="skill" onclick="scroll_skill()" ><a href="#">Skills</a></li>
+		   <li id="portfolio" onclick="scroll_portfolio()" ><a href="#">Work</a></li>				
+		   <li><a href="CV2017.pdf" target="_blank">CV</a></li>
+		   <li><a href="Resume.pdf" target="_blank">Resume</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+		</nav>
+	</div>  <!--end of menu !-->
+	<div id="about">
+		<div class="row">
+			<div class="photo">
+				<h1 class="title">MD.SIFATUL ISLAM |<SPAN>Web Developer</SPAN></h1>
+				<img src="assets/img/me.jpg" />
+				
+			</div>
+		</div>	
+		<div class="row">
+		
+			<div class="introduction ">
+				<div class="col-md-6 ">
+					<div class="row intro">						
+						<h5> <span>HELLO</span>  WORLD</h5>
+						<br>
+						
+						<h6>I am SIFATUL ISLAM, I am a masters student at Chungbuk National University, Cheongju, South Korea- in Information and Communication Department. Working in Web is my hobby  and all the following skills are self taught.<span>I would love to be a part of your projects <span> learn more and grow</h6>
+					</div>
+					<div class="row social">
+							<a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+
+							<a href="https://www.facebook.com/md.sifatulislam"  target="_blank"><i aria-hidden="true" class="fa fa-facebook"></i></a>
+
+							<a href="https://twitter.com/sifii2013"  target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a>
+
+							<a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a>
+
+							<a href="https://github.com/Sifatul"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+							<a href="http://codepen.io/sifii2013/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+					</div>
+	
+				</div>
+				
+				<div class="col-md-6">
+				
+					 <div class="board">
+						<div class="monitor">
+						  
+						  <div class="option_box">
+							<div class="result option"></div>
+							<div class="col-md-6 ">
+							  
+							  <div class="option" id="opt1"></div>
+							</div>
+							<div class="col-md-6 ">
+							  <div class="option" id="opt2"></div>
+							</div>
+
+
+						  </div>
+
+						  <div class=" back_button"><i class="glyphicon glyphicon-arrow-left"></i> </div>
+
+
+						</div>
+						<div class="game_board"> 
+						  <div class="row">
+							<div class="col-md-4 " >
+							  <span class="move" data-move="0"></span>
+							</div>
+							<div class="col-md-4 "> 
+							  <span class="move" data-move="1"></span>
+							</div>
+							<div class="col-md-4 " > 
+							  <span class="move" data-move="2"></span>
+							</div>
+						  </div>
+						  <div class="row">
+							<div class="col-md-4 " > 
+							  <span class="move" data-move="3"></span>
+							</div>
+							<div class="col-md-4 " > 
+							  <span class="move" data-move="4"></span>
+
+							</div>
+							<div class="col-md-4 "  >
+							  <span class="move" data-move="5"></span>
+
+							</div>
+						  </div>
+						  <div class="row">
+							<div class="col-md-4 " > 
+							  <span class="move" data-move="6"></span>
+							</div>
+							<div class="col-md-4 "  > 
+							  <span class="move" data-move="7" ></span>
+							</div>
+							<div class="col-md-4 " > 
+							  <span class="move" data-move="8"></span>
+							</div>
+						  </div>
+
+
+						</div>
+					  </div> <!-- end of tic_tac_toe board !-->
+			
+				</div>
+			</div> <!-- end of introductio -->
+				
+				
+		
+			
+		</div> 
+
+	</div>  <!--end of about !-->
+
+
+	
+
+<div class="skill ">
+
+	<div class="skill_title">
+	SKILL
+	</div>
+
+	<div class=" skill_box ">
+	<div class="col-sm-9 col-md-9 col-lg-9" >
+
+	<div class="row">
+	 <div class="col-sm-6 col-md-6 col-lg-6"  id="android">
+		
+		 <div class="box6">
+
+			<i class="fa fa-android"></i> 
+			<span>ANDROID</span>
+		</div>
+
+	 </div>
+
+
+
+	 <div class="col-sm-3 col-md-3 col-lg-3" id="html">
+	   
+		<div class="box6">
+			<div class="row">
+				<i class="fa fa-wrench"></i> 
+			</div>
+			<div class="row">
+				<span>HTML</span>
+			</div>
+			 
+		</div>
+
+	 </div>
+
+	 <div class="col-sm-3 col-md-3 col-lg-3"  id="css">
+
+		<div class="box6">
+
+			<div class="row">
+				 <i class="fa fa-paint-brush"> </i>
+			</div>
+			<div class="row">
+			   <span>CSS</span>
+			</div>
+		   
+		</div>
+	 </div>
+
+
+
+	</div>   
+	<!-- END IF ROW -->
+	<div class="row">
+
+		<div class=" col-sm-3 col-md-3 col-lg-3" >
+
+			<div class="row" id="js">
+				 <div class="box7" >
+					<i class="fa fa-cog"></i> <span>Js</span>
+				</div>
+			</div>
+			<div class="row"  id="java">
+
+				 <div class="box7" >
+					<i class="fa fa-pencil"></i> <span>JAVA</span>
+				</div>
+
+			</div>
+		   
+		</div>
+
+		<div class="col-sm-6 col-md-6 col-lg-6" id="web">
+
+
+			<div class="box5">
+				<div class="row">
+					<i class="fa fa-globe"></i>
+				</div>
+
+				<div class="row">
+					<span>WEB
+				Development</span>
+				</div>
+
+				 
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			
-			  <ul class="nav navbar-nav navbar-right">
-			  <li id="about_me" onclick="scroll_top()" ><a href="#">About Me</a></li>
-			   <li id="skill" onclick="scroll_skill()" ><a href="#">Skills</a></li>
-			   <li id="portfolio" onclick="scroll_portfolio()" ><a href="#">Work</a></li>				
-			   <li><a href="CV2017.pdf" target="_blank">CV</a></li>
-			   <li><a href="Resume.pdf" target="_blank">Resume</a></li>
-			  </ul>
-			</div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
-	</div> 
-	
-	<div class="skill ">
-    <div class="skill_title">
-    SKILL
-    </div>
+
+		</div>
+		 <div class="col-sm-3 col-md-3 col-lg-3" >
+
+			<div class="row" id="codeigniter">
+
+				 <div class="box7" >
+					<div class="row">
+						 <i class="fa fa-compass"></i>
+					</div>
+
+					<div class="row">
+						 <span>Codeigniter</span>
+					</div>
+				   
+				   
+				</div>
+				
+			</div>
+
+			<div class="row" id="mysql">  
+			   <div class="box7" >
+
+				<div class="row">
+					<i class="fa fa-database"></i>
+				 </div>   
+					<div class="row">
+					 <span>MySql</span>
+					 </div>
+				</div>
+			</div>
+
+			   
 
 
-           
+				
 
-  <div class=" skill_box ">
-    <div class="col-sm-9 col-md-9 col-lg-9" >
+		 </div>
 
-        <div class="row">
-             <div class="col-sm-6 col-md-6 col-lg-6"  id="android">
-                
-                 <div class="box6">
 
-                    <i class="fa fa-android"></i> 
-                    <span>ANDROID</span>
-                </div>
-            
-             </div>
-
-           
-
-             <div class="col-sm-3 col-md-3 col-lg-3" id="html">
-               
-                <div class="box6">
-                    <div class="row">
-                        <i class="fa fa-wrench"></i> 
-                    </div>
-                    <div class="row">
-                        <span>HTML</span>
-                    </div>
-                     
-                </div>
-
-             </div>
-
-             <div class="col-sm-3 col-md-3 col-lg-3"  id="css">
-          
-                <div class="box6">
-
-                    <div class="row">
-                         <i class="fa fa-paint-brush"> </i>
-                    </div>
-                    <div class="row">
-                       <span>CSS</span>
-                    </div>
-                   
-                </div>
-             </div>
+	</div>
 
 
 
-        </div>   
-        <!-- END IF ROW -->
-        <div class="row">
 
-            <div class=" col-sm-3 col-md-3 col-lg-3" >
+	</div>
+		<div class="col-sm-3 col-md-3 col-lg-3" >
 
-                <div class="row" id="js">
-                     <div class="box7" >
-                        <i class="fa fa-cog"></i> <span>Js</span>
-                    </div>
-                </div>
-                <div class="row"  id="java">
+			<div class="row" id="php">
+				<div class="box7">
+					<i class="fa fa-rocket"></i> <span><br>
+					PYTHON</span>
+				</div>
+			</div>
 
-                     <div class="box7" >
-                        <i class="fa fa-pencil"></i> <span>JAVA</span>
-                    </div>
+			<div class="row" id="laravel">
+				<div class="box7">
+					<i class="fa fa-universal-access"></i>
+					<span>Laravel</span>
+				</div>
+			</div>
 
-                </div>
-               
-            </div>
+		</div>
+	</div> <!--end of skill box !-->
 
-            <div class="col-sm-6 col-md-6 col-lg-6" id="web">
+</div> <!--end of skills !-->
 
+<div class="work ">
 
-                <div class="box5">
-                    <div class="row">
-                        <i class="fa fa-globe"></i>
-                    </div>
+	<h2><span><em>WEB</em></span></h2> 
 
-                    <div class="row">
-                        <span>WEB
-                    Development</span>
-                    </div>
+	<div class=" row work_container">
 
-                     
-                </div>
+		<div class=" col-sm-6 image-container">
+			<h2><span><em>Work for <a href="http://durbar.co/" target="_blank">DURBAR</a></em></span></h2> 
+			<a href="http://aabracu.net/" target="_blank"> <img src="assets/img/aabracu.jpeg"/> </a>
 
+			<a href="http://app.dghs.gov.bd/dghseams/attend/" target="_blank"><img src="assets/img/dghs.jpeg"/> </a>	
 
-            </div>
-             <div class="col-sm-3 col-md-3 col-lg-3" >
-
-                <div class="row" id="codeigniter">
-
-                     <div class="box7" >
-                        <div class="row">
-                             <i class="fa fa-compass"></i>
-                        </div>
-
-                        <div class="row">
-                             <span>Codeigniter</span>
-                        </div>
-                       
-                       
-                    </div>
-                    
-                </div>
-
-                <div class="row" id="mysql">  
-                   <div class="box7" >
-
-                    <div class="row">
-                        <i class="fa fa-database"></i>
-                     </div>   
-                        <div class="row">
-                         <span>MySql</span>
-                         </div>
-                    </div>
-                </div>
-
-                   
-
-
-                    
-       
-             </div>
-
-
-        </div>
-
-
-       
-    
-    </div>
-    <div class="col-sm-3 col-md-3 col-lg-3" >
-        
-        <div class="row" id="php">
-            <div class="box7">
-                <i class="fa fa-rocket"></i> <span><br>
-                PYTHON</span>
-            </div>
-        </div>
-
-        <div class="row" id="laravel">
-            <div class="box7">
-                <i class="fa fa-universal-access"></i>
-                <span>Laravel</span>
-            </div>
-        </div>
-       
-
-
-       
-    </div>
-  </div>
-
-        </div>
-	
-    <div class="work ">
-
-        <h2><span><em>WEB</em></span></h2> 
-
-        <div class="work_container">
-
-        <div class="image-container">
-        <h2><span><em>Work for <a href="http://durbar.co/" target="_blank">DURBAR</a></em></span></h2> 
-        <a href="http://aabracu.net/" target="_blank"> <img src="assets/aabracu.jpeg"/> </a>
-
-        <a href="http://app.dghs.gov.bd/dghseams/attend/" target="_blank"><img src="assets/dghs.jpeg"/> </a>	
-
-        </div>
+		</div>
 
 
 
-        <div class="image-container">
+		<div class="col-sm-6 image-container">
 
-        <h2><span><em>Work for <a href="https://www.facebook.com/ZerothTech/?fref=ts" target="_blank">ZerothTech</a></em></span></h2> 
+			<h2><span><em>Work for <a href="https://www.facebook.com/ZerothTech/?fref=ts" target="_blank">ZerothTech</a></em></span></h2> 
 
-        <a href="http://www.onannotravel.com/onanno/home" target="_blank"><img src="assets/ononna.jpeg"/></a>
+			<a href="http://www.onannotravel.com/onanno/home" target="_blank"><img src="assets/img/ononna.jpeg"/></a>
 
-        <h2><span><em>Self-Products in Codeigniter</em></span></h2> 
+			<!-- <h2><span><em>Self-Products in Codeigniter</em></span></h2> 
 
-        <a href="www.toletbd.org" target="_blank"><img src="assets/toletbd.jpeg"/>	</a>			
-        </div>
-        </div>
-    </div>
-	
+			<a href="www.toletbd.org" target="_blank"><img src="assets/img/toletbd.jpeg"/>	</a>	 -->		
+		</div>
+	</div>
+</div> <!--end of work !-->
+
+<div class="footer"> Copyright by devsifat@gmail.com</div>
+
+</div> <!--end of container !-->
 
 
 

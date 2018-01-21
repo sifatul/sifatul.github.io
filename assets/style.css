@@ -8,6 +8,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     vertical-align: baseline;
 }
 
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    /*position: relative;*/
+    min-height: 1px;
+     padding-right: 0px; 
+     padding-left: 0px; 
+}
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display: block;
@@ -34,72 +40,44 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.row{
+	margin: 0 0;
+}
+
 
 /* reset css end */
 
 
 #about {
+	position:relative;
     height: 47%;
     width: 100%;
     background: #F6F6F6;
+    max-height: 400px;
 }
 
 .holder {
     width: 100%;
 }
 
-.cover {
-    height: 55%;
-    background-color: #4E5158;
-    /*background-image: url(aka.jpg);
-    background-size: 100% 55%;
-    background-repeat: no-repeat;
-    background-position: top center;*/
-    background-attachment: fixed;
-    size: contain;
-    overflow: hidden;
-}
-#game_board {
-    width: 30%;
-    height: 85%;
-    margin: auto auto;
-    padding-top: 4%;
-}
-#game_board .row {
-    width: 100%;
-    height: 30%;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 60px;
-    text-align: center;
-}
-#game_board .row .col-xs-6:nth-child(1), #game_board .row .col-sm-4:nth-child(1),
-#game_board .row .col-xs-6:nth-child(2), #game_board .row .col-sm-4:nth-child(2){
-     border-right: 2px solid white;
+.container{
+	width:100%;
+	padding:0px;
 }
 
-#game_board .col-xs-6, #game_board .col-sm-4{
-     border-bottom: 3px solid white;
-     height: 100%;
-}
-#game_board .col-xs-6:nth-child(1), #game_board .col-sm-4:nth-child(1){
-     border-bottom: 3px solid white;
-}
-
-#game_board .row:nth-child(3) .col-xs-6{
-    border-bottom: none;
-}
 .introduction {
-    height: 100%;
-    width: 70%;
     background: transparent;
-    margin: 0 auto;
-    position: relative;
-    padding: 10px;
-    top: -85px;
+    position: absolute;
+	left: 12%;
+	top:20%;
 }
 
-.introduction >h5 {
+.introduction  .col-md-6{
+	float :left;
+	max-width:50%;
+}
+
+.introduction .intro >h5 {
     clear: left;
     text-align: left important!;
     white-space: nowrap;
@@ -114,19 +92,19 @@ table {
     }
 }
 
-.introduction >h5 span {
+.introduction .intro>h5 span {
     font-size: 40px;
     font-weight: 700;
     color: #4E5158;
     padding: 5px;
 }
 
-.introduction >h6 {
+.introduction .intro>h6 {
     font-family: times new roman;
     line-height: 30px;
     font-size: 16px;
 }
-.introduction >h6 span{
+.introduction .intro>h6 span{
     font-size: 20px;
 }
 
@@ -139,6 +117,7 @@ table {
     position: fixed;
     top: 0;
     font-weight: 700;
+    z-index: 10;
 }
 
 .menu .navbar {
@@ -162,21 +141,20 @@ table {
 }
 
 .photo {
-    background: #F6F6F6;
-    border-radius: 100%;
-    float: left;
-    height: 120px;
-    position: relative;
-    padding: 6px;
-    top: -70px;
-    left: 60px;
-    width: 120px;
+
+	position:relative;
+	background-color: #4E5158;
+	height : 15%;
+	width:100%;
 }
 
 .photo img {
-    height: 100%;
-    width: 100%;
+	position: absolute;
+	top: 40%;
+	left: 3%;
     border-radius: 100%;
+	height:150%;
+	border: 5px solid white;
 }
 
 .quotes {
@@ -355,12 +333,12 @@ height: 230px;
 }
 
 .title {
-    left: 70px;
     float: left;
-    position: relative;
-    top: -43px;
+    position: absolute;
     font-size: 18px;
     font-weight: 700;
+	bottom:5%;
+	left: 13%;
 }
 
 .title span {
@@ -371,13 +349,9 @@ height: 230px;
 
 .work {
     background: #fff;
-    padding-top: 50px;
+    padding : 5%;
 }
 
-.work_container {
-    width: 80%;
-    margin: 0 auto;
-}
 
 .work h2 {
     border-bottom: 1px solid #f4f3f3;
@@ -398,9 +372,7 @@ height: 230px;
     margin: 0 auto;
 }
 
-.work h2 span:nth-child(1){
-    padding-left: 20px;
-}
+
 .work h2 span em {
     border-bottom: 1px solid #444948;
     font-style: normal;
@@ -409,20 +381,19 @@ height: 230px;
     height: 10px;
 }
 
+.work_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .work .image-container {
-    width: 45%;
     float: left;
     padding: 10px;
-    margin: 20px;
 }
 
 .work .image-container img {
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     width: 100%;
-    padding: 20px;
-    margin: 20px;
+    margin-top: 5%;
 }
 
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-     position: static; 
-}
