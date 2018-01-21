@@ -65,6 +65,14 @@ table {
 	padding:0px;
 }
 
+.footer{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 100%;
+    padding: 1%;
+    background-color: cream;
+}
+
 .introduction {
     background: transparent;
     position: absolute;
