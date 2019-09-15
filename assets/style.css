@@ -55,9 +55,20 @@ table {
     background: #F6F6F6;
     max-height: 400px;
 }
+.d-f-r{
+    display: flex;
+    flex-direction: row;
+}
+.d-f-c{
+    display: flex;
+    flex-direction: column;
+}
 
 .holder {
     width: 100%;
+}
+.h-50{
+    height: 50%;
 }
 
 .container{
@@ -70,21 +81,20 @@ table {
     font-weight: bolder;
     font-size: 100%;
     padding: 1%;
-    background-color: cream;
+    background: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+.intro-container{
+    position: relative;
+    left: 130px;
 }
-
 .introduction {
-    background: transparent;
-    position: absolute;
-	left: 12%;
-	top:20%;
+    background: transparent;   
+    padding: 20px;   
+    display: flex;
 }
-
-.introduction  .col-md-6{
-	float :left;
-	max-width:50%;
-}
-
+ 
 .introduction .intro >h5 {
     clear: left;
     text-align: left important!;
@@ -129,7 +139,7 @@ table {
 }
 
 .menu .navbar {
-    background: rgba(255,250,225,0.5);
+    background: rgba(232,250,225,0.5);
     color: #fff;
     border: 0;
     border-bottom: 3px solid rgba(0,25,155,0.5);
@@ -149,17 +159,16 @@ table {
 }
 
 .photo {
-
+display: flex;
 	position:relative;
 	background-color: #4E5158;
-	height : 15%;
-	width:100%;
+	height : 75px; 
 }
 
 .photo img {
 	position: absolute;
 	top: 40%;
-	left: 3%;
+	left: 1%;
     border-radius: 100%;
 	height:150%;
 	border: 5px solid white;
@@ -174,13 +183,10 @@ table {
     width: 100%;
 }
 
-.skill {
-    height: 650px;
+.skill { 
     width: 100%;
-    background: #0D3D51;
-    padding-top: 100px;
-    padding: 70px;
-      padding-top: 100px;
+    background: #0D3D51; 
+    padding: 70px; 
 }
 
 
@@ -221,6 +227,7 @@ width: 100%;
 .skill_box #html{
     padding: 20px;
     background: #C3D1DE;
+    align-items: center;
 
 }
 
@@ -241,6 +248,7 @@ width: 100%;
 .skill_box #css{
     padding: 20px;
     background: #12B7A7;
+    align-items: center;
 
 }
 
@@ -248,19 +256,25 @@ width: 100%;
 .skill_box #js {
     padding: 20px;
     background: #12B7A7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .skill_box #java{
     padding: 20px;
-    background: #E84D3B;
+    background: #E84D3B; 
+    align-items: center;
+    justify-content: center;
 }
-.skill_box #web{
-    /*padding: 40px;*/
-    /*height: 150px;*/
+ 
+.skill_box #web{ 
           padding: 4px;
      background: #51C0ED;
-     text-align: center;
-height: 230px;
+     text-align: center; 
+     display: flex;
+     flex-direction: column;
 }
 
 
@@ -283,7 +297,8 @@ height: 230px;
 
 .skill_box #mysql {
     padding: 20px;
-    background: #FFD25F;
+    background: #FFD25F; 
+    align-items: center;
 }
 
 
@@ -295,13 +310,14 @@ height: 230px;
     height: 172px;
 }
 .skill #laravel{
-    padding: 30px;
-    background: #EAEDF2;
-     height: 173px;
+    padding: 20px;
+    background: #EAEDF2; 
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 .skill #php .fa-rocket,.skill #laravel .fa-universal-access {
-    font-size: 60px;
-    padding-bottom: 30px;
+    font-size: 60px; 
 }
 
 .skill #php span,.skill #laravel span {
@@ -340,13 +356,17 @@ height: 230px;
     font-size: 20px;
 }
 
-.title {
-    float: left;
-    position: absolute;
+.title { 
     font-size: 18px;
     font-weight: 700;
-	bottom:5%;
-	left: 13%;
+	bottom:-25px;
+    position: relative;
+    padding: 20px;    
+     left: 130px;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
 }
 
 .title span {
@@ -405,3 +425,13 @@ height: 230px;
     margin-top: 5%;
 }
 
+@media (max-width: 575.98px) {  }
+
+  /* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {    }
+
+  /* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {   }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {   }
