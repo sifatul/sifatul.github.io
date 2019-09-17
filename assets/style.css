@@ -1,5 +1,86 @@
 /* reset css */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,14 +89,74 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     vertical-align: baseline;
 }
 
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
     /*position: relative;*/
     min-height: 1px;
-     padding-right: 0px; 
-     padding-left: 0px; 
+    padding-right: 0px;
+    padding-left: 0px;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -23,15 +164,20 @@ body {
     line-height: 1;
 }
 
-ol,ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote,q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before,blockquote:after,q:before,q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -40,26 +186,28 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-.row{
-	margin: 0 0;
+
+.row {
+    margin: 0 0;
 }
 
 
 /* reset css end */
 
-
 #about {
-	position:relative;
+    position: relative;
     height: 47%;
     width: 100%;
     background: #F6F6F6;
     max-height: 400px;
 }
-.d-f-r{
+
+.d-f-r {
     display: flex;
     flex-direction: row;
 }
-.d-f-c{
+
+.d-f-c {
     display: flex;
     flex-direction: column;
 }
@@ -67,16 +215,17 @@ table {
 .holder {
     width: 100%;
 }
-.h-50{
+
+.h-50 {
     height: 50%;
 }
 
-.container{
-	width:100%;
-	padding:0px;
+.container {
+    width: 100%;
+    padding: 0px;
 }
 
-.footer{
+.footer {
     text-align: center;
     font-weight: bolder;
     font-size: 100%;
@@ -84,18 +233,20 @@ table {
     background: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
-.intro-container{
+}
+
+.intro-container {
     position: relative;
     left: 130px;
 }
+
 .introduction {
-    background: transparent;   
-    padding: 20px;   
+    background: transparent;
+    padding: 20px;
     display: flex;
 }
- 
-.introduction .intro >h5 {
+
+.introduction .intro>h5 {
     clear: left;
     text-align: left important!;
     white-space: nowrap;
@@ -122,7 +273,8 @@ table {
     line-height: 30px;
     font-size: 16px;
 }
-.introduction .intro>h6 span{
+
+.introduction .intro>h6 span {
     font-size: 20px;
 }
 
@@ -139,13 +291,14 @@ table {
 }
 
 .menu .navbar {
-    background: rgba(232,250,225,0.5);
+    background: rgba(232, 250, 225, 0.5);
     color: #fff;
     border: 0;
-    border-bottom: 3px solid rgba(0,25,155,0.5);
+    border-bottom: 3px solid rgba(0, 25, 155, 0.5);
 }
 
-.menu .navbar-default .navbar-nav>li>a,.menu .navbar-default .navbar-brand {
+.menu .navbar-default .navbar-nav>li>a,
+.menu .navbar-default .navbar-brand {
     color: #FA6862;
 }
 
@@ -159,19 +312,19 @@ table {
 }
 
 .photo {
-display: flex;
-	position:relative;
-	background-color: #4E5158;
-	height : 75px; 
+    display: flex;
+    position: relative;
+    background-color: #4E5158;
+    height: 75px;
 }
 
 .photo img {
-	position: absolute;
-	top: 40%;
-	left: 1%;
+    position: absolute;
+    top: 40%;
+    left: 1%;
     border-radius: 100%;
-	height:150%;
-	border: 5px solid white;
+    height: 150%;
+    border: 5px solid white;
 }
 
 .quotes {
@@ -183,76 +336,75 @@ display: flex;
     width: 100%;
 }
 
-.skill { 
+.skill {
     width: 100%;
-    background: #0D3D51; 
-    padding: 70px; 
+    background: #0D3D51;
+    padding: 70px;
 }
-
 
 .skill_box {
-     margin: 10px auto;
+    margin: 10px auto;
     width: 70%;
     height: auto;
-  
 }
 
-
-.skill_box .box7,.skill_box .box6{
-width: 100%;
-   height: 75px;
+.skill_box .box7,
+.skill_box .box6 {
+    width: 100%;
+    height: 75px;
     max-height: 100px;
     float: left;
     text-align: center;
-
 }
 
-
-.skill_box #android{
+.skill_box #android {
     padding: 20px;
     font-weight: 700;
     background: #F6C344;
     text-align: center;
 }
 
-.skill_box #android .fa-android{
+.skill_box #android .fa-android {
     font-size: 60px;
 }
 
-.skill_box #android span{
+.skill_box #android span {
     font-size: 20px;
     color: #000;
     padding: 10px;
 }
 
-.skill_box #html{
+.skill_box #html {
     padding: 20px;
     background: #C3D1DE;
     align-items: center;
-
 }
 
-.skill_box #html .fa-wrench, .skill_box #css  .fa-paint-brush, .skill_box #js .fa-cog, 
- .skill_box #java .fa-pencil, .skill_box #codeigniter .fa-compass , .skill_box #mysql .fa-database{
+.skill_box #html .fa-wrench,
+.skill_box #css .fa-paint-brush,
+.skill_box #js .fa-cog,
+.skill_box #java .fa-pencil,
+.skill_box #codeigniter .fa-compass,
+.skill_box #mysql .fa-database {
     font-size: 45px;
-        /*padding-left: 49px;*/
-    
+    /*padding-left: 49px;*/
 }
 
-.skill_box #html span , .skill_box #css span, .skill_box #js span, 
- .skill_box #java span, .skill_box #codeigniter span, .skill_box #mysql span{
+.skill_box #html span,
+.skill_box #css span,
+.skill_box #js span,
+.skill_box #java span,
+.skill_box #codeigniter span,
+.skill_box #mysql span {
     font-size: 25px;
-        /*padding-left: 43px;*/
-   
+    /*padding-left: 43px;*/
 }
 
-.skill_box #css{
+.skill_box #css {
     padding: 20px;
     background: #12B7A7;
     align-items: center;
-
 }
-
 
 .skill_box #js {
     padding: 20px;
@@ -263,33 +415,30 @@ width: 100%;
     align-items: center;
 }
 
-.skill_box #java{
+.skill_box #java {
     padding: 20px;
-    background: #E84D3B; 
+    background: #E84D3B;
     align-items: center;
     justify-content: center;
 }
- 
-.skill_box #web{ 
-          padding: 4px;
-     background: #51C0ED;
-     text-align: center; 
-     display: flex;
-     flex-direction: column;
-}
 
+.skill_box #web {
+    padding: 4px;
+    background: #51C0ED;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 
 .skill_box #web .fa-globe {
     font-size: 150px;
-      padding: 15px;
+    padding: 15px;
 }
 
 .skill_box #web span {
     font-size: 30px;
-          padding: 15px;
-  
+    padding: 15px;
 }
-
 
 .skill_box #codeigniter {
     padding: 20px;
@@ -298,40 +447,38 @@ width: 100%;
 
 .skill_box #mysql {
     padding: 20px;
-    background: #FFD25F; 
+    background: #FFD25F;
     align-items: center;
 }
-
-
-
 
 .skill #php {
     background: #F7B63E;
     padding: 30px;
     height: 172px;
 }
-.skill #laravel{
+
+.skill #laravel {
     padding: 20px;
-    background: #EAEDF2; 
+    background: #EAEDF2;
     flex-direction: column;
     display: flex;
     align-items: center;
 }
-.skill #php .fa-rocket,.skill #laravel .fa-universal-access {
-    font-size: 60px; 
+
+.skill #php .fa-rocket,
+.skill #laravel .fa-universal-access {
+    font-size: 60px;
 }
 
-.skill #php span,.skill #laravel span {
+.skill #php span,
+.skill #laravel span {
     font-size: 25px;
     font-weight: 900;
 }
 
-
-
-
 .skill_title {
     margin: 0 auto;
-    font-family: 'Raleway',sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 50px;
     font-weight: 900;
     background-color: #fa6862;
@@ -357,13 +504,15 @@ width: 100%;
     font-size: 20px;
 }
 
-.title { 
+.sub-title {}
+
+.title {
     font-size: 18px;
     font-weight: 700;
-	bottom:-25px;
+    bottom: -25px;
     position: relative;
-    padding: 20px;    
-     left: 130px;
+    padding: 20px;
+    left: 130px;
     color: antiquewhite;
     display: flex;
     align-items: center;
@@ -378,9 +527,8 @@ width: 100%;
 
 .work {
     background: #fff;
-    padding : 5%;
+    padding: 5%;
 }
-
 
 .work h2 {
     border-bottom: 1px solid #f4f3f3;
@@ -401,13 +549,12 @@ width: 100%;
     margin: 0 auto;
 }
 
-
 .work h2 span em {
     border-bottom: 1px solid #444948;
     font-style: normal;
     display: inline-block;
     padding: 25px 0;
-    height: 10px; 
+    height: 10px;
     font-size: 14px;
 }
 
@@ -419,22 +566,27 @@ width: 100%;
 .work .image-container {
     float: left;
     padding: 12px 10px 10px 10px;
-    
 }
 
 .work .image-container img {
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     width: 100%;
     margin-top: 12px;
 }
 
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {}
 
-  /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {    }
 
-  /* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {   }
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {}
+
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {}
+
 
 /* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {   }
+
+@media (max-width: 1199.98px) {}
