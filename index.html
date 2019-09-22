@@ -1,7 +1,9 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/fonts">
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -13,262 +15,278 @@
 
 <body>
 
-    <div class="container">
-        <div class="menu">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-                        <a class="navbar-brand" href="#">SIFII</a>
-                    </div>
+    <div class="container-fluid">
+        <nav id="navbar" class="navbar navbar-light bg-light fixed-top ">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about_me">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skill">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mdo">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mdo">Resume</a>
+                </li>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li id="about_me" onclick="scroll_top()"><a href="#">About Me</a></li>
-                            <li id="skill" onclick="scroll_skill()"><a href="#">Skills</a></li>
-                            <li id="portfolio" onclick="scroll_portfolio()"><a href="#">Work</a></li>
-                            <li><a href="CV_md_sifatul_islam.pdf" target="_blank">Cv</a></li>
-                            <li><a href="sifatul_resume.pdf" target="_blank">Resume</a></li>
-                        </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Work</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#one">one</a>
+                        <a class="dropdown-item" href="#two">two</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#three">three</a>
                     </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container-fluid -->
-            </nav>
-        </div>
+                </li>
+            </ul>
+        </nav>
+
         <!--end of menu !-->
-        <div id="about row">
-            <div class="row photo">
-                <img src="assets/img/me.jpg" />
-                <h1 class="title ">MD SIFATUL ISLAM |
-                    <SPAN>Web and Android Developer</SPAN>
-                </h1>
 
+        <!--end of about !-->
 
-            </div>
-            <div class="row introduction ">
+        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <div id="about row">
+                <div class="row photo">
+                    <img src="assets/img/me.jpg" />
+                    <h1 class="title ">MD SIFATUL ISLAM |
+                        <SPAN>Web and Android Developer</SPAN>
+                    </h1>
 
-
-                <div class=" intro-container col-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="row intro  col-8 col-sm-8 col-md-9 col-lg-12">
-                        <h5> <span>HELLO</span> WORLD</h5>
-                        <br>
-
-                        <h6>I am SIFATUL ISLAM; I am a keen learner and the following skills are self taught.<span> I would love to be a part of your projects <span> learn more and grow</h6>
-							<div class="row social intro">
-									<a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
-		
-									<a href="https://www.facebook.com/md.sifatulislam"  target="_blank"><i aria-hidden="true" class="fa fa-facebook"></i></a>
-		
-									<a href="https://twitter.com/sifii2013"  target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a>
-		
-									<!-- <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a> -->
-		
-									<a href="https://github.com/Sifatul"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-		
-									<a href="http://codepen.io/sifii2013/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					
-	
-				</div>
-				
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6">
-				
-					 <div class="board">
-						<div class="monitor">
-						  
-						  <div class="option_box">
-							<div class="result option"></div>
-							<div class="col-6 col-sm-6 col-md-6 ">
-							  
-							  <div class="option" id="opt1"></div>
-							</div>
-							<div class="col-6 col-sm-6 col-md-6 ">
-							  <div class="option" id="opt2"></div>
-							</div>
-
-
-						  </div>
-
-						  <div class=" back_button"><i class="glyphicon glyphicon-arrow-left"></i> </div>
-
-
-						</div>
-						<div class="game_board"> 
-						  <div class="row">
-							<div class="col-4 col-sm-4 col-md-4 " >
-							  <span class="move" data-move="0"></span>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="1"></span>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="2"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="3"></span>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="4"></span>
-
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="5"></span>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="6"></span>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="7"></span>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 ">
-                        <span class="move" data-move="8"></span>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        <!-- end of tic_tac_toe board !-->
-
-    </div>
-    <!-- end of introductio -->
-
-
-
-
-    </div>
-
-    </div>
-    <!--end of about !-->
-
-
-
-
-    <div class=" row skill ">
-
-        <div class="skill_title">
-            SKILL
-        </div>
-
-        <div class=" skill_box ">
-
-
-            <div class="row   d-f-r">
-                <div class="col-sm-6 col-md-6 col-lg-6" id="android">
-                    <i class="fa fa-android"></i>
-                    <span>ANDROID</span>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="html">
-                    <i class="fa fa-wrench"></i>
-                    <span>HTML</span>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="css">
-                    <i class="fa fa-paint-brush"> </i>
-                    <span>CSS</span>
-                </div>
-            </div>
-            <!-- END IF ROW -->
-            <div class="row d-f-r">
-
-                <div class=" col-sm-3 col-md-3 col-lg-3 d-f-c">
-
-                    <div class="row h-50" id="js">
-                        <i class="fa fa-cog"></i> <span>Js</span>
-                    </div>
-                    <div class="row h-50 d-f-r" id="java">
-                        <i class="fa fa-pencil"></i> <span>JAVA</span>
-                    </div>
 
                 </div>
+                <div class="row introduction " id="about_me">
 
-                <div class="col-sm-6 col-md-6 col-lg-6" id="web">
-                    <i class="fa fa-globe"></i> <span>WEB Development</span>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                    <div class="row">
-                        <div class="row h-50 d-f-c" id="mysql">
-                            <i class="fa fa-database"></i> <span>MySql</span>
+
+                    <div class=" intro-container col-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="row intro  col-8 col-sm-8 col-md-9 col-lg-12">
+                            <h5> <span>HELLO</span> WORLD</h5>
+                            <br>
+
+                            <h6>I am SIFATUL ISLAM; I am a keen learner and the following skills are self taught.<span>
+                                    I
+                                    would love to be a part of your projects, <span> learn more and grow</h6>
+                            <div class="row social intro">
+                                <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile"
+                                    target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+
+                                <a href="https://www.facebook.com/md.sifatulislam" target="_blank"><i aria-hidden="true"
+                                        class="fa fa-facebook"></i></a>
+
+                                <a href="https://twitter.com/sifii2013" target="_blank"><i aria-hidden="true"
+                                        class="fa fa-twitter"></i></a>
+
+                                <!-- <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a> -->
+
+                                <a href="https://github.com/Sifatul" target="_blank"><i class="fa fa-github"
+                                        aria-hidden="true"></i></a>
+
+                                <a href="http://codepen.io/sifii2013/" target="_blank"><i class="fa fa-codepen"
+                                        aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                        <div class="row  h-50 d-f-c" id="laravel">
-                            <i class="fa fa-universal-access"></i>
-                            <span>Laravel</span>
+
+
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+                        <div class="board">
+                            <div class="monitor">
+
+                                <div class="option_box">
+                                    <div class="result option"></div>
+                                    <div class="col-6 col-sm-6 col-md-6 ">
+
+                                        <div class="option" id="opt1"></div>
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-6 ">
+                                        <div class="option" id="opt2"></div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class=" back_button"><i class="glyphicon glyphicon-arrow-left"></i> </div>
+
+
+                            </div>
+                            <div class="game_board">
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="0"></span>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="1"></span>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="2"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="3"></span>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="4"></span>
+
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="5"></span>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="6"></span>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="7"></span>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 ">
+                                        <span class="move" data-move="8"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- end of tic_tac_toe board !-->
+
+                    </div>
+                    <!-- end of introductio -->
+
+
+
+
+                </div>
+
+            </div>
+            <div class=" row skill " id="skill">
+
+                <div class="skill_title">
+                    SKILL
+                </div>
+
+                <div class=" skill_box ">
+
+
+                    <div class="row   d-f-r">
+                        <div class="col-sm-6 col-md-6 col-lg-6" id="android">
+                            <i class="fa fa-android"></i>
+                            <span>ANDROID</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="html">
+                            <i class="fa fa-wrench"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="css">
+                            <i class="fa fa-paint-brush"> </i>
+                            <span>CSS</span>
                         </div>
                     </div>
+                    <!-- END IF ROW -->
+                    <div class="row d-f-r">
+
+                        <div class=" col-sm-3 col-md-3 col-lg-3 d-f-c">
+
+                            <div class="row h-50" id="js">
+                                <i class="fa fa-cog"></i> <span>Js</span>
+                            </div>
+                            <div class="row h-50 d-f-r" id="java">
+                                <i class="fa fa-pencil"></i> <span>JAVA</span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-lg-6" id="web">
+                            <i class="fa fa-globe"></i> <span>WEB Development</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="row">
+                                <div class="row h-50 d-f-c" id="mysql">
+                                    <i class="fa fa-database"></i> <span>MySql</span>
+                                </div>
+                                <div class="row  h-50 d-f-c" id="laravel">
+                                    <i class="fa fa-universal-access"></i>
+                                    <span>Laravel</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
+                <!--end of skill box !-->
+
             </div>
+            <!--end of skills !-->
+
+            <div class=" row work " id="portfolio">
+
+                <h2><span><em>Works</em></span></h2>
+
+                <div class=" row work_container">
+                    <div class="col-6 col-sm-6 col-md-6 image-container">
+                        <h2><span><em><a href="https://bachelorwallet.000webhostapp.com/login"
+                                        target="_blank">BachelorLife </a>(Ongoing)</em></span></h2>
+                        <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank"> <img
+                                src="assets/img/current_project.png" /> </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 image-container">
+                        <h2><span><em><a href="http://www.mghgroup.com/" target="_blank">MGH Group</a></em></span></h2>
+                        <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank"> <img
+                                style="width: 35%" src="assets/img/obhai.jpg" /> </a>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 image-container">
+                        <h2><span><em> <a href="http://durbar.co/" target="_blank">DURBAR</a></em></span></h2>
+                        <a href="http://aabracu.net/" target="_blank"> <img src="assets/img/aabracu.jpeg" /> </a>
+
+                        <a href="http://app.dghs.gov.bd/dghseams/attend/" target="_blank"><img
+                                src="assets/img/dghs.jpeg" /> </a>
+
+                    </div>
+
+
+
+                    <div class="col-6 col-sm-6 col-md-6 image-container">
+
+                        <h2><span><em> <a href="https://webable.digital/" target="_blank">WebAble</a></em></span></h2>
+
+                        <div class="card">
+                            <!-- <strong class="sub-title">Abinta</strong> -->
+                            <a href="http://www.dbl-group.com/" target="_blank"><img
+                                    src="assets/img/dbl_group.png" /></a>
+
+                        </div>
+                        <div class="card">
+                            <!-- <strong class="sub-title">Abinta</strong> -->
+                            <a href="http://www.abintafoundation.org/" target="_blank"><img
+                                    src="assets/img/abinta.PNG" /></a>
+
+                        </div>
+
+                        <!-- <h2><span><em>Self-Products in Codeigniter</em></span></h2> 
+        
+                    <a href="www.toletbd.org" target="_blank"><img src="assets/img/toletbd.jpeg"/>	</a>	 -->
+                    </div>
+                </div>
+            </div>
+            <!--end of work !-->
+
+            <div class="  row footer"> Copyright &reg; sifatul@cbnu.ac.kr</div>
 
         </div>
-        <!--end of skill box !-->
 
     </div>
-    <!--end of skills !-->
-
-    <div class=" row work ">
-
-        <h2><span><em>Works</em></span></h2>
-
-        <div class=" row work_container">
-            <div class="col-6 col-sm-6 col-md-6 image-container">
-                <h2><span><em><a href="https://bachelorwallet.000webhostapp.com/login" target="_blank">BachelorLife </a>(Ongoing)</em></span></h2>
-                <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank"> <img src="assets/img/current_project.png" /> </a>
-            </div>
-            <div class="col-6 col-sm-6 col-md-6 image-container">
-                <h2><span><em><a href="http://www.mghgroup.com/" target="_blank">MGH Group</a></em></span></h2>
-                <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank"> <img style="width: 35%" src="assets/img/obhai.jpg" /> </a>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-6 image-container">
-                <h2><span><em> <a href="http://durbar.co/" target="_blank">DURBAR</a></em></span></h2>
-                <a href="http://aabracu.net/" target="_blank"> <img src="assets/img/aabracu.jpeg" /> </a>
-
-                <a href="http://app.dghs.gov.bd/dghseams/attend/" target="_blank"><img src="assets/img/dghs.jpeg" /> </a>
-
-            </div>
 
 
 
-            <div class="col-6 col-sm-6 col-md-6 image-container">
-
-                <h2><span><em> <a href="https://webable.digital/" target="_blank">WebAble</a></em></span></h2>
-
-                <div class="card">
-                    <!-- <strong class="sub-title">Abinta</strong> -->
-                    <a href="http://www.dbl-group.com/" target="_blank"><img src="assets/img/dbl_group.png" /></a>
-
-                </div>
-                <div class="card">
-                    <!-- <strong class="sub-title">Abinta</strong> -->
-                    <a href="http://www.abintafoundation.org/" target="_blank"><img src="assets/img/abinta.PNG" /></a>
-
-                </div>
-
-                <!-- <h2><span><em>Self-Products in Codeigniter</em></span></h2> 
-
-			<a href="www.toletbd.org" target="_blank"><img src="assets/img/toletbd.jpeg"/>	</a>	 -->
-            </div>
-        </div>
-    </div>
-    <!--end of work !-->
-
-    <div class="  row footer"> Copyright &reg; sifatul@cbnu.ac.kr</div>
-
-    </div>
     <!--end of container !-->
 
 
