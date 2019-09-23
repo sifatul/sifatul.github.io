@@ -1,93 +1,5 @@
 /* reset css */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
 .col-lg-1,
 .col-lg-10,
@@ -188,11 +100,14 @@ table {
 }
 
 .row {
+    width: 100%;
     margin: 0 0;
 }
 
 
 /* reset css end */
+
+
 
 #about {
     position: relative;
@@ -201,6 +116,7 @@ table {
     background: #F6F6F6;
     max-height: 400px;
 }
+ 
 
 .d-f-r {
     display: flex;
@@ -337,32 +253,27 @@ table {
     width: 100%;
 }
 
-.skill {
-    width: 100%;
-    background: #0D3D51;
-    padding: 70px;
-}
+/* .skill { 
+    background: #0D3D51; 
+} */
 
-.skill_box {
-    margin: 10px auto;
-    width: 60%;
+.skill_box { 
     height: auto;
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
 }
-
-.skill_box .box7,
-.skill_box .box6 {
-    width: 100%;
-    height: 75px;
-    max-height: 100px;
-    float: left;
-    text-align: center;
-}
+ 
 
 .skill_box #android {
-    padding: 20px;
+    /* padding: 20px; */
     font-weight: 700;
     background: #F6C344;
     text-align: center;
+    flex: 2 1 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .skill_box #android .fa-android {
@@ -376,9 +287,13 @@ table {
 }
 
 .skill_box #html {
-    padding: 20px;
+    /* padding: 20px; */
     background: #C3D1DE;
     align-items: center;
+    flex: 1 1 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .skill_box #html .fa-wrench,
@@ -402,9 +317,13 @@ table {
 }
 
 .skill_box #css {
-    padding: 20px;
+    /* padding: 20px; */
     background: #12B7A7;
     align-items: center;
+    flex: 1 1 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .skill_box #js {
@@ -416,29 +335,29 @@ table {
     align-items: center;
 }
 
-.skill_box #java {
-    padding: 20px;
+.skill_box #java { 
     background: #E84D3B;
     align-items: center;
     justify-content: center;
+   
 }
 
+
 .skill_box #web {
-    padding: 4px;
+    /* padding: 4px; */
     background: #51C0ED;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    text-align: center;    
+    flex: 2 1 0px;
 }
 
 .skill_box #web .fa-globe {
     font-size: 150px;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .skill_box #web span {
     font-size: 30px;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .skill_box #codeigniter {
@@ -446,12 +365,14 @@ table {
     background: #334960;
 }
 
-.skill_box #mysql {
-    padding: 20px;
+.skill_box #mysql { 
     background: #FFD25F;
     align-items: center;
 }
 
+.flex_container_1{
+    flex: 1 1 0px;
+}
 .skill #php {
     background: #F7B63E;
     padding: 30px;
@@ -526,12 +447,8 @@ table {
     margin: 2px;
 }
 
-.work {
-    background: #fff;
-    padding: 5%;
-}
-
-.work h2 {
+ 
+#work h2 {
     border-bottom: 1px solid #f4f3f3;
     display: block;
     width: 100%;
@@ -543,14 +460,14 @@ table {
     height: 50px;
 }
 
-.work h2 span {
+#work h2 span {
     margin: 0;
     display: block;
     width: 100%;
     margin: 0 auto;
 }
 
-.work h2 span em {
+#work h2 span em {
     border-bottom: 1px solid #444948;
     font-style: normal;
     display: inline-block;
@@ -559,17 +476,14 @@ table {
     font-size: 14px;
 }
 
-.work_container {
-    width: 80%;
-    margin: 0 auto;
-}
+ 
 
-.work .image-container {
+#work .image-container {
     float: left;
     padding: 12px 10px 10px 10px;
 }
 
-.work .image-container img {
+#work .image-container img {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     width: 100%;
     margin-top: 15px;

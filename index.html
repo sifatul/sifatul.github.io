@@ -4,7 +4,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/fonts">
+
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
@@ -26,13 +26,16 @@
                     <a class="nav-link" href="#skill">Skills</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#mdo">CV</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#mdo">Resume</a>
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Work</a>
                     <div class="dropdown-menu">
@@ -41,7 +44,7 @@
                         <div role="separator" class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#three">three</a>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
@@ -62,7 +65,7 @@
                 <div class="row introduction " id="about_me">
 
 
-                    <div class=" intro-container col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class=" intro-container col-6 ">
                         <div class="row intro  col-8 col-sm-8 col-md-9 col-lg-12">
                             <h5> <span>HELLO</span> WORLD</h5>
                             <br>
@@ -93,7 +96,7 @@
 
                     </div>
 
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-6 ">
 
                         <div class="board">
                             <div class="monitor">
@@ -166,57 +169,46 @@
                 </div>
 
             </div>
-            <div class=" row skill " id="skill">
+            <div id="skill" class=" skill row  ">
 
-                <div class="skill_title">
-                    SKILL
+                <div class="row mt-2">
+                    <p class="skill_title"> SKILL </p>
                 </div>
 
-                <div class=" skill_box ">
+                <div class="skill_box mx-auto my-4">
+                    <div class="row">
+                        <div class="py-4" id="android">
+                            <i class="fa fa-android"></i> <span class="px-2">ANDROID</span>
+                        </div>
+                        <div class="" id="html">
+                            <i class="fa fa-wrench"></i> <span class="px-2">HTML</span>
+                        </div>
 
+                        <div class="" id="css">
+                            <i class="fa fa-paint-brush"> </i> <span class="px-2">CSS</span>
+                        </div>
 
-                    <div class="row   d-f-r">
-                        <div class="col-sm-6 col-md-6 col-lg-6" id="android">
-                            <i class="fa fa-android"></i>
-                            <span>ANDROID</span>
-                        </div>
-                        <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="html">
-                            <i class="fa fa-wrench"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="col-sm-3 col-md-3 col-lg-3 d-f-c" id="css">
-                            <i class="fa fa-paint-brush"> </i>
-                            <span>CSS</span>
-                        </div>
                     </div>
-                    <!-- END IF ROW -->
-                    <div class="row d-f-r">
 
-                        <div class=" col-sm-3 col-md-3 col-lg-3 d-f-c">
-
-                            <div class="row h-50" id="js">
-                                <i class="fa fa-cog"></i> <span>Js</span>
-                            </div>
-                            <div class="row h-50 d-f-r" id="java">
-                                <i class="fa fa-pencil"></i> <span>JAVA</span>
-                            </div>
-
+                    <div class="d-flex flex-column   flex_container_1">
+                        <div class=" d-flex flex-column py-2 flex_container_1" id="js">
+                            <i class="fa fa-cog"></i> <span class="py-2">Js</span>
+                        </div>
+                        <div class="  d-flex flex-column  py-2 flex_container_1" id="java">
+                            <i class="fa fa-pencil"></i> <span class="py-2">JAVA</span>
                         </div>
 
-                        <div class="col-sm-6 col-md-6 col-lg-6" id="web">
-                            <i class="fa fa-globe"></i> <span>WEB Development</span>
-                        </div>
-                        <div class="col-sm-3 col-md-3 col-lg-3">
-                            <div class="row">
-                                <div class="row h-50 d-f-c" id="mysql">
-                                    <i class="fa fa-database"></i> <span>MySql</span>
-                                </div>
-                                <div class="row  h-50 d-f-c" id="laravel">
-                                    <i class="fa fa-universal-access"></i>
-                                    <span>Laravel</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center py-2" id="web">
+                        <i class="fa fa-globe"></i> <span class="py-2">WEB Development</span>
+                    </div>
 
+                    <div class="  d-flex flex-column flex_container_1 ">
+                        <div class="d-flex justify-content-center   flex-column py-2 flex_container_1" id="mysql">
+                            <i class="fa fa-database"></i> <span class="py-2">MySql</span>
+                        </div>
+                        <div class="  d-flex  justify-content-center py-2 flex_container_1" id="laravel">
+                            <i class="fa fa-universal-access"></i> <span class="py-2">Laravel</span>
                         </div>
                     </div>
 
@@ -226,55 +218,78 @@
             </div>
             <!--end of skills !-->
 
-            <div class=" row work " id="portfolio">
+            <div id="work" class=" container">
 
                 <h2><span><em>Works</em></span></h2>
-
-                <div class=" row work_container">
-                    <div class="col-6 col-sm-6 col-md-6 image-container">
-                        <h2><span><em><a href="https://bachelorwallet.000webhostapp.com/login"
-                                        target="_blank">BachelorLife </a>(Ongoing)</em></span></h2>
-                        <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank"> <img
-                                src="assets/img/current_project.png" /> </a>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 image-container">
-                        <h2><span><em><a href="http://www.mghgroup.com/" target="_blank">MGH Group</a></em></span></h2>
-                        <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank"> <img
-                                style="width: 35%" src="assets/img/obhai.jpg" /> </a>
-                    </div>
-
-                    <div class="col-6 col-sm-6 col-md-6 image-container">
-                        <h2><span><em> <a href="http://durbar.co/" target="_blank">DURBAR</a></em></span></h2>
-                        <a href="http://aabracu.net/" target="_blank"> <img src="assets/img/aabracu.jpeg" /> </a>
-
-                        <a href="http://app.dghs.gov.bd/dghseams/attend/" target="_blank"><img
-                                src="assets/img/dghs.jpeg" /> </a>
-
-                    </div>
-
-
-
-                    <div class="col-6 col-sm-6 col-md-6 image-container">
-
-                        <h2><span><em> <a href="https://webable.digital/" target="_blank">WebAble</a></em></span></h2>
-
-                        <div class="card">
-                            <!-- <strong class="sub-title">Abinta</strong> -->
-                            <a href="http://www.dbl-group.com/" target="_blank"><img
-                                    src="assets/img/dbl_group.png" /></a>
-
+                <div class=" py-2 card-columns">
+                        <div class="card ">
+                                <img src="assets/img/current_project.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">BachelorLife</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up
+                                        the
+                                        bulk
+                                        of the card's content.</p>
+                                    <a href="https://bachelorwallet.000webhostapp.com/login" class="btn btn-primary">Preview</a>
+                                </div>
+                            </div>
+                    <div class="card ">
+                        <img src=" assets/img/dghs.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">BachelorLife</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up
+                                the
+                                bulk
+                                of the card's content.</p>
+                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " class="btn btn-primary">Preview</a>
                         </div>
-                        <div class="card">
-                            <!-- <strong class="sub-title">Abinta</strong> -->
-                            <a href="http://www.abintafoundation.org/" target="_blank"><img
-                                    src="assets/img/abinta.PNG" /></a>
-
-                        </div>
-
-                        <!-- <h2><span><em>Self-Products in Codeigniter</em></span></h2> 
-        
-                    <a href="www.toletbd.org" target="_blank"><img src="assets/img/toletbd.jpeg"/>	</a>	 -->
                     </div>
+                    <div class="card    ">
+                        <img src="assets/img/dbl_group.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">BachelorLife</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up
+                                the
+                                bulk
+                                of the card's content.</p>
+                            <a href="http://www.dbl-group.com/ " class="btn btn-primary">Preview</a>
+                        </div>
+                    </div>
+                    <div class="card  ">
+                        <img src="assets/img/abinta.PNG " class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">BachelorLife</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up
+                                the
+                                bulk
+                                of the card's content.</p>
+                            <a href=" http://www.abintafoundation.org/" class="btn btn-primary">Preview</a>
+                        </div>
+                    </div>
+                    <div class="card  ">
+                        <img src="assets/img/obhai.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">BachelorLife</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up
+                                the
+                                bulk
+                                of the card's content.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en"
+                                class="btn btn-primary">Preview</a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
                 </div>
             </div>
             <!--end of work !-->
