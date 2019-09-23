@@ -141,11 +141,9 @@ table {
     padding: 0px;
 }
 
-.footer {
-    text-align: center;
+.footer { 
     font-weight: bolder;
-    font-size: 100%;
-    padding: 1%;
+    font-size: 100%; 
     background: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -253,9 +251,9 @@ table {
     width: 100%;
 }
 
-/* .skill { 
+#skill { 
     background: #0D3D51; 
-} */
+}
 
 .skill_box { 
     height: auto;
@@ -266,8 +264,7 @@ table {
  
 
 .skill_box #android {
-    /* padding: 20px; */
-    font-weight: 700;
+    /* padding: 20px; */ 
     background: #F6C344;
     text-align: center;
     flex: 2 1 0px;
@@ -379,7 +376,7 @@ table {
     height: 172px;
 }
 
-.skill #laravel {
+  #laravel {
     padding: 20px;
     background: #EAEDF2;
     flex-direction: column;
@@ -387,8 +384,8 @@ table {
     align-items: center;
 }
 
-.skill #php .fa-rocket,
-.skill #laravel .fa-universal-access {
+  #php .fa-rocket,
+  #laravel .fa-universal-access {
     font-size: 60px;
 }
 
@@ -411,10 +408,7 @@ table {
     width: 250px;
 }
 
-.social {
-    margin-top: 10px;
-}
-
+ 
 .social i {
     height: 25px;
     width: 25px;
