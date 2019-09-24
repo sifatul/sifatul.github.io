@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
@@ -196,7 +196,7 @@
                             <i class="fa fa-cog"></i> <span class="py-2">Js</span>
                         </div>
                         <div class="  d-flex flex-column  py-2 flex_container_1" id="java">
-                            <i class="fa fa-pencil"></i> <span class="py-2">JAVA</span>
+                            <i class="fab fa-java"></i> <span class="py-2">JAVA</span>
                         </div>
 
                     </div>
@@ -208,7 +208,7 @@
                         <div class="d-flex justify-content-center   flex-column py-2 flex_container_1" id="mysql">
                             <i class="fa fa-database"></i> <span class="py-2">MySql</span>
                         </div>
-                        <div class="  d-flex  justify-content-center py-2 flex_container_1" id="laravel">
+                        <div class="  d-flex flex-column justify-content-center py-2 flex_container_1" id="laravel">
                             <i class="fa fa-universal-access"></i> <span class="py-2">Laravel</span>
                         </div>
                     </div>
@@ -236,24 +236,24 @@
                             <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank">
                                 <h5 class="card-title">BachelorLife</h5>
                             </a>
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Laravel</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>MySQL</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>REST API</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Bootstrap 4</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>jQuery</p>
-                                </div>
+                            <div class="row d-flex flex-row justify-content-around">
+                                <button type="button" class="btn btn-dark d-inline mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>Laravel 5</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>MySQL</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>REST API</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>Bootstrap 4</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>jQuery</span>
+                                </button>
                             </div>
-                            <p class="card-text">A pet project to keep track records of daily expenses. </p>
+                            <p class="card-text py-2">A pet project to keep track records of daily expenses. </p>
                             <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank"
                                 class="btn btn-primary">LIVE SITE</a>
                         </div>
@@ -315,25 +315,23 @@
                         <img src=" assets/img/dghs.jpeg" class="card-img-top" alt="..." data-toggle="modal"
                             data-target="#healthMinistryModal">
                         <div class="card-body">
-                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"  >
+                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank">
                                 <h5 class="card-title">Ministry of Health & family welfare Bangladesh</h5>
                             </a>
 
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Codeigniter</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>MySQL</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Bootstrap 3</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>jQuery</p>
-                                </div>
+                            <div class="row d-flex flex-row justify-content-around">
+                                <button type="button" class="btn btn-dark d-inline mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>CodeIgniter</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>MySQL</span>
+                                </button>
+
+                                <button type="button" class="btn btn-dark d-inline  mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>jQuery</span>
+                                </button>
                             </div>
-                            <p class="card-text"> An attendence management system to track holidays, leaves and daily
+                            <p class="card-text py-2"> An attendence management system to track holidays, leaves and daily
                                 attendence of all employees.</p>
                             <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"
                                 class="btn btn-primary">LIVE SITE</a>
@@ -390,19 +388,22 @@
                         <img src="assets/img/dbl_group.png" class="card-img-top" alt="..." data-toggle="modal"
                             data-target="#dblModal">
                         <div class="card-body">
-                                <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"     ><h5 class="card-title">DBL group</h5></a>
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>WordPress</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Bootstrap 3</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>jQuery</p>
-                                </div>
+                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank">
+                                <h5 class="card-title">DBL group</h5>
+                            </a>
+                            <div class="row d-flex flex-row justify-content-around">
+                                <button type="button" class="btn btn-dark d-inline mt-1">
+                                    <i class="fas fa-hashtag"></i> <span>WordPress</span>
+                                </button>
+                                <button type="button" class="btn btn-dark d-inline  mt-1 ">
+                                    <i class="fas fa-hashtag"></i> <span>MySQL</span>
+                                </button>
+
+                                <button type="button" class="btn btn-dark d-inline  mt-1   ">
+                                    <i class="fas fa-hashtag"></i> <span>jQuery</span>
+                                </button>
                             </div>
-                            <p class="card-text">A website for DBL group to share information regarding their business
+                            <p class="card-text py-2">A website for DBL group to share information regarding their business
                                 and recruitment.</p>
                             <a href="http://www.dbl-group.com/ " target="_blank" class="btn btn-primary">LIVE SITE</a>
                         </div>
@@ -461,18 +462,19 @@
                                 <h5 class="card-title">Abinta Kabir Foundation</h5>
                             </a>
 
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>WordPress</p>
+                            <div class="row d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-dark d-inline mt-1">
+                                        <i class="fas fa-hashtag"></i> <span>WordPress</span>
+                                    </button>
+                                    <button type="button" class="btn btn-dark d-inline  mt-1 ">
+                                        <i class="fas fa-hashtag"></i> <span>Bootstrap 3</span>
+                                    </button>
+    
+                                    <button type="button" class="btn btn-dark d-inline  mt-1  ">
+                                        <i class="fas fa-hashtag"></i> <span>jQuery</span>
+                                    </button>
                                 </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Bootstrap 3</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>jQuery</p>
-                                </div>
-                            </div>
-                            <p class="card-text">A website to share events, missions, collect donations and indroduce
+                            <p class="card-text pt-2">A website to share events, missions, collect donations and indroduce
                                 the overall activities of AKF Foundation.</p>
                             <a href=" http://www.abintafoundation.org/" target="_blank" class="btn btn-primary">LIVE
                                 SITE</a>
@@ -528,18 +530,19 @@
                                 <h5 class="card-title">OBHAI</h5>
                             </a>
 
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Java</p>
+                            <div class="row d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-dark d-inline mt-1">
+                                        <i class="fas fa-hashtag"></i> <span>JAVA</span>
+                                    </button>
+                                    <button type="button" class="btn btn-dark d-inline  mt-1  ml-1">
+                                        <i class="fas fa-hashtag"></i> <span>Android</span>
+                                    </button>
+    
+                                    <button type="button" class="btn btn-dark d-inline  mt-1  ml-1">
+                                        <i class="fas fa-hashtag"></i> <span>Firebase</span>
+                                    </button>
                                 </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Android</p>
-                                </div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
-                                    <p>Firebase</p>
-                                </div>
-                            </div>
-                            <p class="card-text">A ride sharing app (a product of MGH group).</p>
+                            <p class="card-text pt-2">A ride sharing app (a product of MGH group).</p>
                             <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank"
                                 class="btn btn-primary">DOWNLOAD</a>
                         </div>

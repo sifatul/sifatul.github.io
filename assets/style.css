@@ -143,7 +143,7 @@ table {
     height: 50%;
 }
 
-max-width-full .dropdown-menu {
+ .dropdown-menu {
     right: 0;
     left: auto !important;
 }
@@ -312,11 +312,14 @@ max-width-full .dropdown-menu {
 .skill_box #html .fa-wrench,
 .skill_box #css .fa-paint-brush,
 .skill_box #js .fa-cog,
-.skill_box #java .fa-pencil,
+.skill_box #java  .fa-java,
 .skill_box #codeigniter .fa-compass,
 .skill_box #mysql .fa-database {
     font-size: 45px;
     /*padding-left: 49px;*/
+}
+.skill_box #java  .fa-java{
+    color: red;
 }
 
 
@@ -341,7 +344,7 @@ max-width-full .dropdown-menu {
 }
 
 .skill_box #java {
-    background: #E84D3B;
+    background: #EAEDF2;
     align-items: center;
     justify-content: center;
 
@@ -383,7 +386,9 @@ max-width-full .dropdown-menu {
 }
 
 #laravel {
-    background: #EAEDF2;
+  
+
+    background: #E84D3B;
     align-items: center;
 }
 
@@ -447,7 +452,7 @@ max-width-full .dropdown-menu {
 }
 
 #skill span {
-    font-size: x-large;
+    font-size: large;
     font-weight: 400;
 }
 
