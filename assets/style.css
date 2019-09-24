@@ -76,10 +76,6 @@ body {
     line-height: 1;
 }
 
-ol,
-ul {
-    list-style: none;
-}
 
 blockquote,
 q {
@@ -116,7 +112,18 @@ table {
     background: #F6F6F6;
     max-height: 400px;
 }
- 
+
+.card img:hover {
+    cursor: hand;
+}
+
+.intro-container {
+    flex: 1 1 0;
+}
+
+.board-container {
+    flex: 1 1 0;
+}
 
 .d-f-r {
     display: flex;
@@ -136,14 +143,14 @@ table {
     height: 50%;
 }
 
-.container-fluid {
-    width: 100%;
-    padding: 0px;
+max-width-full .dropdown-menu {
+    right: 0;
+    left: auto !important;
 }
 
-.footer { 
+.footer {
     font-weight: bolder;
-    font-size: 100%; 
+    font-size: 100%;
     background: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -151,23 +158,35 @@ table {
 
 .intro-container {
     position: relative;
-    left: 130px;
+    padding-left: 130px;
 }
 
 .introduction {
     background: transparent;
-    padding: 20px;
-    display: flex;
 }
 
-.introduction .intro>h5 {
+
+.introduction .intro-container .hello {
     clear: left;
-    text-align: left important!;
+    text-align: left important !;
     white-space: nowrap;
     overflow: hidden;
-    width: 30em;
-    animation: type 10s;
+    width: 10em;
+    animation: type 5s;
 }
+
+.introduction .intro-container .hello span:nth-child(1) {
+    font-size: xx-large;
+    font-weight: 700;
+    color: #4E5158;
+}
+
+.introduction .intro-container .hello span:nth-child(2) {
+    font-size: medium;
+    font-weight: 500;
+    color: #4E5158;
+}
+
 
 @keyframes type {
     from {
@@ -175,12 +194,6 @@ table {
     }
 }
 
-.introduction .intro>h5 span {
-    font-size: 40px;
-    font-weight: 700;
-    color: #4E5158;
-    padding: 5px;
-}
 
 .introduction .intro>h6 {
     font-family: times new roman;
@@ -191,7 +204,14 @@ table {
 .introduction .intro>h6 span {
     font-size: 20px;
 }
- 
+
+.line-height-1-25 {
+    line-height: 1.25;
+}
+
+.max-width-full {
+    max-width: 100%;
+}
 
 .menu {
     display: none;
@@ -227,18 +247,18 @@ table {
 }
 
 .photo {
-    display: flex;
-    position: relative;
+    /* display: flex;
+    position: relative; */
     background-color: #4E5158;
-    height: 75px;
+    /* height: 75px; */
 }
 
-.photo img {
+.profile-image {
     position: absolute;
-    top: 40%;
-    left: 1%;
+    /* top: 40%; */
+    /* left: 1%; */
     border-radius: 100%;
-    height: 150%;
+    height: 100px;
     border: 5px solid white;
 }
 
@@ -251,20 +271,20 @@ table {
     width: 100%;
 }
 
-#skill { 
-    background: #0D3D51; 
+#skill {
+    background: #0D3D51;
 }
 
-.skill_box { 
+.skill_box {
     height: auto;
     display: flex;
     width: 60%;
     flex-wrap: wrap;
 }
- 
+
 
 .skill_box #android {
-    /* padding: 20px; */ 
+    /* padding: 20px; */
     background: #F6C344;
     text-align: center;
     flex: 2 1 0px;
@@ -277,11 +297,7 @@ table {
     font-size: 60px;
 }
 
-.skill_box #android span {
-    font-size: 20px;
-    color: #000;
-    padding: 10px;
-}
+
 
 .skill_box #html {
     /* padding: 20px; */
@@ -303,15 +319,7 @@ table {
     /*padding-left: 49px;*/
 }
 
-.skill_box #html span,
-.skill_box #css span,
-.skill_box #js span,
-.skill_box #java span,
-.skill_box #codeigniter span,
-.skill_box #mysql span {
-    font-size: 25px;
-    /*padding-left: 43px;*/
-}
+
 
 .skill_box #css {
     /* padding: 20px; */
@@ -332,18 +340,18 @@ table {
     align-items: center;
 }
 
-.skill_box #java { 
+.skill_box #java {
     background: #E84D3B;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 
 .skill_box #web {
     /* padding: 4px; */
     background: #51C0ED;
-    text-align: center;    
+    text-align: center;
     flex: 2 1 0px;
 }
 
@@ -352,48 +360,39 @@ table {
     /* padding: 15px; */
 }
 
-.skill_box #web span {
-    font-size: 30px;
-    /* padding: 15px; */
-}
+
 
 .skill_box #codeigniter {
     padding: 20px;
     background: #334960;
 }
 
-.skill_box #mysql { 
+.skill_box #mysql {
     background: #FFD25F;
     align-items: center;
 }
 
-.flex_container_1{
+.flex_container_1 {
     flex: 1 1 0px;
 }
+
 .skill #php {
     background: #F7B63E;
-    padding: 30px;
+
     height: 172px;
 }
 
-  #laravel {
-    padding: 20px;
+#laravel {
     background: #EAEDF2;
-    flex-direction: column;
-    display: flex;
     align-items: center;
 }
 
-  #php .fa-rocket,
-  #laravel .fa-universal-access {
+#php .fa-rocket,
+#laravel .fa-universal-access {
     font-size: 60px;
 }
 
-.skill #php span,
-.skill #laravel span {
-    font-size: 25px;
-    font-weight: 900;
-}
+
 
 .skill_title {
     margin: 0 auto;
@@ -408,7 +407,50 @@ table {
     width: 250px;
 }
 
- 
+
+
+
+#projects h2 {
+    border-bottom: 1px solid #f4f3f3;
+    display: block;
+    font-family: ProximaNovaSemiBold;
+    font-weight: bolder;
+}
+
+#projects h2 span {
+    margin: 0;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#projects h2 span em {
+    border-bottom: 1px solid #444948;
+    font-style: normal;
+    display: inline-block;
+    padding: 25px 0;
+    height: 10px;
+    font-size: 14px;
+}
+
+
+
+#projects .image-container {
+    float: left;
+    padding: 12px 10px 10px 10px;
+}
+
+#projects .image-container img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    margin-top: 15px;
+}
+
+#skill span {
+    font-size: x-large;
+    font-weight: 400;
+}
+
 .social i {
     height: 25px;
     width: 25px;
@@ -419,73 +461,49 @@ table {
     float: left;
     font-size: 20px;
 }
-
-.sub-title {}
+.sub_title{
+    font-size: small;
+    color: white;
+}
 
 .title {
     font-size: 18px;
     font-weight: 700;
-    bottom: -25px;
-    position: relative;
-    padding: 20px;
-    left: 130px;
+    padding-left: 130px;
+    /* left: 130px; */
     color: antiquewhite;
-    display: flex;
     align-items: center;
     font-family: sans-serif;
 }
 
-.title span {
-    font-size: 13px;
-    padding: 5px;
-    margin: 2px;
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
 }
 
- 
-#work h2 {
-    border-bottom: 1px solid #f4f3f3;
-    display: block;
-    width: 100%;
-    font-size: .8em;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
-    font-family: ProximaNovaSemiBold;
-    height: 50px;
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
 }
 
-#work h2 span {
-    margin: 0;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
 }
 
-#work h2 span em {
-    border-bottom: 1px solid #444948;
-    font-style: normal;
-    display: inline-block;
-    padding: 25px 0;
-    height: 10px;
-    font-size: 14px;
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 3;
+    }
 }
 
- 
 
-#work .image-container {
-    float: left;
-    padding: 12px 10px 10px 10px;
-}
-
-#work .image-container img {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-    width: 100%;
-    margin-top: 15px;
-}
-
-@media (max-width: 575.98px) {}
-
-
+   /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {   }
 /* Small devices (landscape phones, less than 768px) */
 
 @media (max-width: 767.98px) {}
