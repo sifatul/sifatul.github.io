@@ -12,7 +12,7 @@ function show_result(result){
 $('.result').html(result);
   $('.result').css('display','block');
 $(".back_button").find('span').html('');
-$(".back_button").find('.glyphicon-arrow-left').toggleClass('glyphicon-arrow-left glyphicon-refresh');
+$(".back_button").find('.fas fa-arrow-left').toggleClass('fas fa-arrow-left fa fa-refresh');
 $('.back_button').css('display','block'); 
 $('.game_board').css('opacity', '0.15');
 $('.monitor').css('display','block');
@@ -56,7 +56,7 @@ $('#opt1, #opt2').click(function(){
     // game_start();
   }
   $('.back_button').click(function(){  
-    $(".back_button").find('.glyphicon-refresh').toggleClass('glyphicon-refresh glyphicon-arrow-left ');
+    $(".back_button").find('.fa fa-refresh').toggleClass('fa fa-refresh fas fa-arrow-left ');
      $('.result').css('display','none');
     $(".back_button").css('display','none');
     $('#opt1').css('display','block');  
