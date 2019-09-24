@@ -2,21 +2,21 @@
 
 <head>
     <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/fontawesome/css/all.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="stylesheet" type="text/css" href="assets/tic_tac_toe.css">
- 
+
 </head>
 
 <body>
 
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 px-0">
         <nav id="navbar" class="navbar navbar-light bg-light fixed-top ">
             <a class="navbar-brand" href="#">#SIFII</a>
             <ul class="nav nav-pills">
@@ -27,25 +27,19 @@
                     <a class="nav-link" href="#skill">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="CV_md_sifatul_islam.pdf" target="_blank">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sifatul_resume.pdf" target="_blank">Resume</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
 
-                <!-- <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">Work</a>
+                        aria-haspopup="true" aria-expanded="false">CV | Resume</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#one">one</a>
-                        <a class="dropdown-item" href="#two">two</a>
+                        <a class="dropdown-item" href="CV_md_sifatul_islam.pdf" target="_blank">CV </a>
+                        <a class="dropdown-item" href="sifatul_resume.pdf" target="_blank">Resume </a>
                         <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#three">three</a>
+                        <a class="dropdown-item" href="#three">Resume (korean)</a>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </nav>
 
@@ -54,130 +48,129 @@
         <!--end of about !-->
 
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-               <img src="assets/img/me.jpg" class="profile-image mt-4 ml-2"/>
-                <div class="row photo pt-5">
-                  
-                    <h1 class="title ">MD SIFATUL ISLAM |
-                        <SPAN>Web and Android Developer</SPAN>
-                    </h1>
+            <img src="assets/img/me.jpg" class="profile-image mt-4 ml-2" />
+            <div class="row photo pt-5 d-flex align-content-center">
+
+                <h1 class="title d-inline">MD SIFATUL ISLAM | </h1>
+                <span class="px-2 sub_title pt-1">Web and Android Developer</SPAN>
+
+
+            </div>
+
+
+            <div class="introduction d-flex d-row flex-wrap" id="about_me">
+
+
+                <div class="intro-container  pr-4">
+
+                    <div class="py-3 hello">
+                        <span>HELLO</span>
+                        <span>World</span>
+                    </div>
+                    <div class="row">
+                        <span class="py-2">I am <strong>SIFATUL </strong>. I have worked as a <i>web</i> developer for
+                            almost two years and six months as an <i>android </i>developer. </span>
+                        <br><strong class="py-1"> I would love to be a part of your projects, learn more and
+                            grow.</strong>
+                    </div>
+
+                    <div class="row social intro mt-2">
+                        <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+
+                        <a href="https://www.facebook.com/md.sifatulislam" target="_blank"> <i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="https://twitter.com/sifii2013" target="_blank"> <i class="fab fa-twitter"></i></a>
+
+                        <!-- <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a> -->
+
+                        <a href="https://github.com/Sifatul" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+
+                        <a href="http://codepen.io/sifii2013/" target="_blank"><i class="fab fa-codepen"
+                                aria-hidden="true"></i></a>
+                    </div>
+
 
 
                 </div>
+                <div class="d-flex board-container">
 
-                
-                <div class="introduction d-flex d-row flex-wrap" id="about_me">
+                    <div class="board my-4 mx-auto">
+                        <div class="monitor">
+
+                            <div class="option_box">
+                                <div class="result option"></div>
+                                <div class="col-6 col-sm-6 col-md-6 ">
+
+                                    <div class="option" id="opt1"></div>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 ">
+                                    <div class="option" id="opt2"></div>
+                                </div>
 
 
-                    <div class="intro-container  pr-4">
-                        
-                            <div class="py-2 hello"> 
-                                <span>HELLO</span>
-                                <span>World</span>
+                            </div>
+
+                            <div class=" back_button"><i class="fas fa-arrow-left"></i> </div>
+
+
+                        </div>
+                        <div class="game_board">
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="0"></span>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="1"></span>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="2"></span>
+                                </div>
                             </div>
                             <div class="row">
-<span>I am <strong>SIFATUL </strong>. I have worked as a <i>web</i> developer for almost two years and six months as an <i>android </i>developer; I am a keen learner and the following skills are self taught.</span> 
-<h5> I would love to be a part of your projects, learn more and grow.</h5>
-                            </div>
- 
-                            <div class="row social intro mt-2">
-                                <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile"
-                                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
-
-                                <a href="https://www.facebook.com/md.sifatulislam" target="_blank"> <i
-                                        class="fab fa-facebook-f"></i></a>
-
-                                <a href="https://twitter.com/sifii2013" target="_blank"> <i
-                                        class="fab fa-twitter"></i></a>
-
-                                <!-- <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a> -->
-
-                                <a href="https://github.com/Sifatul" target="_blank"> <i
-                                        class="fab fa-linkedin-in"></i></a>
-
-                                <a href="http://codepen.io/sifii2013/" target="_blank"><i class="fab fa-codepen"
-                                        aria-hidden="true"></i></a>
-                            </div>
-                      
-
-
-                    </div>
-                    <div class="d-flex board-container">
-
-                            <div class="board my-4 mx-auto">
-                                <div class="monitor">
-    
-                                    <div class="option_box">
-                                        <div class="result option"></div>
-                                        <div class="col-6 col-sm-6 col-md-6 ">
-    
-                                            <div class="option" id="opt1"></div>
-                                        </div>
-                                        <div class="col-6 col-sm-6 col-md-6 ">
-                                            <div class="option" id="opt2"></div>
-                                        </div>
-    
-    
-                                    </div>
-    
-                                    <div class=" back_button"><i class="fas fa-arrow-left"></i> </div>
-    
-    
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="3"></span>
                                 </div>
-                                <div class="game_board">
-                                    <div class="row">
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="0"></span>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="1"></span>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="2"></span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="3"></span>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="4"></span>
-    
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="5"></span>
-    
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="6"></span>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="7"></span>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4 ">
-                                            <span class="move" data-move="8"></span>
-                                        </div>
-                                    </div>
-    
-    
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="4"></span>
+
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="5"></span>
+
                                 </div>
                             </div>
-                            <!-- end of tic_tac_toe board !-->
-    
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="6"></span>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="7"></span>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 ">
+                                    <span class="move" data-move="8"></span>
+                                </div>
+                            </div>
+
+
                         </div>
-                    
-                    <!-- end of introductio -->
-
-
-
+                    </div>
+                    <!-- end of tic_tac_toe board !-->
 
                 </div>
 
-             
- 
-   
-            <div id="skill" class="py-2" >
+                <!-- end of introductio -->
+
+
+
+
+            </div>
+
+
+
+
+            <div id="skill" class="py-2">
 
                 <div class="row my-2">
                     <p class="skill_title"> SKILL </p>
@@ -186,7 +179,7 @@
                 <div class="skill_box mx-auto py-2 ">
                     <div class="row">
                         <div class="py-4" id="android">
-                                <i class="fab fa-android"></i> <span class="px-2">ANDROID</span>
+                            <i class="fab fa-android"></i> <span class="px-2">ANDROID</span>
                         </div>
                         <div class="" id="html">
                             <i class="fa fa-wrench"></i> <span class="px-2">HTML</span>
@@ -226,93 +219,380 @@
             </div>
             <!--end of skills !-->
 
-            <div id="work" class=" ">
+            <div id="projects" class="py-4 ">
 
                 <div class="container">
-                        <h2><em><span><em>Works</em></span></em></h2>
+                    <h2>Projects</h2>
                 </div>
-                    
+
+
+
                 <div class=" py-2 card-columns container">
-                        
+                    <!-- BachelorLife -->
                     <div class="card ">
-                        <img src="assets/img/current_project.png" class="card-img-top" alt="...">
+                        <img src="assets/img/current_project.png" class="card-img-top" alt="..." data-toggle="modal"
+                            data-target="#bachelorLifeModal">
                         <div class="card-body">
-                            <h5 class="card-title">BachelorLife</h5>
+                            <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank">
+                                <h5 class="card-title">BachelorLife</h5>
+                            </a>
                             <div class="row">
-                               <div class="d-inline py-1"> <i class="fas fa-hashtag"></i><p>Laravel</p></div>
-                               <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>MySQL</p></div>
-                               <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>REST API</p></div>
-                               <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Bootstrap 4</p></div>
-                               <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>jQuery</p></div>
-                            </div>
-                            <p class="card-text">A pet project to keep track records of daily expenses.  </p>
-                            <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank" class="btn btn-primary">Preview</a>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src=" assets/img/dghs.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Ministry of Health & family welfare Bangladesh</h5>
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i><p>Codeigniter</p></div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>MySQL</p></div> 
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Bootstrap 3</p></div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>jQuery</p></div>
-                            </div>
-                            <p class="card-text"> An attendence management system to track holidays, leaves and daily attendence of all employees.</p>
-                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank" class="btn btn-primary">Preview</a>
-                        </div>
-                    </div>
-                    <div class="card    ">
-                        <img src="assets/img/dbl_group.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DBL group</h5>
-                            <div class="row">
-                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i><p>WordPress</p></div> 
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Bootstrap 3</p></div>
-                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>jQuery</p></div>
-                            </div>
-                            <p class="card-text">A website for DBL group to share information regarding their business and recruitment.</p>
-                            <a href="http://www.dbl-group.com/ " target="_blank" class="btn btn-primary">Preview</a>
-                        </div>
-                    </div>
-                    <div class="card  ">
-                        <img src="assets/img/abinta.PNG " class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Abinta Kabir Foundation</h5>
-                            <div class="row">
-                                    <div class="d-inline py-1"> <i class="fas fa-hashtag"></i><p>WordPress</p></div> 
-                                    <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Bootstrap 3</p></div>
-                                    <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>jQuery</p></div>
+                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Laravel</p>
                                 </div>
-                            <p class="card-text">A website to share events, missions, collect donations and indroduce the overall activities of AKF Foundation.</p>
-                            <a href=" http://www.abintafoundation.org/" target="_blank" class="btn btn-primary">Preview</a>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>MySQL</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>REST API</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Bootstrap 4</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>jQuery</p>
+                                </div>
+                            </div>
+                            <p class="card-text">A pet project to keep track records of daily expenses. </p>
+                            <a href="https://bachelorwallet.000webhostapp.com/login" target="_blank"
+                                class="btn btn-primary">LIVE SITE</a>
                         </div>
                     </div>
-                    <div class="card  ">
-                        <img src="assets/img/obhai.jpg" class="card-img-top" alt="...">
+                    <!-- Button trigger modal -->
+
+
+                    <!-- BachelorLife Modal -->
+
+
+
+                    <!-- Modal -->
+                    <div class="modal fade  px-4 container" id="bachelorLifeModal" tabindex="-1" role="dialog"
+                        aria-labelledby="bachelorLifeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered max-width-full" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container d-flex flex-wrap flex-row">
+                                        <img src="assets/img/current_project.png"
+                                            class="img-fluid col-12 col-sm-12 col-md-9" alt="Responsive image">
+                                        <div class=" col-12 col-sm-12 col-md-3  px-3">
+                                            <span class="line-height-1-25">BachelorLife is designed to keep record of
+                                                your daily expenses to ensure a healthy lifestyle within the budget.
+                                                Each individual user can track the category where they spend the most
+                                                and harness unimportant expenses. </span>
+
+                                            <h5 class="modal-title py-2">Features</h5>
+                                            <hr class="m-0">
+                                            <ul>
+                                                <li class="line-height-1-25">Multiple categories of expenses</li>
+                                                <li class="line-height-1-25">Summary of current month's expenses</li>
+                                                <li class="line-height-1-25">Archive of previous months' expenses</li>
+                                                <li class="line-height-1-25">REST API for integration with other apps
+                                                </li>
+                                            </ul>
+                                            <span class="line-height-1-25"><strong>Upcoming:</strong> Prediction of your
+                                                total expenses at the end of the month. </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+
+
+                    <!-- Ministry of Health & family welfare Bangladesh -->
+
+                    <div class="card ">
+                        <img src=" assets/img/dghs.jpeg" class="card-img-top" alt="..." data-toggle="modal"
+                            data-target="#healthMinistryModal">
                         <div class="card-body">
-                            <h5 class="card-title">OBHAI</h5>
+                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"  >
+                                <h5 class="card-title">Ministry of Health & family welfare Bangladesh</h5>
+                            </a>
+
                             <div class="row">
-                                    <div class="d-inline py-1"> <i class="fas fa-hashtag"></i><p>Java</p></div>
-                                    <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Android</p></div>
-                                    <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i><p>Firebase</p></div>
-                                 </div>
-                            <p class="card-text">A ride sharing app (a product of MGH group).</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en"
-                            target="_blank" class="btn btn-primary">Preview</a>
+                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Codeigniter</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>MySQL</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Bootstrap 3</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>jQuery</p>
+                                </div>
+                            </div>
+                            <p class="card-text"> An attendence management system to track holidays, leaves and daily
+                                attendence of all employees.</p>
+                            <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"
+                                class="btn btn-primary">LIVE SITE</a>
+                        </div>
+                    </div>
+
+                    <!-- Ministry of Health & family welfare Bangladesh  Modal -->
+
+
+
+                    <!-- Modal -->
+                    <div class="modal fade  px-4 container" id="healthMinistryModal" tabindex="-1" role="dialog"
+                        aria-labelledby="healthMinistryModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered max-width-full" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container d-flex flex-wrap flex-row">
+                                        <img src=" assets/img/dghs.jpeg" class="img-fluid col-12 col-sm-12 col-md-9"
+                                            alt="Responsive image">
+                                        <div class=" col-12 col-sm-12 col-md-3  px-3">
+                                            <span class="line-height-1-25">This project is an attendence management
+                                                system for Ministry of Health and Family Welfare, Bangladesh. At Durbar
+                                                this was one of the biggest project that I worked with and was
+                                                responsive for proper visualizaiton of around 4GB of data. </span>
+
+                                            <h5 class="modal-title py-2">Features</h5>
+                                            <hr class="m-0">
+                                            <ul>
+                                                <li class="line-height-1-25">Attendence summary can be seen per
+                                                    employee/ hospital/ district/ division </li>
+                                                <li class="line-height-1-25">Attendence can be filtered by
+                                                    year/month/date </li>
+                                                <li class="line-height-1-25">Faster retrieval of information from 4GB of
+                                                    data </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card    ">
+                        <img src="assets/img/dbl_group.png" class="card-img-top" alt="..." data-toggle="modal"
+                            data-target="#dblModal">
+                        <div class="card-body">
+                                <a href="http://app.dghs.gov.bd/dghseams/attend/ " target="_blank"     ><h5 class="card-title">DBL group</h5></a>
+                            <div class="row">
+                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>WordPress</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Bootstrap 3</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>jQuery</p>
+                                </div>
+                            </div>
+                            <p class="card-text">A website for DBL group to share information regarding their business
+                                and recruitment.</p>
+                            <a href="http://www.dbl-group.com/ " target="_blank" class="btn btn-primary">LIVE SITE</a>
                         </div>
                     </div>
 
 
 
+                    <!-- DBL group Modal -->
+
+                    <!-- Modal -->
+                    <div class="modal fade  px-4 container" id="dblModal" tabindex="-1" role="dialog"
+                        aria-labelledby="dblModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered max-width-full" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container d-flex flex-wrap flex-row">
+                                        <img src="assets/img/dbl_group.png" class="img-fluid col-12 col-sm-12 col-md-9"
+                                            alt="Responsive image">
+                                        <div class=" col-12 col-sm-12 col-md-3  px-3">
+                                            <span class="line-height-1-25">This is one of the many wordpress projects
+                                                that I worked at WebAble Digital. This is a dynamic website for DBL
+                                                group, Bangladesh. </span>
+
+                                            <h5 class="modal-title py-2">Features</h5>
+                                            <hr class="m-0">
+                                            <ul>
+                                                <li class="line-height-1-25">Smooth and eye catching design </li>
+                                                <li class="line-height-1-25">Many sliders and smooth transition </li>
+                                                <li class="line-height-1-25">Faster rendering of pages with alot of
+                                                    images, sliders and videos</li>
+                                            </ul>
+                                            <a href="http://www.dbl-group.com/ " target="_blank"
+                                                class="btn btn-primary mt-4">LIVE SITE</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="card  ">
+                        <img src="assets/img/abinta.PNG " class="card-img-top" alt="..." data-toggle="modal"
+                            data-target="#akfModal">
+                        <div class="card-body">
+                            <a href=" http://www.abintafoundation.org/" target="_blank">
+                                <h5 class="card-title">Abinta Kabir Foundation</h5>
+                            </a>
 
+                            <div class="row">
+                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>WordPress</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Bootstrap 3</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>jQuery</p>
+                                </div>
+                            </div>
+                            <p class="card-text">A website to share events, missions, collect donations and indroduce
+                                the overall activities of AKF Foundation.</p>
+                            <a href=" http://www.abintafoundation.org/" target="_blank" class="btn btn-primary">LIVE
+                                SITE</a>
+                        </div>
+                    </div>
+
+                    <!-- Abinta Kabir Foundation group Modal -->
+
+                    <!-- Modal -->
+                    <div class="modal fade  px-4 container" id="akfModal" tabindex="-1" role="dialog"
+                        aria-labelledby="akfModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered max-width-full" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container d-flex flex-wrap flex-row">
+                                        <img src="assets/img/abinta.PNG " class="img-fluid col-12 col-sm-12 col-md-9"
+                                            alt="Responsive image">
+                                        <div class=" col-12 col-sm-12 col-md-3  px-3">
+                                            <span class="line-height-1-25">This is one of the many wordpress projects
+                                                that I worked at WebAble Digital. This is a dynamic website for Abinta
+                                                Kabir Foundation, Bangladesh. </span>
+
+                                            <h5 class="modal-title py-2">Features</h5>
+                                            <hr class="m-0">
+                                            <ul>
+                                                <li class="line-height-1-25">Digital payment.</li>
+                                                <li class="line-height-1-25">Faster rendering of pages with alot of
+                                                    images, sliders and videos. </li>
+                                            </ul>
+                                            <a href="http://www.abintafoundation.org/" target="_blank"
+                                                class="btn btn-primary mt-4">LIVE SITE</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  ">
+                        <img src="assets/img/obhai.jpg" class="card-img-top" alt="..." data-toggle="modal"
+                            data-target="#obhaiModal">
+                        <div class="card-body">
+                            <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank">
+                                <h5 class="card-title">OBHAI</h5>
+                            </a>
+
+                            <div class="row">
+                                <div class="d-inline py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Java</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Android</p>
+                                </div>
+                                <div class="d-inline pl-2 py-1"> <i class="fas fa-hashtag"></i>
+                                    <p>Firebase</p>
+                                </div>
+                            </div>
+                            <p class="card-text">A ride sharing app (a product of MGH group).</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en" target="_blank"
+                                class="btn btn-primary">DOWNLOAD</a>
+                        </div>
+                    </div>
+
+                    <!-- OBHAI Modal -->
+
+                    <!-- Modal -->
+                    <div class="modal fade  px-4 container" id="obhaiModal" tabindex="-1" role="dialog"
+                        aria-labelledby="obhaiModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered max-width-full" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container d-flex flex-wrap flex-row justify-content-between">
+                                        <img src="assets/img/obhai.jpg" class="img-fluid col-md-3"
+                                            alt="Responsive image">
+                                        <div class=" col-md-8  px-3">
+                                            <span class="line-height-1-25">OBHAI is a product of MGH group, Bangladesh.
+                                                During my
+                                                tenure at MGH group I built OBHAI from a broken bone to version 1.2. As
+                                                a team we updated the libraries, updated the design and implemented new
+                                                features.
+                                            </span>
+
+                                            <h5 class="modal-title py-2">Features</h5>
+                                            <hr class="m-0">
+                                            <ul>
+                                                <li class="line-height-1-25">Realtime tracking of users with Google Map
+                                                </li>
+                                                <li class="line-height-1-25">Firebase notification</li>
+                                                <li class="line-height-1-25">Digital payment system</li>
+                                            </ul>
+                                            <a href="https://play.google.com/store/apps/details?id=com.obhai&hl=en"
+                                                target="_blank" class="btn btn-primary mt-4">Play Store </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-            <!--end of work !-->
+            <!--end of projects !-->
 
             <div class=" row footer ">
                 <p class="m-auto py-2">Copyright &reg; sifatul@cbnu.ac.kr</p>
@@ -322,26 +602,24 @@
 
     </div>
 
- 
-      
+
+
 
 
     <!--end of container !-->
 
-<!-- all modal's content -->
-<!-- Modal -->
+    <!-- all modal's content -->
+    <!-- Modal -->
 
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
- 
-<script type="text/javascript"  src="assets/myscripts.js"></script>
-<script type="text/javascript"  src="assets/tic_tac_toe.js"></script>
-<!-- <script type="text/javascript" >
-        $(document).ready(function() {
-          $("#myModal").modal();
-        });
-      </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+</script>
+
+<script type="text/javascript" src="assets/myscripts.js"></script>
+<script type="text/javascript" src="assets/tic_tac_toe.js"></script>
+
 
 </html>
