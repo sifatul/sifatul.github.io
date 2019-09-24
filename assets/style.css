@@ -117,7 +117,12 @@ table {
     max-height: 400px;
 }
  
-
+.intro-container{
+    flex: 1 1 0;
+}
+.board-container{
+    flex: 1 1 0;
+}
 .d-f-r {
     display: flex;
     flex-direction: row;
@@ -151,23 +156,33 @@ table {
 
 .intro-container {
     position: relative;
-    left: 130px;
+    padding-left: 130px;
 }
 
 .introduction {
-    background: transparent;
-    padding: 20px;
-    display: flex;
+    background: transparent; 
 }
 
-.introduction .intro>h5 {
+
+.introduction .intro-container  .hello {
     clear: left;
     text-align: left important!;
     white-space: nowrap;
     overflow: hidden;
-    width: 30em;
-    animation: type 10s;
+    width: 10em;
+    animation: type 5s;
 }
+.introduction .intro-container .hello span:nth-child(1){
+font-size: xx-large; 
+font-weight: 700;
+color: #4E5158; 
+}
+.introduction .intro-container .hello span:nth-child(2){
+    font-size: medium; 
+    font-weight: 500;
+    color: #4E5158; 
+    }
+    
 
 @keyframes type {
     from {
@@ -175,13 +190,7 @@ table {
     }
 }
 
-.introduction .intro>h5 span {
-    font-size: 40px;
-    font-weight: 700;
-    color: #4E5158;
-    padding: 5px;
-}
-
+ 
 .introduction .intro>h6 {
     font-family: times new roman;
     line-height: 30px;
@@ -227,18 +236,18 @@ table {
 }
 
 .photo {
-    display: flex;
-    position: relative;
+    /* display: flex;
+    position: relative; */
     background-color: #4E5158;
-    height: 75px;
+    /* height: 75px; */
 }
 
-.photo img {
+.profile-image{
     position: absolute;
-    top: 40%;
-    left: 1%;
+    /* top: 40%; */
+    /* left: 1%; */
     border-radius: 100%;
-    height: 150%;
+    height: 100px;
     border: 5px solid white;
 }
 
@@ -419,18 +428,13 @@ table {
     float: left;
     font-size: 20px;
 }
-
-.sub-title {}
-
+ 
 .title {
     font-size: 18px;
-    font-weight: 700;
-    bottom: -25px;
-    position: relative;
-    padding: 20px;
-    left: 130px;
-    color: antiquewhite;
-    display: flex;
+    font-weight: 700; 
+    padding-left: 130px;
+    /* left: 130px; */
+    color: antiquewhite; 
     align-items: center;
     font-family: sans-serif;
 }
