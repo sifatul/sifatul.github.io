@@ -293,7 +293,7 @@ table {
     justify-content: center;
 }
 
-.skill_box #android .fa-android {
+.skill_box #android i,.skill_box #html i{
     font-size: 60px;
 }
 
@@ -309,15 +309,15 @@ table {
     justify-content: center;
 }
 
-.skill_box #html .fa-wrench,
-.skill_box #css .fa-paint-brush,
-.skill_box #js .fa-cog,
+.skill_box #css i,
+.skill_box #js i,
 .skill_box #java  .fa-java,
 .skill_box #codeigniter .fa-compass,
-.skill_box #mysql .fa-database {
-    font-size: 45px;
+.skill_box #mysql i,#laravel i {
+    font-size: 40px;
     /*padding-left: 49px;*/
 }
+
 .skill_box #java  .fa-java{
     color: red;
 }
@@ -393,9 +393,7 @@ table {
 }
 
 #php .fa-rocket,
-#laravel .fa-universal-access {
-    font-size: 60px;
-}
+
 
 
 
