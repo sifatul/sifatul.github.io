@@ -168,7 +168,7 @@ table {
 
 .introduction .intro-container .hello {
     clear: left;
-    text-align: left important !;
+    text-align: left !important;
     white-space: nowrap;
     overflow: hidden;
     width: 10em;
