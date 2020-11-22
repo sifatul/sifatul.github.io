@@ -21,7 +21,7 @@ const getProjects = async () => {
       if (!data) reject([]);
       console.log(data);
       let projects = [];
-      Object.entries(data).map(item => {
+      Object.entries(data).forEach(item => {
         projects = [...projects, ...item[1].projects]
       });
       resolve(projects || [])
