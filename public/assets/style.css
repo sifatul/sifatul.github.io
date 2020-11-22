@@ -338,6 +338,7 @@ table {
 }
 
 .skill_box #js {
+    min-height:100px;
     padding: 20px;
     background: #fff;
     display: flex;
@@ -350,6 +351,7 @@ table {
     background: #EAEDF2;
     align-items: center;
     justify-content: center;
+    min-height:100px;
 
 }
 
