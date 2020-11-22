@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <nav id="navbar" class="navbar navbar-light bg-light fixed-top ">
-            <a class="navbar-brand" href="#">#SIFII</a>
+            <a class="navbar-brand" href="#" rel="noreferrer">#SIFII</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#about_me">About Me</a>

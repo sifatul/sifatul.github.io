@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div class="container-fluid pt-5 px-0">
       <div>
-        <img src="https://i.ibb.co/NSD44RP/me.jpg" class="profile-image mt-4 ml-2" />
+        <img src="https://i.ibb.co/NSD44RP/me.jpg" class="profile-image mt-4 ml-2" alt ="my img" />
         <div class="row photo pt-5 d-flex align-content-center">
 
           <h1 class="title d-inline">MD SIFATUL ISLAM | </h1>
@@ -34,7 +33,7 @@ function App() {
 
           <div class="row social intro mt-2">
             <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile"
-              target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              target="_blank" rel="noreferrer" ><i class="fab fa-linkedin-in"></i></a>
 
             {/* <a href="https://www.facebook.com/md.sifatulislam" target="_blank"> <i
               class="fab fa-facebook-f"></i></a> */}
@@ -43,9 +42,9 @@ function App() {
 
             {/* <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a>  */}
 
-            <a href="https://github.com/Sifatul" target="_blank"> <i class="fab fa-github"></i></a>
+            <a href="https://github.com/Sifatul" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
 
-            <a href="http://codepen.io/sifii2013/" target="_blank"><i class="fab fa-codepen"
+            <a href="http://codepen.io/sifii2013/" target="_blank" rel="noreferrer"><i class="fab fa-codepen"
               aria-hidden="true"></i></a>
           </div>
 
