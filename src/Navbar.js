@@ -1,7 +1,8 @@
 import { getBasicInfo } from "./lib/Firebase";
 import React from 'react';
 function Navbar() {
-    const [state, setstate] = React.useState({})
+    const [state, setstate] = React.useState({});
+    console.log(state)
     
     React.useEffect(() => {
         try {
