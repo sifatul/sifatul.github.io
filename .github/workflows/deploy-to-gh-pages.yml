@@ -34,7 +34,7 @@ jobs:
       run: |
         git config --global user.name sifatul
         git config --global user.email devsifat@gmail.com
-        git remote set-url origin https://sifatul@github.com/sifatul.github.io
+        git remote set-url origin https://github.com/Sifatul/sifatul.github.io.git
         npm run deploy
       env:
         user_name: 'github-actions[bot]'
