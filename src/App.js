@@ -5,7 +5,7 @@ function App() {
   return (
     <div class="container-fluid pt-5 px-0">
       <div>
-        <img src="https://i.ibb.co/NSD44RP/me.jpg" class="profile-image mt-4 ml-2" alt ="my img" />
+        <img src="https://i.ibb.co/NSD44RP/me.jpg" class="profile-image mt-4 ml-2" alt="my img" />
         <div class="row photo pt-5 d-flex align-content-center">
 
           <h1 class="title d-inline">MD SIFATUL ISLAM | </h1>
@@ -26,8 +26,8 @@ function App() {
             <span>World</span>
           </div>
           <div class="row">
-            <span class="py-2">I am <strong>SIFATUL </strong>. I have worked as a <i>web</i> developer for
-            almost two years. </span>
+            <span class="py-2">I am <strong>SIFATUL </strong>. I am a <i>web</i> developer and love to work with React.js, Node.js and
+            MongoDB. </span>
             <strong class="py-1"> I would love to be a part of your projects, learn more and
             grow.</strong>
           </div>
@@ -116,12 +116,12 @@ function App() {
       </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-</script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+      </script>
 
-<script type="text/javascript" src="assets/myscripts.js"></script>
-<script type="text/javascript" src="assets/tic_tac_toe.js"></script>
+      <script type="text/javascript" src="assets/myscripts.js"></script>
+      <script type="text/javascript" src="assets/tic_tac_toe.js"></script>
 
     </div>
   );
