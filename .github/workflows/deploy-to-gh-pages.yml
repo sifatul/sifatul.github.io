@@ -32,12 +32,12 @@ jobs:
 
     - name: Deploy
       run: |
-        git config --global user.name sifatul
+        git config --global user.name devsifat
         git config --global user.email devsifat@gmail.com
         git remote set-url origin https://github.com/Sifatul/sifatul.github.io.git
         npm run deploy
       env:
-        user_name: 'sifatul'
-        user_email: 'sifii2013@gmail.com'
+        user_name: 'devsifat'
+        user_email: 'devsifat@gmail.com'
         github_token: ${{ secrets.DEPLOY_SECRET }}
         repository: ${{ github.repository }}
