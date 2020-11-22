@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Box from '@material-ui/core/Box';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 function getTags(tags) {
     return tags.map(item => {
-        return <Button  className="m-1" variant="outlined" color="primary" >
+        return <Button className="m-1" variant="outlined" color="primary" >
             {item}
         </Button>
     });
@@ -44,7 +43,7 @@ function getTags(tags) {
 export default function MediaCard(props) {
     const classes = useStyles();
     console.log("project: ", props)
-    const { company, companyWebsite, productName, productSummary, productThumbnailUrl, productUrl, productWebsite, subtitle, tags = [] } = props.item;
+    const { productName, productSummary, productThumbnailUrl, productUrl, productWebsite, subtitle, tags = [] } = props.item;
     return (
         <Card className={classes.root}>
             <CardHeader
@@ -66,7 +65,7 @@ export default function MediaCard(props) {
                 <Typography gutterBottom variant="body2" color="textSecondary" component="p">
                     {productSummary.length > 80 ? (productSummary.substring(0, 80) + '...') : productSummary}
                 </Typography>
-                <Box  display="flex" flexWrap="wrap" flexDirection="row" justifyContent="start">
+                <Box display="flex" flexWrap="wrap" flexDirection="row" justifyContent="start">
                     {getTags(tags)}
                 </Box>
 

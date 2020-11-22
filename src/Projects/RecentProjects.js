@@ -3,22 +3,22 @@ import Card from "./Card";
 import { getProjects } from "../lib/Firebase"
 
 import {
-    makeStyles, Grid
+     Grid
 } from '@material-ui/core';
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        justifyContent: 'center'
-    },
-    photo: {
-        backgroundColor: '#4E5158'
-    }
-}));
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//         display: 'flex',
+//         justifyContent: 'center'
+//     },
+//     photo: {
+//         backgroundColor: '#4E5158'
+//     }
+// }));
 
 export default function Projects() {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [state, setstate] = React.useState([])
     React.useEffect(() => {
 
@@ -32,23 +32,23 @@ export default function Projects() {
         }
     }, [])
     return (
-     <div id="projects" class="py-4 ">
+        <div id="projects" class="py-4 ">
             <div class="container">
                 <h2>Projects</h2>
             </div>
 
 
-            <div class="py-2 container">
+            <div class=" py-2 container">
                 <Grid
                     container
                     direction="row"
                     justify="start"
-                    alignItems="center"
+                    alignItems="start"
                     spacing={2}
 
                 >
                     {(state || []).map((item, key) => {
-                        return <Grid item key={'project' + key} >
+                        return <Grid item key={'project' + key}  md={6} lg={4} sm={12} >
                             <Card item={item}></Card>
                         </Grid>
                     })}

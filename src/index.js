@@ -5,8 +5,7 @@ import App from './App';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Skills from './Skills';
-import RecentProjects from './RecentProjects';
-import Projects from './Projects/Projects';
+import RecentProjects from './Projects/RecentProjects';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
