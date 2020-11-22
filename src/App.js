@@ -27,7 +27,7 @@ function App() {
           </div>
           <div class="row">
             <span class="py-2">I am <strong>SIFATUL </strong>. I have worked as a <i>web</i> developer for
-            almost two years and six months as an <i>android </i>developer. </span>
+            almost two years. </span>
             <strong class="py-1"> I would love to be a part of your projects, learn more and
             grow.</strong>
           </div>
