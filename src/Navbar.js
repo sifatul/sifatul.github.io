@@ -30,9 +30,9 @@ function Navbar() {
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">CV | Resume</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href={state.resume} target="_blank">Resume</a> 
+                        <a class="dropdown-item" href={state.resume} target="_blank" rel="noopener noreferrer" >Resume</a> 
                         <div role="separator" class="dropdown-divider"></div>
-                         <a class="dropdown-item"    href={state.resume_korean} target="_blank">이럭서</a>
+                         <a class="dropdown-item"    href={state.resume_korean} target="_blank" rel="noopener noreferrer"  >이럭서</a>
                     </div>
                 </li>
             </ul>
