@@ -29,3 +29,5 @@ jobs:
   
     - name: Build
       run: npm run deploy
+      with:
+        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
