@@ -3,7 +3,7 @@ import Card from "./Card";
 import { getProjects } from "../lib/Firebase"
 
 import {
-     Grid
+    Grid
 } from '@material-ui/core';
 
 
@@ -25,6 +25,7 @@ export default function Projects() {
         try {
             getProjects().then(projects => {
                 console.log(projects);
+                projects.sort((a, b) => parseInt(b.year) - parseInt(a.year))
                 setstate(projects)
             })
         } catch (e) {
@@ -48,7 +49,7 @@ export default function Projects() {
 
                 >
                     {(state || []).map((item, key) => {
-                        return <Grid item key={'project' + key}  md={6} lg={4} sm={12} >
+                        return <Grid item key={'project' + key} md={6} lg={4} sm={12} >
                             <Card item={item}></Card>
                         </Grid>
                     })}

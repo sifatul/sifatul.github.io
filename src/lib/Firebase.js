@@ -21,11 +21,16 @@ const getProjects = async () => {
       if (!data) reject([]);
       console.log(data);
       let projects = [];
-      Object.entries(data).forEach(item => {
-        projects = [...projects, ...item[1].projects]
-      });
+      for (let com in data) {
+        const temp = data[com].projects;
+        projects = projects.concat(...temp)
+        
+      }
       resolve(projects || [])
-    })
+
+      resolve(projects || [])
+    });
+
   })
 }
 const getBasicInfo = async () => {
