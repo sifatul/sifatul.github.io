@@ -63,7 +63,8 @@ export default function MediaCard(props) {
 
 
                 <Typography gutterBottom variant="body2" color="textSecondary" component="p">
-                    {productSummary.length > 80 ? (productSummary.substring(0, 80) + '...') : productSummary}
+                {productSummary}
+                    {/* {productSummary.length > 80 ? (productSummary.substring(0, 80) + '...') : productSummary} */}
                 </Typography>
                 <Box display="flex" flexWrap="wrap" flexDirection="row" justifyContent="start">
                     {getTags(tags)}
