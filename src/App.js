@@ -22,7 +22,7 @@ function App() {
         <div class="intro-container  pr-4">
 
           <div class="py-3 hello">
-            <span>HELLO</span>
+            {/* <span>HELLO</span> */}
             <span>World</span>
           </div>
           <div class="row">
