@@ -22,8 +22,8 @@ function App() {
         <div class="intro-container  pr-4">
 
           <div class="py-3 hello">
-            {/* <span>HELLO</span>
-            <span>World</span> */}
+            <span>HELLO</span>
+            <span>World</span>
           </div>
           <div class="row">
             <span class="py-2">I am <strong>SIFATUL </strong>. I am a <i>web</i> developer and love to work with React.js, Node.js and
