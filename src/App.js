@@ -27,7 +27,7 @@ function App() {
           </div>
           <div class="row">
             <span class="py-2">I am <strong>SIFATUL </strong>. I am a <i>web</i> developer and love to work with React.js, Node.js and
-            MongoDB. </span>
+            MongoDB. </span><br/>
             <strong class="py-1"> I would love to be a part of your projects, learn more and
             grow.</strong>
           </div>
