@@ -7,6 +7,16 @@ import Footer from './Footer';
 import Skills from './Skills';
 import RecentProjects from './Projects/RecentProjects';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-YTF161B095'); // add your tracking id here.
+
+try{
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  console.log("tracking")
+}
+catch(e){
+  console.error(e)
+}
 
 ReactDOM.render(
   <React.StrictMode>
