@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sifatul.github.io/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/sifatul.github.io/static/js/main.0f96bed0.chunk.js",
-    "main.js.map": "/sifatul.github.io/static/js/main.0f96bed0.chunk.js.map",
+    "main.js": "/sifatul.github.io/static/js/main.090014d6.chunk.js",
+    "main.js.map": "/sifatul.github.io/static/js/main.090014d6.chunk.js.map",
     "runtime-main.js": "/sifatul.github.io/static/js/runtime-main.1f8f31c9.js",
     "runtime-main.js.map": "/sifatul.github.io/static/js/runtime-main.1f8f31c9.js.map",
     "static/js/2.9f8b742e.chunk.js": "/sifatul.github.io/static/js/2.9f8b742e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1f8f31c9.js",
     "static/js/2.9f8b742e.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.0f96bed0.chunk.js"
+    "static/js/main.090014d6.chunk.js"
   ]
 }
