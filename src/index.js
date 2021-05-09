@@ -21,11 +21,11 @@ catch(e){
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
-    <App />
+    {/* <App />
     <Skills />
-    <RecentProjects />
+    <RecentProjects /> */}
     {/* <Projects /> */}
-    <Footer/>
+    {/* <Footer/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
