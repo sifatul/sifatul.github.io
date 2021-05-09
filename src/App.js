@@ -121,7 +121,7 @@ function App() {
       </script>
 
       <script type="text/javascript" src="assets/myscripts.js"></script>
-      <script type="text/javascript" src="assets/tic_tac_toe.js"></script>
+      {/* <script type="text/javascript" src="assets/tic_tac_toe.js"></script> */}
 
     </div>
   );
