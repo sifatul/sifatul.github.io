@@ -1,5 +1,5 @@
 {
-  "homepage": "http://sifatul.github.io/sifatul.github.io",
+  "homepage": "http://sifatul.github.io/",
   "name": "sifatul.github.io",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b test10 -d build",
     "start": "react-scripts start",
     "build": "set \"CI=false\" && react-scripts build",
     "test": "react-scripts test",
