@@ -1,112 +1,221 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-import './App.css';
+import './styles/index.scss';
 
 function App() {
-  return (
-    <div class="container-fluid pt-5 px-0">
-      <div>
-        <img src="https://i.ibb.co/NSD44RP/me.jpg" class="profile-image mt-4 ml-2" alt="my img" />
-        <div class="row photo pt-5 d-flex align-content-center">
-
-          <h1 class="title d-inline">MD SIFATUL ISLAM | </h1>
-          <span class="px-2 sub_title pt-1">Web/Application Developer</span>
-        </div>
-
+  return (<body>
+    <div class="container">
+      <div class="workspace">
+        <div class="myWorkspace">SI</div>
 
       </div>
 
+      <div class="channelsPeopleWrapper">
+        <div class="nameSection"> Sifatul </div>
+        <div class="wrapper">
 
-      <div class="introduction d-flex d-row flex-wrap" id="about_me">
+          <div class="channelListSection channelList">
+            <div class="channel-item labelOnly">
 
+              <img class="channel-icon" src="https://img.icons8.com/metro/15/c7b7c6/sort-down.png" alt="down-arrow-icon" />
 
-        <div class="intro-container  pr-4">
+              <span class="channel name"> Channels</span>
+            </div>
 
-          <div class="py-3 hello">
-            <span>HELLO</span>
-            <span>World</span>
+            <div class="channel-item">
+              <img class="channel-icon" src="https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png" alt="hash-icon" />
+              <span class="channel name"> Projects</span>
+            </div>
+            <div class="channel-item">
+              <img class="channel-icon" src="https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png" alt="hash-icon" />
+              <span class="channel name"> Experience</span>
+            </div>
+            <div class="channel-item">
+              <img class="channel-icon add-icon" src="https://img.icons8.com/ios/50/c7b7c6/plus-math.png" alt="hash-icon" />
+              <span class="channel name"> Add channels</span>
+            </div>
+
           </div>
-          <div class="row">
-            <span class="py-2">I am <strong>SIFATUL </strong>. I am a <i>web</i> developer and love to work with React.js, Node.js and
-            MongoDB. </span><br/>
-            <strong class="py-1"> I would love to be a part of your projects, learn more and
-            grow.</strong>
+          <div class="channelListSection peopleList">
+
+            <div class="channelList">
+              <div class="channel-item labelOnly">
+
+                <img class="channel-icon" src="https://img.icons8.com/metro/15/c7b7c6/sort-down.png" alt="down-arrow-icon" />
+
+                <span class="channel name"> Direct messages</span>
+              </div>
+              <div class="channel-item active">
+                <img class="channel-icon" src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="hash-icon" />
+                <span class="channel name"> Sifatul Islam</span>
+              </div>
+              <div class="channel-item">
+                <img class="channel-icon add-icon" src="https://img.icons8.com/ios/50/c7b7c6/plus-math.png" alt="hash-icon" />
+                <span class="channel name"> Add teammates</span>
+              </div>
+
+            </div>
+
           </div>
+          <div class="channelListSection appList">
 
-          <div class="row social intro mt-2">
-            <a href="https://www.linkedin.com/in/mdsifatulislam?trk=nav_responsive_tab_profile"
-              target="_blank" rel="noreferrer" ><i class="fab fa-linkedin-in"></i></a>
+            <div class="channelList">
+              <div class="channel-item labelOnly">
 
-            {/* <a href="https://www.facebook.com/md.sifatulislam" target="_blank"> <i
-              class="fab fa-facebook-f"></i></a> */}
+                <img class="channel-icon" src="https://img.icons8.com/metro/15/c7b7c6/sort-down.png" alt="down-arrow-icon" />
 
-            {/* <a href="https://twitter.com/sifii2013" target="_blank"> <i class="fab fa-twitter"></i></a> */}
+                <span class="channel name"> Apps</span>
+              </div>
 
-            {/* <a href="https://www.pinterest.com/mdsifatulislam/"  target="_blank"><i aria-hidden="true" class="fa fa-pinterest"></i></a>  */}
+              <div class="channel-item ">
 
-            <a href="https://github.com/Sifatul" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
+                <img class="channel-icon big-icon" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-color-tal-revivo.png" alt="hackerrank-icon" />
+                <span class="channel name"> Hackerrank</span>
+              </div>
 
-            <a href="http://codepen.io/sifii2013/" target="_blank" rel="noreferrer"><i class="fab fa-codepen"
-              aria-hidden="true"></i></a>
+              <div class="channel-item ">
+
+                <img class="channel-icon big-icon" src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="github-icon" />
+                <span class="channel name"> Github</span>
+              </div>
+
+              <div class="channel-item ">
+
+                <img class="channel-icon big-icon" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png" alt="leetcode-icon" />
+                <span class="channel name"> Leetcode</span>
+              </div>
+              <div class="channel-item">
+                <img class="channel-icon add-icon" src="https://img.icons8.com/ios/50/c7b7c6/plus-math.png" alt="hash-icon" />
+                <span class="channel name"> Add apps</span>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
-        <div class="d-flex board-container">
+        <div class="channelListSection huddle">
+          <div class="channel-item ">
 
-          <div class="board my-4 mx-auto">
-            <div class="monitor">
+            <img class="channel-icon" src="https://img.icons8.com/small/16/c7b7c6/radio-tower.png" alt="radio-icon" />
 
-              <div class="option_box">
-                <div class="result option"></div>
-                <div class="col-6 col-sm-6 col-md-6 ">
+            <span class="channel name"> Huddle</span>
+          </div>
 
-                  <div class="option" id="opt1"></div>
+        </div>
+      </div>
+
+      <div class="channelView">
+        <div class="nameSection">
+          <img class="channel-icon big-icon" src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="profile-icon" />
+          <span>Sifatul Islam </span>
+        </div>
+
+        <div class="wrapper">
+          <div class="singleMessage">
+            <div class="col avatarContainer">
+              <img src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="hash-icon" />
+            </div>
+            <div class="col">
+              <div class="row">
+                <span class="username"> Sifatul </span>
+                <span class="userMessageTime">8:06 AM</span>
+              </div>
+              <div class="row message">
+                Hello there. <br /> <br />
+                My name is Md Sifatul Islam. I am fullstack developer with 3+ years of years of experience working with react, nodejs and aws services for small to midium size start-ups. <br />
+
+                Currently I am working as technical lead playing the role as the main
+                developer to oversee all development projects. I build CI/CD pipelines
+                which increased daily deploy count by 2-fold and have a proven track record of
+                working with a project from planning to deployment. <br />
+
+                In terms of stack I work with NodeJs (Express/NestJs) in backend, ReactJs (NextJs) using JavaScript / TypeScript, Java for competitive programming, Docker, MongoDB or MySQL for database. I am very comfortable in working with AWS cloud services like RDS, S3, ECS, EC2 etc and hold AWS solution associate certification too.
+
+              </div>
+            </div>
+
+          </div>
+          <div class="floatingTime">
+            <div class="floatingTimeWrapper">
+              <button class="timeCapsule">Today</button>
+            </div>
+          </div>
+          <div class="singleMessage">
+            <div class="col avatarContainer">
+              <img src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="avatar" />
+            </div>
+            <div class="col">
+              <div class="row">
+                <span class="username"> Sifatul </span>
+                <span class="userMessageTime">8:06 AM</span>
+              </div>
+              <div class="row message">
+                This portfolio is made for fun to combinely present all my skills. Here is just the begining.
+              </div>
+            </div>
+
+          </div>
+          <div class="singleMessage">
+            <div class="col avatarContainer">
+              <img src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="avatar" />
+            </div>
+            <div class="col">
+              <div class="row">
+                <span class="username"> Sifatul </span>
+                <span class="userMessageTime">8:06 AM</span>
+              </div>
+              <div class="row message">
+                you can checkout my blog too. Here is a good article to start with.
+                <div class="link">
+                  <a href="https://dev.to/sifatul/create-package-in-github-registry-51p9">https://dev.to/sifatul/create-package-in-github-registry-51p9</a>
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 ">
-                  <div class="option" id="opt2"></div>
+                <div class="colWrapper">
+                  <div class="borderLeft"></div>
+                  <div class="metaContainer">
+
+                    <div class="metaLogoSiteName">
+                      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" alt="logo-icon" />
+                      <span class="metaName">DEV Community</span>
+                    </div>
+                    <div class="linkTitle">
+                      Simple guide to create package in Github registry
+                    </div>
+                    <div class="description">
+                      Creating a package in the GitHub registry is very simple. Firstly package.json needs to be updated;... (32 kB)
+                    </div>
+                    <div class="previewImage">
+                      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--VC0V3bMa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a3t917ikhl3szi5lff1a.png" alt="link-preview" />
+                    </div>
+                  </div>
                 </div>
 
               </div>
+            </div>
 
-              <div class=" back_button"><i class="fas fa-arrow-left"></i> </div>
+          </div>
+        </div>
+
+        <div class="textEditor">
+          <div class="container">
+            <div class="editorItemContainer">
+
+              <img class="editorItem" src="https://img.icons8.com/material-outlined/15/cacaca/bold.png" alt="bold-icon" />
+              <img class="editorItem" src="https://img.icons8.com/ios-glyphs/15/cacaca/italic.png" alt="italic-icon" />
+              <img class="editorItem" src=" https://img.icons8.com/external-tal-revivo-bold-tal-revivo/15/bcbbbc/external-strikethrough-text-feature-in-word-processing-application-text-bold-tal-revivo.png" alt="strike-through-icon" />
+            </div>
+            <div contentEditable="true" class="textArea">
 
             </div>
-            <div class="game_board">
-              <div class="row">
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="0"></span>
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="1"></span>
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="2"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="3"></span>
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="4"></span>
+            <div class="actionItemContainer">
+              <div class="left">
+                <img class="editorItem" src="https://img.icons8.com/ios/15/bcbbbc/no-video--v1.png" alt="no-video" />
 
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="5"></span>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="6"></span>
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="7"></span>
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 ">
-                  <span class="move" data-move="8"></span>
-                </div>
+                <img class="editorItem" src="https://img.icons8.com/material-outlined/15/bcbbbc/microphone.png" alt="microphone" />
               </div>
 
+              <div class="right">
+
+                <img class="editorItem" src="https://img.icons8.com/external-inkubators-glyph-inkubators/15/bcbbbc/external-send-ecommerce-user-interface-inkubators-glyph-inkubators.png" alt="send-icon" />
+              </div>
 
             </div>
           </div>
@@ -114,16 +223,10 @@ function App() {
         </div>
 
       </div>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-      </script>
-
-      <script type="text/javascript" src="assets/myscripts.js"></script>
-      {/* <script type="text/javascript" src="assets/tic_tac_toe.js"></script> */}
 
     </div>
+  </body>
+
   );
 }
 
