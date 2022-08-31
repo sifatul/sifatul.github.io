@@ -1,7 +1,7 @@
 const ChannelItem = (props) => {
   const { channelName, imgSrc } = props
   return <>
-    <div class="channel-item">
+    <div class="channel-item hasLink">
       <img class="channel-icon add-icon" src={imgSrc} alt={channelName} />
       <span class="channel name"> {channelName}</span>
     </div>

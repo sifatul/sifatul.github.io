@@ -13,14 +13,17 @@ const ChannelList = () => {
       channelName: "Experiences",
     }
   ]
+
   return <>
     <div class="channelListSection channelList">
 
       <ChannelLabel
+
         label="Channels"
       />
       {channels.map(channel => {
         return <ChannelItem
+          key={channel.channelName}
           {...channel}
         />
       })}
