@@ -1,0 +1,56 @@
+$border-color: #dddddd;
+
+$font-size: 13px;
+
+$primary-color: #4b154c;
+$primary-color-hover: #3f0e40;
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-color;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@mixin title() {
+  color: #d1d2d3;
+  font-weight: bold;
+
+  font-size: 16px;
+  padding: 10px;
+}
+
+@mixin default() {
+  color: #5f5f62;
+  font-family: Helvetica;
+  font-size: $font-size;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+}
+.nameSection {
+  top: 0;
+  left: 0;
+  right: 0;
+  @include title();
+  border-bottom: 1px solid #522653;
+  color: #ffffff;
+  padding: 10px 10px 10px 15px;
+}
+.hasLink {
+  &:hover {
+    cursor: pointer;
+  }
+}
