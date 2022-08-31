@@ -3,6 +3,8 @@ import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
 import { useState } from "react"
 import Style from "./leftSidebar.module.scss"
+import { useStore } from '../../store';
+
 
 const channels = [
   {
@@ -22,6 +24,7 @@ const channels = [
 const ChannelList = () => {
 
   const [open, setOpen] = useState(true)
+  const { setActiveSidebar, activeSidebarLabel } = useStore();
 
   return <>
     <div className={`${Style.channelListSection} ${Style.appList}`}>
@@ -37,6 +40,8 @@ const ChannelList = () => {
         {channels.map(channel => {
           return <ChannelItem
             {...channel}
+            activeSidebarLabel={activeSidebarLabel}
+            onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
           />
         })}
         <AddChannel label="Add apps" />
