@@ -5,19 +5,19 @@ import IntroMessage from "./introMessage"
 import TextEditor from "./textEditor"
 const ChannelView = () => {
 
-  const { activeSidebar } = useStore();
+  const { activeSidebarLabel, activeSidebarIcon } = useStore();
 
   return <>
 
     <div class="channelView">
       <div class="nameSection">
-        <img class="channel-icon big-icon" src="https://avatars.githubusercontent.com/u/10746740?v=4" alt="profile-icon" />
-        <span>Sifatul Islam </span>
+        <img class="channel-icon big-icon" src={activeSidebarIcon} alt="profile-icon" />
+        <span>{activeSidebarLabel} </span>
       </div>
 
       <div class="wrapper">
-        {activeSidebar === peopleArr[0].label && <IntroMessage />}
-        {activeSidebar !== peopleArr[0].label && <> {activeSidebar}</>}
+        {activeSidebarLabel === peopleArr[0].label && <IntroMessage />}
+        {activeSidebarLabel !== peopleArr[0].label && <> {activeSidebarLabel}</>}
 
       </div>
       <TextEditor />
