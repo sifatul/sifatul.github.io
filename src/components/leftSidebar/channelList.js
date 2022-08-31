@@ -1,6 +1,7 @@
 import AddChannel from "./addChannel"
 import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
+import { useState } from "react"
 const ChannelList = () => {
   const channels = [
     {
@@ -13,21 +14,25 @@ const ChannelList = () => {
       channelName: "Experiences",
     }
   ]
-
+  const [open, setOpen] = useState(true)
   return <>
     <div class="channelListSection channelList">
 
       <ChannelLabel
-
+        toggleOpen={() => setOpen(!open)}
         label="Channels"
+        open={open}
       />
-      {channels.map(channel => {
-        return <ChannelItem
-          key={channel.channelName}
-          {...channel}
-        />
-      })}
-      <AddChannel label="Add channels" />
+      {open && <>
+        {channels.map(channel => {
+          return <ChannelItem
+            key={channel.channelName}
+            {...channel}
+          />
+        })}
+        <AddChannel label="Add channels" />
+      </>}
+
 
     </div>
 
