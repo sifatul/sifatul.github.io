@@ -5,16 +5,20 @@ import IntroMessage from "./introMessage"
 import TextEditor from "./textEditor"
 const ChannelView = () => {
 
-  const { activeSidebarLabel, activeSidebarIcon } = useStore();
+  const { activeSidebarItem } = useStore();
+  const { activeSidebarLabel, activeSidebarIcon } = activeSidebarItem;
 
   return <>
 
     <div className={Style.channelView}>
       <div className={Style.nameSection}>
         <img
+          onClick={e => { }}
           style={{ paddingRight: 10 }}
-          className={`${Style.channelIcon} ${Style.navigationIcon}`}
-          src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-sidebar-applications-windows-those-icons-lineal-those-icons.png" />
+          className={`${Style.channelIcon} ${Style.navigationIcon} `}
+          src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-sidebar-applications-windows-those-icons-lineal-those-icons.png"
+          alt="navigation-icon"
+        />
         <img
           className={`${Style.channelIcon} ${Style.bigIcon}`}
           src={activeSidebarIcon} alt={activeSidebarLabel} />

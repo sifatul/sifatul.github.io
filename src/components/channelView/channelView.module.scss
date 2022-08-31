@@ -9,7 +9,7 @@ $secondary-color: #f8f8f8;
 $tertiary-color: #f8f8f8;
 
 $layout-breakpoint-mobile: 650px;
-@media (max-width: $layout-breakpoint-mobile) {
+@media screen and (max-width: $layout-breakpoint-mobile) {
   .channelView {
     width: 100%;
     img {
@@ -37,6 +37,7 @@ $layout-breakpoint-mobile: 650px;
   // border: 1px solid red;
   position: relative;
   background: $secondary-color;
+
   .col:nth-child(2) {
     padding: 0px 0px 0px 5px;
   }
@@ -75,6 +76,13 @@ $layout-breakpoint-mobile: 650px;
     }
     span {
       padding-left: 10px;
+    }
+    .navigationIcon {
+      display: none;
+
+      @media screen and (max-width: $layout-breakpoint-mobile) {
+        display: block;
+      }
     }
   }
   .singleMessage {
