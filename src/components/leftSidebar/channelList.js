@@ -2,6 +2,7 @@ import AddChannel from "./addChannel"
 import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
 import { useState } from "react"
+import Style from "./leftSidebar.module.scss"
 const ChannelList = () => {
   const channels = [
     {
@@ -16,7 +17,7 @@ const ChannelList = () => {
   ]
   const [open, setOpen] = useState(true)
   return <>
-    <div class="channelListSection channelList">
+    <div className={`${Style.channelListSection} ${Style.channelList}`}>
 
       <ChannelLabel
         toggleOpen={() => setOpen(!open)}

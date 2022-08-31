@@ -1,4 +1,6 @@
-import { useStore } from '../../store'
+import { useStore } from '../../store';
+import Style from './leftSidebar.module.scss';
+
 const ChannelItem = (props) => {
   const { label, imgSrc } = props
 
@@ -7,9 +9,14 @@ const ChannelItem = (props) => {
 
 
   return <>
-    <div class={`channel-item hasLink ${activeSidebar === label && 'active'}`} onClick={e => setActiveSidebar(label)}>
-      <img class="channel-icon add-icon" src={imgSrc} alt={label} />
-      <span class="channel name"> {label}</span>
+    <div
+
+      className={`${Style.channelItem} ${Style.hasLink} ${activeSidebar === label && Style.active}`}
+      onClick={e => setActiveSidebar(label)}>
+      <img
+        className={`${Style.channelIcon} ${Style.addIcon}`}
+        src={imgSrc} alt={label} />
+      <span > {label}</span>
     </div>
   </>
 }

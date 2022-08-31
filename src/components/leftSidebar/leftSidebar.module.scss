@@ -1,21 +1,17 @@
 $border-color-secondary: #522653;
-$font-size: 13px;
-$layout-breakpoint-mobile: 350px;
-$layout-breakpoint-tablet: 650px;
+$layout-breakpoint-mobile: 450px;
+$layout-breakpoint-tablet: 667px;
 
 $primary-color: #4b154c;
 $primary-color-hover: #3f0e40;
 
-$width-channelList: 300px;
-$width-workspace: 40px;
-
 @mixin channelListCommon() {
   padding: 10px 0px;
-  .channel-item {
+  .channelItem {
     padding: 5px 10px;
     display: flex;
     align-items: center;
-    .channel-icon {
+    .channelIcon {
       margin-right: 10px;
     }
     &.active {
@@ -24,7 +20,7 @@ $width-workspace: 40px;
     &:hover:not(.active):not(.labelOnly) {
       background: $primary-color-hover;
     }
-    & .channel-icon.add-icon {
+    & .channelIcon.addIcon {
       background: $border-color-secondary;
       border-radius: 2px;
     }
@@ -47,23 +43,23 @@ $width-workspace: 40px;
 .channelListSection.channelList,
 .channelListSection.peopleList {
   @include channelListCommon();
-  .channel-icon {
+  .channelIcon {
     height: 15px;
   }
-  .labelOnly .channel-icon {
+  .labelOnly .channelIcon {
     height: 10px;
   }
 }
 
 .channelListSection.appList {
   @include channelListCommon();
-  .channel-icon {
+  .channelIcon {
     height: 15px;
   }
   .big-icon {
     height: 20px;
   }
-  .labelOnly .channel-icon {
+  .labelOnly .channelIcon {
     height: 10px;
   }
 }
@@ -119,13 +115,8 @@ $width-workspace: 40px;
     color: white;
   }
 }
-@media (max-width: $layout-breakpoint-tablet) {
-  .workspace {
-    display: none;
-  }
-}
 
-@media (max-width: $layout-breakpoint-mobile) {
+@media (max-width: $layout-breakpoint-tablet) {
   .channelsPeopleWrapper {
     display: none;
   }

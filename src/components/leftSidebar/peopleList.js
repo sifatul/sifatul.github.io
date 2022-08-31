@@ -2,6 +2,7 @@ import AddChannel from "./addChannel"
 import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
 import { useState } from "react"
+import Style from "./leftSidebar.module.scss"
 export const peopleArr = [
   {
     label: "Sifatul Islam",
@@ -14,7 +15,8 @@ const ChannelList = () => {
   const [open, setOpen] = useState(true)
 
   return <>
-    <div class="channelListSection peopleList">
+    <div className={`${Style.channelListSection} ${Style.peopleList}`}>
+
 
       <ChannelLabel
         toggleOpen={() => setOpen(!open)}
