@@ -5,13 +5,13 @@ import { useState } from "react"
 const ChannelList = () => {
   const channels = [
     {
-      channelName: "Projects",
+      label: "Projects",
       imgSrc: "https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png",
 
     },
     {
       imgSrc: "https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png",
-      channelName: "Experiences",
+      label: "Experiences",
     }
   ]
   const [open, setOpen] = useState(true)

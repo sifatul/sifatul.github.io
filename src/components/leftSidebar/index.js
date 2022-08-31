@@ -15,8 +15,6 @@ const LeftSidebar = () => {
         <ChannelList />
         <PeopleList />
         <Applist />
-
-
       </div>
       <div class="channelListSection huddle">
         <div class="channel-item ">

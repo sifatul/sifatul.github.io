@@ -2,15 +2,15 @@ import AddChannel from "./addChannel"
 import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
 import { useState } from "react"
+export const peopleArr = [
+  {
+    label: "Sifatul Islam",
+    imgSrc: "https://avatars.githubusercontent.com/u/10746740?v=4",
 
+  }
+]
 const ChannelList = () => {
-  const channels = [
-    {
-      channelName: "Sifatul Islam",
-      imgSrc: "https://avatars.githubusercontent.com/u/10746740?v=4",
 
-    }
-  ]
   const [open, setOpen] = useState(true)
 
   return <>
@@ -23,7 +23,7 @@ const ChannelList = () => {
       />
 
       {open && <>
-        {channels.map(channel => {
+        {peopleArr.map(channel => {
           return <ChannelItem
             {...channel}
           />
