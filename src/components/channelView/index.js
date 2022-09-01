@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { useStore } from '../../store'
 import { peopleArr } from '../leftSidebar/peopleList'
 import Style from './channelView.module.scss'
@@ -5,15 +6,19 @@ import IntroMessage from "./introMessage"
 import TextEditor from "./textEditor"
 const ChannelView = () => {
 
-  const { activeSidebarItem } = useStore();
-  const { activeSidebarLabel, activeSidebarIcon } = activeSidebarItem;
+  const { activeSidebarItem, hideSidebar, showSidebar } = useStore();
+  const { activeSidebarLabel, activeSidebarIcon, open } = activeSidebarItem;
+
+  const toggleSidebar = useCallback(() => {
+    return open ? hideSidebar() : showSidebar()
+  }, [open])
 
   return <>
 
     <div className={Style.channelView}>
       <div className={Style.nameSection}>
         <img
-          onClick={e => { }}
+          onClick={e => toggleSidebar()}
           style={{ paddingRight: 10 }}
           className={`${Style.channelIcon} ${Style.navigationIcon} `}
           src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-sidebar-applications-windows-those-icons-lineal-those-icons.png"

@@ -120,4 +120,12 @@ $primary-color-hover: #3f0e40;
   .channelsPeopleWrapper {
     display: none;
   }
+  .channelsPeopleWrapper.active {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    left: 50px;
+    bottom: 0;
+    top: 0;
+  }
 }
