@@ -1,4 +1,5 @@
 $border-color-secondary: #522653;
+
 $layout-breakpoint-mobile: 450px;
 $layout-breakpoint-tablet: 667px;
 
@@ -8,18 +9,23 @@ $primary-color-hover: #3f0e40;
 @mixin channelListCommon() {
   padding: 10px 0px;
   .channelItem {
-    padding: 5px 10px;
-    display: flex;
     align-items: center;
-    .channelIcon {
-      margin-right: 10px;
+    display: flex;
+    padding: 5px 10px;
+    outline: none;
+    &:hover:not(.active):not(.labelOnly) {
+      background: $primary-color-hover;
+      @media (max-width: $layout-breakpoint-tablet) {
+        background: transparent;
+      }
     }
     &.active {
       background: #1264a3;
     }
-    &:hover:not(.active):not(.labelOnly) {
-      background: $primary-color-hover;
+    .channelIcon {
+      margin-right: 10px;
     }
+
     & .channelIcon.addIcon {
       background: $border-color-secondary;
       border-radius: 2px;
@@ -36,9 +42,8 @@ $primary-color-hover: #3f0e40;
 }
 
 .channelListSection {
-  width: 300px;
-
   color: #c7b7c6;
+  width: 300px;
 }
 .channelListSection.channelList,
 .channelListSection.peopleList {
@@ -53,48 +58,51 @@ $primary-color-hover: #3f0e40;
 
 .channelListSection.appList {
   @include channelListCommon();
-  .channelIcon {
-    height: 15px;
-  }
   .big-icon {
     height: 20px;
   }
+  .channelIcon {
+    height: 15px;
+  }
+
   .labelOnly .channelIcon {
     height: 10px;
   }
 }
 .channelListSection.huddle {
+  @include channelListCommon();
+
   border-top: 1px solid $border-color-secondary;
   background: $primary-color;
-  @include channelListCommon();
-  position: absolute;
   bottom: 0;
+  position: absolute;
 }
 .channelsPeopleWrapper {
   border-left: 1px solid #522653;
-  position: relative;
+  background: $primary-color;
 
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  background: $primary-color;
   overflow: hidden;
+  position: relative;
+
   .nameSection {
-    top: 0;
-    left: 0;
-    right: 0;
     @include title();
     border-bottom: 1px solid #522653;
     color: #ffffff;
+    left: 0;
     padding: 10px 10px 10px 15px;
+    right: 0;
+    top: 0;
   }
   .wrapper {
-    position: relative;
-    top: 0px;
     bottom: 0px;
     height: calc(100vh - 80px);
     overflow-y: auto;
     overflow-x: hidden;
+    position: relative;
+    top: 0px;
   }
 }
 
@@ -103,29 +111,39 @@ $primary-color-hover: #3f0e40;
   padding: 10px;
 
   .myWorkspace {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-
-    // padding: 5px;
     border-radius: 8px;
     border: 2px solid white;
     color: white;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
   }
 }
 
 @media (max-width: $layout-breakpoint-tablet) {
+  .channelItem {
+    font-size: 14px;
+    &:hover,
+    &:focus,
+    &:visited {
+      background: transparent;
+      outline: none;
+    }
+  }
+  .channelListSection {
+    width: 200px;
+  }
   .channelsPeopleWrapper {
     display: none;
   }
   .channelsPeopleWrapper.active {
     display: block;
-    position: absolute;
-    z-index: 4;
     left: 50px;
     bottom: 0;
     top: 0;
+    position: absolute;
+    z-index: 4;
   }
 }

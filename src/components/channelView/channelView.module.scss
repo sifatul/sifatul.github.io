@@ -8,8 +8,8 @@ $width-channelList: 300px;
 $secondary-color: #f8f8f8;
 $tertiary-color: #f8f8f8;
 
-$layout-breakpoint-mobile: 650px;
-@media screen and (max-width: $layout-breakpoint-mobile) {
+$layout-breakpoint-tablet: 650px;
+@media screen and (max-width: $layout-breakpoint-tablet) {
   .channelView {
     width: calc(100% - 40px);
     img {
@@ -22,6 +22,10 @@ $layout-breakpoint-mobile: 650px;
 @mixin paragraph() {
   line-height: 18px;
   font-size: 13px;
+  @media screen and (max-width: $layout-breakpoint-tablet) {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 @mixin title() {
@@ -33,7 +37,7 @@ $layout-breakpoint-mobile: 650px;
 }
 
 .channelView {
-  @media screen and (max-width: $layout-breakpoint-mobile) {
+  @media screen and (max-width: $layout-breakpoint-tablet) {
     width: calc(100% - 40px);
   }
   width: 100%;
@@ -83,7 +87,7 @@ $layout-breakpoint-mobile: 650px;
     .navigationIcon {
       display: none;
 
-      @media screen and (max-width: $layout-breakpoint-mobile) {
+      @media screen and (max-width: $layout-breakpoint-tablet) {
         display: block;
       }
     }
