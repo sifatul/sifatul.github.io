@@ -18,23 +18,20 @@ const IntroMessage = () => {
 
 
     <TextMessage
-      message="Hello there.\nMy name is Md Sifatul Islam. I am fullstack developer with around 4 years of experience working with react, nodejs and aws services growing startups or for venture capital company.
-      \n Currently I am working as technical lead playing the role as the main developer to oversee all development projects. For TeraArk & TeraComix I built CI/CD pipelines which increased daily deploy count by 2-fold and have a proven track record of working with a project from planning to deployment.
+      message="Hello there.\nMy name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix. 
+      \nFor TeraArk & TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment.
 "
     />
 
     <TextMessage
       message="I work with NodeJs (Express/NestJs) in backend, ReactJs (NextJs) using JavaScript / TypeScript, Java for competitive programming, Docker, MongoDB or MySQL for database. I am very comfortable in working with AWS cloud services like RDS, S3, ECS, EC2 etc and hold AWS solution associate certification too."
     />
+    <TimeCapsule time="Today" />
 
     <TextMessage
       message="This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through to know more about me."
     />
-    <TimeCapsule time="Today" />
 
-
-
-    <LinkMessage {...blogLink} />
 
   </>
 

@@ -1,0 +1,38 @@
+{
+  "blog":{
+    "link": "https://dev.to/sifatul/create-package-in-github-registry-51p9",
+    "previewImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--VC0V3bMa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a3t917ikhl3szi5lff1a.png",
+    "platformName": "DEV Community",
+    "title": "Simple guide to create package in Github registry",
+    "description": "Creating a package in the GitHub registry is very simple. Firstly package.json needs to be updated;... (32 kB)",
+    "message": "you can checkout my blog too. Here is a good article to start with.",
+    "favicon": "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+  },
+  "teracomix":{
+    "link": "https://teracomix.com",
+    "previewImage": "http://d13sbg4omn24zh.cloudfront.net/static/images/meta-resources/img_meta.jpg",
+    "platformName": "Teracomix - Official Website.",
+    "title": "Teracomix",
+    "description": "TeraComix is a K-6 online edutainment webtoon platform providing safe, fun, and curated age-appropriate education-based comic web stories. TeraComix encourages reading, inspires creative thinking, and promotes a creator’s mindset.",
+    "message": "",
+    "favicon": "https://teracomix.com/favicon.ico"
+  },
+  "pointAvenue":{
+    "link": "https://www.pointavenue.com/programs/online-learning-courses",
+    "previewImage": "https://paathena-public-prod.s3.ap-southeast-1.amazonaws.com/pasite/images/courses/English_Learning_1-4_1.jpg",
+    "platformName": "Point Avenue",
+    "title": "Online Learning Courses - Point Avenue",
+    "description": "Founded by West Point graduates, Point Avenue aspires to help students achieve academic and lifelong success. Make sure you make that step with the best version of yourself.",
+    "message": "",
+    "favicon": "https://paathena-public-prod.s3-ap-southeast-1.amazonaws.com/pasite/images/common/favicon.ico"
+  },
+  "sample":{
+    "link": "",
+    "previewImage": "",
+    "platformName": "",
+    "title": "",
+    "description": "",
+    "message": "",
+    "favicon": ""
+  }
+}

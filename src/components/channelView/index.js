@@ -6,6 +6,7 @@ import Style from './channelView.module.scss'
 import Header from "./header"
 import IntroMessage from "./introMessage"
 import Projects from './projects'
+import Experiences from './experiences'
 import TextEditor from "./textEditor/textEditor"
 const ChannelView = () => {
 
@@ -18,6 +19,8 @@ const ChannelView = () => {
         return <IntroMessage />;
       case channels[0].label:
         return <Projects />
+      case channels[1].label:
+        return <Experiences />
       default:
         return <>{activeSidebarLabel}</>;
     }
