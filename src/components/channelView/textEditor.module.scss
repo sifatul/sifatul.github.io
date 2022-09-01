@@ -13,7 +13,7 @@ $tertiary-color: #f8f8f8;
   .container {
     // padding: 10px;
     border: $border;
-    height: 100px;
+    min-height: 100px;
     border-radius: 10px;
     background: #ffffff;
     display: flex;
@@ -49,8 +49,10 @@ $tertiary-color: #f8f8f8;
   }
   .textArea {
     padding: 10px;
-
-    height: 30px;
+    height: auto;
+    max-height: 200px;
+    overflow: auto;
+    min-height: 30px;
     background: transparent;
     // border: none;
     // border: 1px solid red;

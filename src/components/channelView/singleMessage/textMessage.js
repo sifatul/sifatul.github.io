@@ -3,6 +3,7 @@ import Style from '../channelView.module.scss'
 
 const TextMessage = (props) => {
   const { message } = props
+  const messageArr = message.split("\\n");
   return <>
     <div className={Style.singleMessage}>
       <div
@@ -16,7 +17,9 @@ const TextMessage = (props) => {
           className={`${Style.row} ${Style.message}`}
 
         >
-          <> {message} </>
+          <> {messageArr.map((text, idx) => {
+            return <div className="block" map={idx}>{text}</div>
+          })} </>
 
         </div>
       </div>
