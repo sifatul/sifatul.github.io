@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react';
 
 function useOutsideAlerter(ref, callback) {
   useEffect(() => {
@@ -19,4 +19,4 @@ function useOutsideAlerter(ref, callback) {
     };
   }, [ref]);
 }
-export { useOutsideAlerter }
+export { useOutsideAlerter };
