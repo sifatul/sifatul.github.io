@@ -24,7 +24,7 @@ const LinkMessage = (props) => {
             <div className={Style.metaContainer}>
 
               <div className={Style.metaLogoSiteName}>
-                <img src={favicon} alt="logo-icon" />
+                {favicon && <img src={favicon} alt="logo-icon" />}
                 <span className={Style.metaName}>{platformName}</span>
               </div>
               <div className={`hasLink ${Style.linkTitle}`} onClick={clickRouteHandler}>
