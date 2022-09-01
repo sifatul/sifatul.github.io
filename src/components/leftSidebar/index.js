@@ -1,10 +1,11 @@
-import Style from './leftSidebar.module.scss'
-import ChannelList from "./channelList"
-import PeopleList from "./peopleList"
+import { useRef } from 'react'
+import { useOutsideAlerter } from "../../hooks/outsideClickHandler"
+import { useStore } from '../../store'
 import Applist from "./appList"
 import ChannelItem from "./channelItem"
-import { useStore } from '../../store'
-import { useEffect, useRef } from 'react'
+import ChannelList from "./channelList"
+import Style from './leftSidebar.module.scss'
+import PeopleList from "./peopleList"
 
 
 const LeftSidebar = () => {
@@ -12,37 +13,18 @@ const LeftSidebar = () => {
   const { activeSidebarItem, hideSidebar } = useStore();
   const { open } = activeSidebarItem
 
-  function useOutsideAlerter(ref) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          // alert("You clicked outside of me!");
-          hideSidebar()
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
-  }
 
   const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef);
+  useOutsideAlerter(wrapperRef, hideSidebar);
 
-  return <>
+  return <div className="flex">
     <div className={Style.workspace} >
       <div className={Style.myWorkspace}>SI</div>
 
     </div>
 
     {<div className={`${Style.channelsPeopleWrapper} ${open && Style.active}`} ref={wrapperRef}>
-      <div className={Style.nameSection}> Sifatul </div>
+      <div className={`nameSection ${Style.nameSection}`}> Sifatul </div>
       <div className={Style.wrapper}>
         <ChannelList />
         <PeopleList />
@@ -58,6 +40,6 @@ const LeftSidebar = () => {
       </div>
     </div>}
 
-  </>
+  </div>
 }
 export default LeftSidebar

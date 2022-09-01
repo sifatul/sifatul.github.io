@@ -1,10 +1,20 @@
 
-import Style from '../channelView.module.scss'
+import { useStore } from "../../../store";
+import Style from '../channelView.module.scss';
 
 const SenderInfo = () => {
+
+
+  const { profileVisible, hideUserProfile, showUserProfile } = useStore();
+
+
+
+
+
+
   return <>
     <div className={Style.row}>
-      <span className={Style.username}> Sifatul </span>
+      <span className={`hasLink ${Style.username}`} onClick={e => showUserProfile()}> Sifatul </span>
       <span className={Style.userMessageTime}>8:06 AM</span>
     </div>
   </>

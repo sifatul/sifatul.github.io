@@ -4,17 +4,18 @@ import ChannelItem from "./channelItem"
 import { useState } from "react"
 import Style from "./leftSidebar.module.scss"
 import { useStore } from '../../store';
+import { IMAGE_COLOR } from "../../constants/index"
 
 const ChannelList = () => {
   const channels = [
     {
       label: "Projects",
-      imgSrc: "https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png",
+      imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
       imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
 
     },
     {
-      imgSrc: "https://img.icons8.com/sf-regular/48/c7b7c6/hashtag.png",
+      imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
       imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
       label: "Experiences",
     }
@@ -33,7 +34,7 @@ const ChannelList = () => {
       {open && <>
         {channels.map(channel => {
           return <ChannelItem
-            key={channel.channelName}
+            key={channel.label}
             {...channel}
             activeSidebarLabel={activeSidebarLabel}
             onClick={e => setActiveSidebar(channel.label, channel.imgSrcDark)}

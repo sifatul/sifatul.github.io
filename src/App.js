@@ -1,14 +1,17 @@
 import './index.scss';
 import LeftSidebar from "./components/leftSidebar"
 import ChannelView from "./components/channelView"
+import UserProfile from "./components/userProfile"
+
 function App() {
-  return (<body>
-    <div class="container">
+  return (
+    <div className="container">
       <LeftSidebar />
       <ChannelView />
+      <UserProfile />
 
     </div>
-  </body>
+
 
   );
 }

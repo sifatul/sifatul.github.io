@@ -1,16 +1,17 @@
-import { peopleArr } from './components/leftSidebar/peopleList'
 import create from 'zustand'
+import { MY_INFO } from "./constants/index"
 
 const initalState = {
   activeSidebarItem: {
-    activeSidebarLabel: peopleArr[0].label,
-    activeSidebarIcon: peopleArr[0].imgSrc,
+    activeSidebarLabel: MY_INFO.name,
+    activeSidebarIcon: MY_INFO.avatar,
     open: null
-  }
+  },
+  profileVisible: false
 }
 
 const useStore = create(set => ({
-  activeSidebarItem: initalState.activeSidebarItem,
+  ...initalState,
   setActiveSidebar: (label, icon) => set(state => {
     const activeSidebarItem = {
       activeSidebarLabel: label,
@@ -33,6 +34,15 @@ const useStore = create(set => ({
       open: true
     }
     return { ...state, activeSidebarItem }
+  }),
+
+  hideUserProfile: () => set(state => {
+
+    return { ...state, profileVisible: false }
+  }),
+  showUserProfile: () => set(state => {
+
+    return { ...state, profileVisible: true }
   }),
 }))
 

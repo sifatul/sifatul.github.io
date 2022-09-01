@@ -13,7 +13,7 @@ const LinkMessage = () => {
           className={`${Style.row} ${Style.message}`}
         >
           you can checkout my blog too. Here is a good article to start with.
-                <div className={Style.link}>
+                <div className={`.hasLink ${Style.link}`}>
             <a href="https://dev.to/sifatul/create-package-in-github-registry-51p9">https://dev.to/sifatul/create-package-in-github-registry-51p9</a>
           </div>
           <div className={Style.colWrapper}>
@@ -24,7 +24,7 @@ const LinkMessage = () => {
                 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" alt="logo-icon" />
                 <span className={Style.metaName}>DEV Community</span>
               </div>
-              <div className={Style.linkTitle}>
+              <div className={`hasLink ${Style.linkTitle}`}>
                 Simple guide to create package in Github registry
                     </div>
               <div className={Style.description}>

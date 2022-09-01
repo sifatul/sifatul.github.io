@@ -5,24 +5,28 @@ $font-size: 13px;
 
 $width-channelList: 300px;
 
-$secondary-color: #f8f8f8;
+$secondary-color: white;
 $tertiary-color: #f8f8f8;
 
-$layout-breakpoint-tablet: 650px;
-@media screen and (max-width: $layout-breakpoint-tablet) {
-  .channelView {
-    width: calc(100% - 40px);
-    img {
-      height: auto;
-      max-width: 100%;
-    }
-  }
-}
+$Small: 576px;
+$Medium: 768px;
+$Large: 992px;
+$ExtraLarge: 1200px;
+
+// @media screen and (max-width: $Medium) {
+//   .channelView {
+//     width: calc(100% px);
+//     img {
+//       height: auto;
+//       max-width: 100%;
+//     }
+//   }
+// }
 
 @mixin paragraph() {
   line-height: 18px;
   font-size: 13px;
-  @media screen and (max-width: $layout-breakpoint-tablet) {
+  @media screen and (max-width: $Medium) {
     font-size: 13px;
     line-height: 20px;
   }
@@ -37,9 +41,9 @@ $layout-breakpoint-tablet: 650px;
 }
 
 .channelView {
-  @media screen and (max-width: $layout-breakpoint-tablet) {
-    width: calc(100% - 40px);
-  }
+  // @media screen and (max-width: $Medium) {
+  //   width: calc(100% - 40px);
+  // }
   width: 100%;
   // border: 1px solid red;
   position: relative;
@@ -72,22 +76,12 @@ $layout-breakpoint-tablet: 650px;
   }
 
   .nameSection {
-    top: 0;
-    @include title();
     color: #1d1c1d;
     border-bottom: 1px solid #dfdfdf;
-    display: flex;
-    img {
-      height: 20px;
-      border-radius: 5px;
-    }
-    span {
-      padding-left: 10px;
-    }
     .navigationIcon {
       display: none;
 
-      @media screen and (max-width: $layout-breakpoint-tablet) {
+      @media screen and (max-width: $Medium) {
         display: block;
       }
     }
@@ -101,6 +95,9 @@ $layout-breakpoint-tablet: 650px;
     .username {
       color: #1d1c1d;
       font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .avatarContainer {
       width: 40px;
@@ -115,6 +112,7 @@ $layout-breakpoint-tablet: 650px;
       color: #616061;
     }
     .message {
+      @include paragraph();
       padding-top: 5px;
       color: #4a494a;
       .colWrapper {
@@ -142,7 +140,13 @@ $layout-breakpoint-tablet: 650px;
           max-width: 550px;
           padding-top: 10px;
           img {
-            height: 200px;
+            // height: 200px;
+            width: 100%;
+
+            // @media screen and (max-width: $ExtraLarge) {
+            //   height: auto;
+            //   width: 100%;
+            // }
           }
         }
 
@@ -162,6 +166,10 @@ $layout-breakpoint-tablet: 650px;
           font-weight: bold;
           color: #1264a3;
           padding: 5px 0;
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: #1264a3;
+          }
         }
         .description {
           @include paragraph();

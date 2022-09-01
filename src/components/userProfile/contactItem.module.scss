@@ -1,0 +1,31 @@
+$tertiary-color: #f8f8f8;
+$secondary-color: white;
+.wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+.imageContainer {
+  background: $tertiary-color;
+  padding: 5px 8px;
+
+  border-radius: 10%;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  justify-content: space-between;
+  span:first-child {
+    font-size: 13px;
+    font-weight: 500;
+    color: grey;
+  }
+  span:nth-child(2) {
+    font-size: 13px;
+    color: #1264a3;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: #1264a3;
+    }
+  }
+}

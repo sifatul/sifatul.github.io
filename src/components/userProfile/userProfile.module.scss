@@ -1,0 +1,101 @@
+$border-color: #dddddd;
+$border: 1px solid $border-color;
+
+$tertiary-color: #f8f8f8;
+$secondary-color: white;
+
+$Small: 576px;
+$Medium: 768px;
+$Large: 992px;
+$ExtraLarge: 1200px;
+
+.imageContainer {
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.nameSection {
+  color: #1d1c1d;
+  border-bottom: $border;
+}
+.profileView {
+  border-left: $border;
+  position: relative;
+  right: 0;
+  height: 100%;
+  background-color: $secondary-color;
+  min-width: 500px;
+  @media screen and (max-width: $Large) {
+    position: absolute;
+    z-index: 4;
+    min-width: 70%;
+  }
+}
+
+.avatarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.avatar {
+  width: 250px;
+  padding: 20px;
+  border-radius: 10%;
+}
+.currentTime {
+  display: flex;
+  // justify-content: center;
+  color: grey;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 15px;
+
+  span {
+    padding-left: 10px;
+    font-weight: nor;
+  }
+}
+.name {
+  font-weight: bold;
+  font-size: 25px;
+  display: block;
+}
+.onlineStatus {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 15px;
+  padding-bottom: 10px;
+
+  img {
+    height: 10px;
+  }
+  span {
+    padding-left: 10px;
+    font-weight: nor;
+  }
+}
+
+.title {
+  // font-weight: bold;
+  font-size: 15px;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.wrapper {
+  padding-left: 10px;
+}
+.contactWrapper {
+  border-top: $border;
+  padding-top: 15px;
+  .header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+  }
+}

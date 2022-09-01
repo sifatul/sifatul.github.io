@@ -39,6 +39,8 @@ const ChannelList = () => {
       {open && <>
         {channels.map(channel => {
           return <ChannelItem
+            key={channel.label}
+
             {...channel}
             activeSidebarLabel={activeSidebarLabel}
             onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
