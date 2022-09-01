@@ -6,20 +6,21 @@ import Style from "./leftSidebar.module.scss"
 import { useStore } from '../../store';
 import { IMAGE_COLOR } from "../../constants/index"
 
-const ChannelList = () => {
-  const channels = [
-    {
-      label: "Projects",
-      imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
-      imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
+export const channels = [
+  {
+    label: "Projects",
+    imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
+    imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
 
-    },
-    {
-      imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
-      imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
-      label: "Experiences",
-    }
-  ]
+  },
+  {
+    imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
+    imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
+    label: "Experiences",
+  }
+]
+const ChannelList = () => {
+
   const [open, setOpen] = useState(true)
   const { setActiveSidebar, activeSidebarLabel } = useStore();
 

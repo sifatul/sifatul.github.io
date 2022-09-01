@@ -14,6 +14,7 @@ $ExtraLarge: 1200px;
 @mixin channelListCommon() {
   padding: 10px 0px;
   .channelItem {
+    font-size: 13px;
     align-items: center;
     display: flex;
     padding: 5px 10px;
@@ -127,7 +128,6 @@ $ExtraLarge: 1200px;
 
 @media (max-width: $Medium) {
   .channelItem {
-    font-size: 14px;
     &:hover,
     &:focus,
     &:visited {

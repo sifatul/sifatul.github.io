@@ -18,7 +18,7 @@ const TextMessage = (props) => {
 
         >
           <> {messageArr.map((text, idx) => {
-            return <div className="block" map={idx}>{text}</div>
+            return <div className="block" key={idx}>{text}</div>
           })} </>
 
         </div>

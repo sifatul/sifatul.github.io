@@ -1,13 +1,28 @@
+import { useMemo } from 'react'
 import { useStore } from '../../store'
+import { channels } from "../leftSidebar/channelList"
 import { peopleArr } from '../leftSidebar/peopleList'
 import Style from './channelView.module.scss'
 import Header from "./header"
 import IntroMessage from "./introMessage"
-import TextEditor from "./textEditor"
+import Projects from './projects'
+import TextEditor from "./textEditor/textEditor"
 const ChannelView = () => {
 
   const { activeSidebarItem } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
+
+  const activePage = useMemo(() => {
+    switch (activeSidebarLabel) {
+      case peopleArr[0].label:
+        return <IntroMessage />;
+      case channels[0].label:
+        return <Projects />
+      default:
+        return <>{activeSidebarLabel}</>;
+    }
+
+  }, [activeSidebarLabel])
 
 
   return <>
@@ -16,8 +31,7 @@ const ChannelView = () => {
       <Header />
 
       <div className={Style.wrapper}>
-        {activeSidebarLabel === peopleArr[0].label && <IntroMessage />}
-        {activeSidebarLabel !== peopleArr[0].label && <> {activeSidebarLabel}</>}
+        {activePage}
 
       </div>
       <TextEditor />

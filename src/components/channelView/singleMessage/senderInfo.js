@@ -3,14 +3,7 @@ import { useStore } from "../../../store";
 import Style from '../channelView.module.scss';
 
 const SenderInfo = () => {
-
-
-  const { profileVisible, hideUserProfile, showUserProfile } = useStore();
-
-
-
-
-
+  const { showUserProfile } = useStore();
 
   return <>
     <div className={Style.row}>

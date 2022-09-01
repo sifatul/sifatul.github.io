@@ -5,18 +5,9 @@ import { IMAGE_COLOR } from "../../constants/index"
 import { useStore } from "../../store"
 import { useRef } from 'react';
 import { useOutsideAlerter } from "../../hooks/outsideClickHandler";
+import { formatAMPM } from "../../helpers/time.helper"
 
 
-function formatAMPM(date) {
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  var strTime = hours + ':' + minutes + ' ' + ampm;
-  return strTime;
-}
 const contactInfo = [
   { label: "Email Address", value: MY_INFO.email, icon: `https://img.icons8.com/ios/18/000000/mail.png` },
   { label: "Phone", value: MY_INFO.phone, icon: "https://img.icons8.com/ios/18/000000/phone.png" },

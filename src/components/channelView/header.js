@@ -10,7 +10,7 @@ const Header = () => {
 
   const toggleSidebar = useCallback(() => {
     return open ? hideSidebar() : showSidebar()
-  }, [open])
+  }, [open, hideSidebar, showSidebar])
 
 
   return <>

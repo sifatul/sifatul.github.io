@@ -113,7 +113,7 @@ $ExtraLarge: 1200px;
     }
     .message {
       @include paragraph();
-      padding-top: 5px;
+      // padding-top: 5px;
       color: #4a494a;
       .colWrapper {
         display: flex;
