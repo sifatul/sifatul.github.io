@@ -27,13 +27,14 @@ $ExtraLarge: 1200px;
     }
     &.active {
       background: #1264a3;
+      color: #ffffff;
     }
     .channelIcon {
       margin-right: 10px;
     }
 
     & .channelIcon.addIcon {
-      background: $border-color-secondary;
+      // background: $border-color-secondary;
       border-radius: 2px;
     }
   }

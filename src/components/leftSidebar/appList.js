@@ -24,7 +24,10 @@ const channels = [
 const ChannelList = () => {
 
   const [open, setOpen] = useState(true)
-  const { setActiveSidebar, activeSidebarLabel } = useStore();
+  const { setActiveSidebar, activeSidebarItem } = useStore();
+  const { activeSidebarLabel } = activeSidebarItem
+
+
 
   return <>
     <div className={`${Style.channelListSection} ${Style.appList}`}>
@@ -42,7 +45,7 @@ const ChannelList = () => {
             key={channel.label}
 
             {...channel}
-            activeSidebarLabel={activeSidebarLabel}
+            active={activeSidebarLabel === channel.label}
             onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
           />
         })}

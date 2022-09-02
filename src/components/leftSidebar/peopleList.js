@@ -36,7 +36,7 @@ const ChannelList = () => {
             key={channel.label}
 
             {...channel}
-            activeSidebarLabel={activeSidebarLabel}
+            active={activeSidebarLabel === channel.label}
             onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
           />
         })}

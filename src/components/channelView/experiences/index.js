@@ -21,11 +21,11 @@ const Projects = () => {
       const { messages } = company
 
       return messages.map(item => {
-        return <>
+        return <div key={item.time}>
 
           {item.time && <TimeCapsule time={item.time} />}
           {item.msg && <TextMessage message={item.msg} />}
-        </>
+        </div>
       })
 
 

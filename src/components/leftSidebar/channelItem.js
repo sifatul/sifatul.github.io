@@ -1,12 +1,13 @@
+import { memo, useMemo } from 'react';
 import Style from './leftSidebar.module.scss';
 
 const ChannelItem = (props) => {
-  const { label, imgSrc, activeSidebarLabel, onClick } = props
+  const { label, imgSrc, active, onClick } = props
 
 
   return <>
     <div
-      className={`hasLink ${Style.channelItem}   ${activeSidebarLabel === label && Style.active}`}
+      className={`hasLink ${Style.channelItem}   ${active && Style.active}`}
       onClick={onClick}>
       <img
         className={`${Style.channelIcon} ${Style.addIcon}`}
@@ -15,4 +16,4 @@ const ChannelItem = (props) => {
     </div>
   </>
 }
-export default ChannelItem
+export default memo(ChannelItem)

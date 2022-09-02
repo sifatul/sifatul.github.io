@@ -11,18 +11,22 @@ export const channels = [
     label: "Projects",
     imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
     imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
+    imgSrcWhite: "https://img.icons8.com/sf-regular/48/ffffff/hashtag.png",
 
   },
   {
     imgSrc: `https://img.icons8.com/sf-regular/48/${IMAGE_COLOR}/hashtag.png`,
     imgSrcDark: "https://img.icons8.com/sf-regular/48/000000/hashtag.png",
+    imgSrcWhite: "https://img.icons8.com/sf-regular/48/ffffff/hashtag.png",
     label: "Experiences",
   }
 ]
 const ChannelList = () => {
 
   const [open, setOpen] = useState(true)
-  const { setActiveSidebar, activeSidebarLabel } = useStore();
+  const { setActiveSidebar, activeSidebarItem } = useStore();
+  const { activeSidebarLabel } = activeSidebarItem
+
 
   return <>
     <div className={`${Style.channelListSection} ${Style.channelList}`}>
@@ -34,11 +38,15 @@ const ChannelList = () => {
       />
       {open && <>
         {channels.map(channel => {
+          const label = channel.label
+          const active = activeSidebarLabel === label
+          const imgSrc = active ? channel.imgSrcWhite : channel.imgSrc
           return <ChannelItem
-            key={channel.label}
-            {...channel}
-            activeSidebarLabel={activeSidebarLabel}
-            onClick={e => setActiveSidebar(channel.label, channel.imgSrcDark)}
+            key={label}
+            label={label}
+            imgSrc={imgSrc}
+            active={active}
+            onClick={e => setActiveSidebar(label, channel.imgSrcDark)}
 
           />
         })}
