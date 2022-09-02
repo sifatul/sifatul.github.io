@@ -3,7 +3,7 @@ import Style from '../channelView.module.scss'
 
 const TextMessage = (props) => {
   const { message } = props
-  const messageArr = message.split("\\n");
+  const messageArr = message.split("\n");
   return <>
     <div className={Style.singleMessage}>
       <div

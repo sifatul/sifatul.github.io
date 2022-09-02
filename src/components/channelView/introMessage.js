@@ -29,7 +29,7 @@ const IntroMessage = () => {
     <TimeCapsule time="Today" />
 
     <TextMessage
-      message="This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through to know more about me."
+      message="This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through the platform to know more about me."
     />
 
 

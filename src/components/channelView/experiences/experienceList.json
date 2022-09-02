@@ -1,0 +1,55 @@
+[{
+  "name": "Durbar",
+  "messages": [{
+    "time": "October 2015",
+    "msg": "Joined Durbar "
+  },
+  {
+    "msg": "Responsible to develop large scale government projects and multiple  outsourced projects using in PHP(CodeIgniter), and MySQL. "
+  },
+  {
+    "time": "April 2016",
+    "msg": "left Durbar in preparation of thesis and final semester at BRAC University."
+  }]
+},
+
+{
+  "name": "MGH group",
+  "messages": [
+    {
+      "time": "September 2018",
+      "msg": "Joined MGH group"
+    },
+    {
+      "msg": "Join OBHAI team as frontend developer.\nResponsibilites include Frontend development in JAVA, new features  like digital payment, Firebase notifications etc. implementations and resolved bugs in google map. "
+    },
+
+    {
+      "time": "February 2019",
+      "msg": "left MGH to finish Masters in CBNU."
+    }
+
+
+
+  ]
+},
+{
+  "name": "MoneyBrain",
+  "messages": [{
+    "time": "January 2020",
+    "msg": "joined MoneyBrain."
+  }, {
+    "time": "December 2020",
+    "msg": "left MoneyBrain."
+  }]
+},
+{
+  "name": "TeraArk",
+  "messages": [{
+    "time": "January 2021",
+    "msg": "joined TeraArk as a Fullstack Developer"
+  },
+  {
+    "msg": "joined Teracomix team as tech lead."
+  }]
+}]
