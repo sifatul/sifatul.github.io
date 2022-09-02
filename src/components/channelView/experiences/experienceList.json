@@ -1,55 +1,52 @@
-[{
-  "name": "Durbar",
-  "messages": [{
-    "time": "October 2015",
-    "msg": "Joined Durbar "
+[
+
+
+  {
+    "name": "TeraArk",
+    "avatar": "https://www.npxteraark.com/favicon.ico",
+    "messages": [
+      {
+        "time": "January 2021",
+        "msg": "was added to #experiences by Sifatul."
+      }
+    ]
   },
   {
-    "msg": "Responsible to develop large scale government projects and multiple  outsourced projects using in PHP(CodeIgniter), and MySQL. "
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+       
+        "msg": "was added to PointAvenue and ArkEdison project by TeraArk."
+      },
+      {
+       
+        "msg": "R&D with video and audio streaming technology, researching existing services like zoom, chime, etc."
+      },
+      {
+       
+        "msg": "built a live class tool that is being used in three schools by 500+ students and teachers."
+      }
+    ]
   },
   {
-    "time": "April 2016",
-    "msg": "left Durbar in preparation of thesis and final semester at BRAC University."
-  }]
-},
-
-{
-  "name": "MGH group",
-  "messages": [
-    {
-      "time": "September 2018",
-      "msg": "Joined MGH group"
-    },
-    {
-      "msg": "Join OBHAI team as frontend developer.\nResponsibilites include Frontend development in JAVA, new features  like digital payment, Firebase notifications etc. implementations and resolved bugs in google map. "
-    },
-
-    {
-      "time": "February 2019",
-      "msg": "left MGH to finish Masters in CBNU."
-    }
-
-
-
-  ]
-},
-{
-  "name": "MoneyBrain",
-  "messages": [{
-    "time": "January 2020",
-    "msg": "joined MoneyBrain."
-  }, {
-    "time": "December 2020",
-    "msg": "left MoneyBrain."
-  }]
-},
-{
-  "name": "TeraArk",
-  "messages": [{
-    "time": "January 2021",
-    "msg": "joined TeraArk as a Fullstack Developer"
+    "name": "Teracomix",
+    "avatar": "https://teracomix.com/favicon.ico",
+    "messages": [
+      {
+        "time": "October 2021",
+        "msg": "was added to #experiences by TeraArk."
+      }
+    ]
   },
   {
-    "msg": "joined Teracomix team as tech lead."
-  }]
-}]
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+       
+        "msg": "was added to Teracomix team by TeraArk."
+      }
+    ]
+  }
+]

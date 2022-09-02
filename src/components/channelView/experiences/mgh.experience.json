@@ -1,0 +1,40 @@
+[
+  {
+    "name": "MGH group",
+    "avatar": "http://www.mghgroup.com/mgh/img/images/mgh.png",
+    "messages": [
+      {
+        "time": "September 2018",
+        "msg": "added to #experiences by Sifatul."
+      }
+    ]
+  },
+  {
+    "name": "OBHAI",
+    "avatar": "https://www.obhai.com/img/Obhai/favnew.png",
+    "messages": [{ "msg": "added to #experiences by MGH group." }]
+  },
+
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [ 
+      {
+        "msg": "developing new features with OBHAI team: digital payment, Firebase notifications etc.\nResolved bugs in google map. "
+      },
+      {
+        "time": "February 2019",
+        "msg": "quit job at MGH to finish Masters in Chungbuk National University, South Korea."
+      }
+    ]
+  },
+  {
+    "name": "MGH group",
+    "avatar": "https://www.obhai.com/img/Obhai/favnew.png",
+    "messages": [
+      {
+        "msg": "left #experiences along with OBHAI ."
+      }
+    ]
+  }
+]

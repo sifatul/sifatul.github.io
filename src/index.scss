@@ -151,6 +151,11 @@ $primary-color-hover: #3f0e40;
   color: #5f5f62;
   font-size: $font-size;
 }
+@mixin allowHover() {
+  &:hover {
+    cursor: pointer;
+  }
+}
 html {
   max-width: 100%;
 }
@@ -183,9 +188,11 @@ body {
   }
 }
 .hasLink {
-  &:hover {
-    cursor: pointer;
-  }
+  @include allowHover();
+}
+.isLink {
+  @include allowHover();
+  color: #1264a3 !important;
 }
 .flex {
   display: flex;

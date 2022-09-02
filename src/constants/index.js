@@ -5,5 +5,6 @@ export const MY_INFO = {
   email: "devsifat@gmail.com",
   phone: "+82-010-9527-3236",
 }
+
 export const IMAGE_COLOR = "c7b7c6"
 

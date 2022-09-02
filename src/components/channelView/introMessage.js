@@ -1,6 +1,8 @@
+import { MY_INFO } from "../../constants"
 import LinkMessage from "./singleMessage/linkMessage"
 import TextMessage from "./singleMessage/textMessage"
 import TimeCapsule from "./singleMessage/timeCapsule"
+
 
 const IntroMessage = () => {
 
@@ -14,22 +16,26 @@ const IntroMessage = () => {
     favicon: "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png",
   }
 
+  const senderInfo = {
+    senderAvatar: MY_INFO.avatar,
+    senderName: MY_INFO.name,
+  }
   return <>
-
-
     <TextMessage
-      message="Hello there.\nMy name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix. 
-      \nFor TeraArk & TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment.
-"
+      message="Hello there!My name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix.\nFor TeraArk & TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment."
+      senderInfo={senderInfo}
     />
 
     <TextMessage
       message="I work with NodeJs (Express/NestJs) in backend, ReactJs (NextJs) using JavaScript / TypeScript, Java for competitive programming, Docker, MongoDB or MySQL for database. I am very comfortable in working with AWS cloud services like RDS, S3, ECS, EC2 etc and hold AWS solution associate certification too."
+      senderInfo={senderInfo}
     />
-    <TimeCapsule time="Today" />
+    <TimeCapsule time="Today"
+    />
 
     <TextMessage
       message="This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through the platform to know more about me."
+      senderInfo={senderInfo}
     />
 
 

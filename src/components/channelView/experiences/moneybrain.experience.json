@@ -1,0 +1,71 @@
+[
+
+  {
+    "name": "MoneyBrain",
+    "avatar": "https://www.deepbrainai.io/favicon.ico",
+    "messages": [
+      {
+        "time": "January 2020",
+        "msg": "added to #experiences by Sifatul."
+      }
+    ]
+  },
+  {
+    "name": "SpeakNow",
+    "avatar": "https://www.speaknow.ai/webapp/img/favicon.ico",
+    "messages": [
+      {
+        "msg": "added to #experiences by MoneyBrain."
+        
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "msg": "added to SpeakNow team by MoneyBrain."
+        
+      },
+      {
+        "msg": "collaborating with SpeakNow team to develop  major features such as SMS authentication, online purchase, TTS, STT, etc.."
+      }
+    ]
+  },
+  {
+    "name": "AI STUDIOS",
+    "avatar": "https://aistudios.com/favicon-32x32.png",
+    "messages": [
+      {
+        "msg": "added to #experiences by MoneyBrain."
+        
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "msg": "added to AI STUDIOS team by MoneyBrain."
+        
+      }
+    ]
+  },
+
+
+  {
+    "name": "MoneyBrain",
+    "avatar": "https://www.deepbrainai.io/favicon.ico",
+    "messages": [
+      {
+        "time": "December 2020",
+        "msg": "rebranding as DeepBrain."
+      },
+      {
+        "msg": "left #experiences along with SpeanNow and AI STUDIOS."
+      }
+    ]
+  }
+]

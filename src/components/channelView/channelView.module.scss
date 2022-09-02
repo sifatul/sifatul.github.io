@@ -165,7 +165,7 @@ $ExtraLarge: 1200px;
 
         .linkTitle {
           font-weight: bold;
-          color: #1264a3;
+          // color: #1264a3;
           padding: 5px 0;
           &:hover {
             text-decoration: underline;
@@ -206,7 +206,7 @@ $ExtraLarge: 1200px;
     height: 20px;
   }
 }
-.title {
+.title:not(.isLink) {
   color: #1d1c1d;
   font-weight: bold;
   line-height: 18px;
