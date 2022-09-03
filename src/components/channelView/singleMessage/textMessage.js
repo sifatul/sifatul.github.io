@@ -3,7 +3,16 @@ import MessageWrapper from "../../../Hoc/messageWrapper";
 import { getLinksFromText } from 'js-string-helper';
 
 const TextMessage = (props) => {
-  const { message, senderInfo } = props
+  let { message, senderInfo } = props
+
+
+  const links = getLinksFromText(message)
+  for (let i = 0; i < links?.length; i++) {
+    const url = links[i]
+    const linkMarkup = `<a href=${url}  class="isLink" target="_blank"  >${url}</a>`
+    message = message.replace(url, linkMarkup)
+  }
+
   const messageArr = message.trim().split(/\r?\\n/);
 
   return <>
@@ -11,11 +20,9 @@ const TextMessage = (props) => {
       {...senderInfo}
     >
       <> {messageArr.map((text, idx) => {
-        const links = getLinksFromText(text)
-        if (links?.length > 0) return links.map(link => {
-          return <a key={link} className="isLink" href={link} target="_blank"  >{link}</a>
-        })
-        return <div className="block" key={idx}>{text}</div>
+        return <div className="block" key={idx}
+          dangerouslySetInnerHTML={{ __html: text }}
+        >{ }</div>
       })} </>
     </MessageWrapper>
   </>

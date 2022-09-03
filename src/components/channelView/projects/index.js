@@ -1,22 +1,17 @@
-import TextMessage from "../singleMessage/textMessage"
-import LinkMessage from "../singleMessage/linkMessage"
-import data from "./projectList.json"
 import ChannelIntro from "../channelIntro"
 import { MY_INFO, TERAARK_INFO } from "../../../constants"
 import MoneyBrainProjects from "./moneybrain.projects"
+import TeraArkProjects from "./teraark.project"
 
 
 const Projects = () => {
 
-  const { blog, teracomix, pointAvenue } = data
+
   const senderInfo = {
     senderAvatar: MY_INFO.avatar,
     senderName: MY_INFO.name,
   }
-  const senderTeraArk = {
-    senderAvatar: TERAARK_INFO.avatar,
-    senderName: TERAARK_INFO.name,
-  }
+
   return <>
     {/* <LinkMessage {...blog} /> */}
     <ChannelIntro
@@ -28,21 +23,7 @@ const Projects = () => {
     />
     <MoneyBrainProjects />
 
-    <TextMessage
-      message={"was added to #experiences by Sifatul."}
-      senderInfo={senderTeraArk}
-    />
-    <LinkMessage {...pointAvenue}
-      message="An integrated platform of LMS, CMS, and Live Class to provide classroom-as-a-service."
-      senderInfo={senderTeraArk}
-
-    />
-    <LinkMessage {...teracomix}
-      message="Online comics platform to teach English to kids."
-      senderInfo={senderTeraArk}
-
-
-    />
+    <TeraArkProjects />
   </>
 }
 export default Projects
