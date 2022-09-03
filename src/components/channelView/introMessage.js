@@ -6,6 +6,8 @@ import TimeCapsule from "./singleMessage/timeCapsule"
 
 const IntroMessage = () => {
 
+
+
   const blogLink = {
     link: "https://dev.to/sifatul/create-package-in-github-registry-51p9",
     previewImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--VC0V3bMa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a3t917ikhl3szi5lff1a.png",
@@ -22,7 +24,7 @@ const IntroMessage = () => {
   }
   return <>
     <TextMessage
-      message="Hello there!My name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix.\nFor TeraArk & TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment."
+      message="Hello there!\nMy name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix.\nFor TeraArk & TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment."
       senderInfo={senderInfo}
     />
 
@@ -35,6 +37,10 @@ const IntroMessage = () => {
 
     <TextMessage
       message="This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through the platform to know more about me."
+      senderInfo={senderInfo}
+    />
+    <TextMessage
+      message="You might also want to take a look into my CV. \n https://drive.google.com/file/d/1VqbG5y01zuoqt8Dc1QyvkA37NQnr4KuL/view?usp=sharing"
       senderInfo={senderInfo}
     />
 

@@ -4,7 +4,7 @@ import TextMessage from "../singleMessage/textMessage"
 import TimeCapsule from "../singleMessage/timeCapsule"
 import DurbarExperience from "./dubar.experience.json"
 import MoneybrainExperience from "./moneybrain.experience.json"
-import TeracomixExperience from "./experienceList.json"
+import TeracomixExperience from "./teraark.experience.json"
 import MghExperience from "./mgh.experience.json"
 
 const Projects = () => {

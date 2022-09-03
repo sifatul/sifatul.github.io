@@ -10,8 +10,8 @@ const LinkMessage = (props) => {
 
 
     {message}
-    <div className={`.hasLink ${Style.link}`}>
-      <a href={link}>{link}</a>
+    <div className={`isLink`}>
+      <a className={`isLink`} href={link}>{link}</a>
     </div>
     <div className={Style.colWrapper}>
       <div className={Style.borderLeft}></div>

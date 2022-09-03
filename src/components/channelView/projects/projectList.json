@@ -26,6 +26,24 @@
     "message": "",
     "favicon": "https://paathena-public-prod.s3-ap-southeast-1.amazonaws.com/pasite/images/common/favicon.ico"
   },
+  "speakNow":{
+    "link": "https://www.speaknow.ai",
+    "previewImage": "https://www.speaknow.ai/webapp/img/share_800x420.png",
+    "platformName": "SpeakNow",
+    "title": "인공지능 영어회화 스픽나우",
+    "description": "실제사람과 똑같은 AI튜터와 영어공부 하세요.",
+    "message": "",
+    "favicon": "https://www.speaknow.ai/webapp/img/favicon.ico"
+  },
+  "AIStudios":{
+    "link": "https://aistudios.com/",
+    "previewImage": "https://cdn.aistudios.com/images/thumbnail/kakao_default_thumb.png",
+    "platformName": "AI STUDIOS",
+    "title": "AI STUDIOS - Text to Video Generation Platform Using AI Avatar.",
+    "description": "Experience the leading AI Avatar platform. You are free to use your AI avatar without having to worry about copyright. Just prepare a script and create your first AI video in less than 5 minutes.",
+    "message": "",
+    "favicon": "https://aistudios.com/favicon-32x32.png"
+  },
   "sample":{
     "link": "",
     "previewImage": "",
