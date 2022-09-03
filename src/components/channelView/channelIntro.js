@@ -1,4 +1,5 @@
 import Style from './channelView.module.scss'
+import Image from "../global/image"
 
 const ChannelIntro = (props) => {
   const { channelName, body, imgSrc } = props
@@ -7,7 +8,7 @@ const ChannelIntro = (props) => {
       <div
         className={`${Style.col} `}    >
         <div className={Style.ChannelIntroIconWrapper}>
-          <img src={imgSrc} alt="hash-icon" />
+          <Image src={imgSrc} alt="hash-icon" />
         </div>
 
       </div>

@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useStore } from '../../store';
 import Style from './channelView.module.scss';
+import Image from "../global/image"
 
 const Header = () => {
 
@@ -15,14 +16,14 @@ const Header = () => {
 
   return <>
     <div className={`nameSection ${Style.nameSection}`}>
-      <img
+      <Image
         onClick={e => toggleSidebar()}
         style={{ paddingRight: 10 }}
         className={`${Style.channelIcon} ${Style.navigationIcon} `}
         src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-sidebar-applications-windows-those-icons-lineal-those-icons.png"
         alt="navigation-icon"
       />
-      <img
+      <Image
         className={`${Style.channelIcon} ${Style.bigIcon}`}
         src={activeSidebarIcon} alt={activeSidebarLabel} />
       <span>{activeSidebarLabel} </span>

@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react';
 import Style from './leftSidebar.module.scss';
-
+import Image from "../global/image"
 const ChannelItem = (props) => {
   const { label, imgSrc, active, onClick } = props
 
@@ -9,7 +9,7 @@ const ChannelItem = (props) => {
     <div
       className={`hasLink ${Style.channelItem}   ${active && Style.active}`}
       onClick={onClick}>
-      <img
+      <Image
         className={`${Style.channelIcon} ${Style.addIcon}`}
         src={imgSrc} alt={label} />
       <span > {label}</span>

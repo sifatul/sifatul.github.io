@@ -6,6 +6,7 @@ import { useStore } from "../../store"
 import { useRef } from 'react';
 import { useOutsideAlerter } from "../../hooks/outsideClickHandler";
 import { formatAMPM } from "../../helpers/time.helper"
+import Image from "../global/image"
 
 
 const contactInfo = [
@@ -29,7 +30,7 @@ const UserProfile = () => {
         <span>Profile </span>
       </div>
       <div className={Style.avatarContainer}>
-        <img className={Style.avatar} src={MY_INFO.avatar} alt="my-avatar" />
+        <Image className={Style.avatar} src={MY_INFO.avatar} alt="my-avatar" />
       </div>
 
 
@@ -38,14 +39,14 @@ const UserProfile = () => {
         <span className={Style.title}>{MY_INFO.title}</span>
         <div className={Style.onlineStatus}>
           <div className={Style.imageContainer}>
-            <img src={`https://img.icons8.com/material-outlined/24/${IMAGE_COLOR}/circled.png`} alt="circle-icon" />
+            <Image src={`https://img.icons8.com/material-outlined/24/${IMAGE_COLOR}/circled.png`} alt="circle-icon" />
           </div>
           <span>Away</span>
         </div>
         <div className={Style.currentTime}>
 
           <div className={Style.imageContainer}>
-            <img src={`https://img.icons8.com/pastel-glyph/20/000000/clock--v1.png`} alt="clock-icon" />
+            <Image src={`https://img.icons8.com/pastel-glyph/20/000000/clock--v1.png`} alt="clock-icon" />
           </div>
           <span>{time} local time</span>
 
