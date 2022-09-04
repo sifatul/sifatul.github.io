@@ -6,20 +6,23 @@ import Style from "./leftSidebar.module.scss"
 import { useStore } from '../../store';
 
 
-const channels = [
-  {
-    label: "Hackerrank",
-    imgSrc: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-color-tal-revivo.png",
-
-  },
+export const apps = [
   {
     imgSrc: "https://img.icons8.com/ios-glyphs/30/ffffff/github.png",
+    imgSrcDark: "https://img.icons8.com/ios-glyphs/30/000000/github.png",
     label: "Github",
   },
   {
     imgSrc: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png",
     label: "Leetcode",
-  }
+  },
+  {
+    label: "Hackerrank",
+    imgSrc: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-color-tal-revivo.png",
+
+  },
+
+
 ]
 const ChannelList = () => {
 
@@ -40,13 +43,14 @@ const ChannelList = () => {
         label="Apps"
       />
       {open && <>
-        {channels.map(channel => {
+        {apps.map(channel => {
+          const imgSrc = channel.imgSrcDark || channel.imgSrc
           return <ChannelItem
             key={channel.label}
 
             {...channel}
             active={activeSidebarLabel === channel.label}
-            onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
+            onClick={e => setActiveSidebar(channel.label, imgSrc)}
           />
         })}
         <AddChannel label="Add apps" />
