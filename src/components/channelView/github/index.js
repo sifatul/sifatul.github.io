@@ -11,10 +11,15 @@ const GithubPage = () => {
   const [repos, setRepos] = useState(GithubRepos)
   let lastRepoTime = '';
   useEffect(() => {
-    GetData('https://api.github.com/users/sifatul/repos').then(data => {
-      setRepos(data)
+    try {
+      GetData('https://api.github.com/users/sifatul/repos').then(data => {
+        if (!data || data.length <= 0) return
+        setRepos(data)
 
-    })
+      })
+    } catch (e) {
+      console.error(e)
+    }
 
   }, [])
   const senderInfo = {
@@ -47,7 +52,7 @@ const GithubPage = () => {
       // if (description) messageIntro += `\\nDescription: ${description}.`
       if (html_url) messageLinks += `\\n repository link: ${html_url}.`
       if (homepage) messageLinks += `\\nDemo: ${homepage}.`
-      const showTime = lastRepoTime != time;
+      const showTime = lastRepoTime !== time;
       lastRepoTime = time;
       return <div key={full_name}>
         {showTime && <TimeCapsule time={time} />}
