@@ -1,9 +1,11 @@
 import Style from './channelView.module.scss'
 import Image from "../global/image"
+import { textToLinkMarkup } from "../../helpers/string.helper"
 
 const ChannelIntro = (props) => {
   const { channelName, body, imgSrc } = props
-  return <>
+  const message = textToLinkMarkup(body)
+  return <div className={`${Style.channelIntro}`}>
     <div className={`${Style.singleMessage} ${Style.channelIntro}`}>
       <div
         className={`${Style.col} `}    >
@@ -21,15 +23,15 @@ const ChannelIntro = (props) => {
         <div
 
           className={`${Style.row} ${Style.message}`}
+          dangerouslySetInnerHTML={{ __html: message }}
 
-        >
-          {body}
 
-        </div>
+        />
+
       </div>
 
     </div>
 
-  </>
+  </div>
 }
 export default ChannelIntro

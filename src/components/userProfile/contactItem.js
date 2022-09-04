@@ -2,6 +2,7 @@ import Style from "./contactItem.module.scss"
 import Image from "../global/image"
 const ContactItem = (props) => {
   const { label, icon, value } = props
+  if (!value) return <></>
   return <>
     <div className={Style.wrapper}>
       <div className={Style.imageContainer}>

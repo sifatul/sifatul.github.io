@@ -7,7 +7,7 @@ const initalState = {
     activeSidebarIcon: MY_INFO.avatar,
     open: null
   },
-  profileVisible: false
+  profileVisible: null
 }
 
 const useStore = create(set => ({
@@ -33,16 +33,17 @@ const useStore = create(set => ({
       ...state.activeSidebarItem,
       open: true
     }
+    console.log("activeSidebarItem: ", activeSidebarItem)
     return { ...state, activeSidebarItem }
   }),
 
   hideUserProfile: () => set(state => {
 
-    return { ...state, profileVisible: false }
+    return { ...state, profileVisible: null }
   }),
-  showUserProfile: () => set(state => {
+  showUserProfile: (activeProfileName) => set(state => {
 
-    return { ...state, profileVisible: true }
+    return { ...state, profileVisible: activeProfileName }
   }),
 }))
 

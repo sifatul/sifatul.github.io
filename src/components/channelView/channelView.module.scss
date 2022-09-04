@@ -85,6 +85,9 @@ $ExtraLarge: 1200px;
         display: block;
       }
     }
+    .channelIcon {
+      margin-right: 10px;
+    }
   }
   .singleMessage {
     @include paragraph();
@@ -192,6 +195,11 @@ $ExtraLarge: 1200px;
 .channelIntro {
   padding-top: 80px;
   padding-bottom: 40px;
+
+  @media screen and (max-width: $Medium) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 }
 .ChannelIntroIconWrapper {
   background-color: #f4ede4;

@@ -6,7 +6,6 @@ import Image from "../components/global/image"
 const MessageWrapper = (props) => {
   const { children, senderName, senderAvatar } = props
   const { showUserProfile } = useStore();
-  console.log()
 
   return <>
     <div className={Style.singleMessage}>
@@ -17,7 +16,7 @@ const MessageWrapper = (props) => {
       <div className={Style.col}>
         <div className={Style.row}>
           <span className={`hasLink ${Style.username}`}
-            onClick={e => showUserProfile()}
+            onClick={e => showUserProfile(senderName)}
           > {senderName} </span>
           <span className={Style.userMessageTime}>8:06 AM</span>
         </div>
