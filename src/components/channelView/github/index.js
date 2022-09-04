@@ -44,7 +44,7 @@ const GithubPage = () => {
       const time = slackTimelineformat(created_at)
       let messageIntro = `a new repository named ${full_name} is created by ${ownerName}.`
       let messageLinks = ''
-      if (description) messageIntro += `\\n${description}.`
+      // if (description) messageIntro += `\\nDescription: ${description}.`
       if (html_url) messageLinks += `\\n repository link: ${html_url}.`
       if (homepage) messageLinks += `\\nDemo: ${homepage}.`
       const showTime = lastRepoTime != time;
@@ -55,6 +55,10 @@ const GithubPage = () => {
           message={messageIntro}
           senderInfo={senderInfo}
         />
+        {description && <TextMessage
+          message={`${full_name} is ${description}`}
+          senderInfo={senderInfo}
+        />}
         <TextMessage
           message={messageLinks}
           senderInfo={senderInfo}
