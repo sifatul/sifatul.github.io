@@ -46,6 +46,10 @@
       {
        
         "msg": "was added to Teracomix team by TeraArk."
+      },
+      {
+       
+        "msg": "Managing and leading a team of six develoeprs, built CI/CD pipelines with Github action, AWS ECR, ECS, and ALB which increased daily deploy count by 200%."
       }
     ]
   }
