@@ -56,10 +56,10 @@ $ExtraLarge: 1200px;
 .channelListSection.peopleList {
   @include channelListCommon();
   .channelIcon {
-    height: 15px;
+    height: 20px;
   }
   .labelOnly .channelIcon {
-    height: 10px;
+    height: 15px;
   }
 }
 
@@ -69,11 +69,11 @@ $ExtraLarge: 1200px;
     height: 20px;
   }
   .channelIcon {
-    height: 15px;
+    height: 20px;
   }
 
   .labelOnly .channelIcon {
-    height: 10px;
+    height: 15px;
   }
 }
 .channelListSection.huddle {

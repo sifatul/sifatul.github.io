@@ -22,6 +22,7 @@ const useStore = create(set => ({
     return { ...state, activeSidebarItem }
   }),
   hideSidebar: () => set(state => {
+    if (!state.activeSidebarItem.open) return state
     const activeSidebarItem = {
       ...state.activeSidebarItem,
       open: null

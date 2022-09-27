@@ -211,3 +211,24 @@ body {
 .flex {
   display: flex;
 }
+
+/* button background color */
+.tox .tox-tbtn {
+  background-color: #fff;
+}
+
+/* button background color (hover) */
+.tox .tox-tbtn:hover,
+.tox .tox-tbtn:focus {
+  background-color: #ebebeb !important;
+}
+
+.tox-tinymce {
+  border: none !important;
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header,
+.tox .tox-toolbar,
+.tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary {
+  background-color: #f8f8f8 !important;
+}
