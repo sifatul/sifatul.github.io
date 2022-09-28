@@ -8,7 +8,7 @@ const GuestPage = () => {
   return <>
     <ChannelIntro
       channelName={activeSidebarLabel}
-      body="This is your space. Draft messages, list your to-dos, or keep links and files handy. You can also talk to yourself here, but please bear in mind you’ll have to supply both sides of the conversation."
+      body="This is your space but please bear in mind this page is just made to keep sync with the Slack UI but does not have any functional value in this project."
       imgSrc={activeSidebarIcon}
 
     />

@@ -2,6 +2,7 @@ import { MY_INFO } from "../../../constants";
 import { useStore } from '../../../store';
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
+import TextEditor from "../textEditor/textEditor";
 
 
 const IntroMessage = () => {
@@ -37,6 +38,7 @@ const IntroMessage = () => {
         />
       </div>
     })}
+    <TextEditor />
 
   </>
 

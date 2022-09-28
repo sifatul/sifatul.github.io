@@ -49,7 +49,7 @@ const ChannelView = () => {
         {activePage}
 
       </div>
-      <TextEditor />
+
     </div>
 
   </>
