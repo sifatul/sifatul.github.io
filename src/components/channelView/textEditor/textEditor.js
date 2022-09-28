@@ -88,7 +88,7 @@ const TextEditor = () => {
           menubar: false,
           branding: false,
           toolbar: 'bold italic link',
-          placeholder: "Jot something down. Sifatul will get back to you",
+          placeholder: "Message Sifatul",
           content_style: 'body { border: none; font-family: "Noto Sans", sans-serif; font-size:14px}; '
         }}
 

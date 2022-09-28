@@ -4,8 +4,11 @@ import ChannelIntro from "../channelIntro"
 
 const LeetCodePage = () => {
 
+
   useEffect(() => {
-    GetData('https://find-profile.vercel.app/api/platform/GITHUB?source=https://api.github.com/users/sifatul')
+    GetData('https://codies.vercel.app/api/leetcode/find?userName=sifatul2020').then(res => {
+      console.log(" res: ", res)
+    })
   }, [])
   return <>
     <ChannelIntro

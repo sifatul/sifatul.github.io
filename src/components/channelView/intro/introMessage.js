@@ -3,6 +3,7 @@ import { useStore } from '../../../store';
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
 import TextEditor from "../textEditor/textEditor";
+import PersonIntro from "../personIntro"
 
 
 const IntroMessage = () => {
@@ -27,6 +28,12 @@ const IntroMessage = () => {
     senderName: MY_INFO.name,
   }
   return <>
+    <PersonIntro
+      channelName={"activeSidebarLabel"}
+      body="This is the very beginning of your direct message history with <strong>Sifatul</strong>. Only the two of you are in this conversation."
+      imgSrc={MY_INFO.avatar}
+
+    />
     {introMessages.map((msgItem, idx) => {
       const { message, time, senderInfo = MyInfo } = msgItem
       return <div key={idx}>
