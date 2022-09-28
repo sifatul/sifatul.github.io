@@ -13,6 +13,7 @@ import Github from "./github"
 import GithubPage from './github'
 import LeetCodePage from './leetcode'
 import HackerRankPage from './hackerrank'
+import GuestPage from "./guestPage"
 const ChannelView = () => {
 
   const { activeSidebarItem } = useStore();
@@ -33,7 +34,7 @@ const ChannelView = () => {
       case apps[1].label:
         return <LeetCodePage />
       default:
-        return <>{activeSidebarLabel}</>;
+        return <GuestPage />
     }
 
   }, [activeSidebarLabel])

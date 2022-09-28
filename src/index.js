@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     <head>
       <link rel="preconnect" href="https://fonts.googleapis.com" ></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'true'} ></link>
@@ -16,7 +16,7 @@ root.render(
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"></link>
     </head>
     <App />
-  </React.StrictMode>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

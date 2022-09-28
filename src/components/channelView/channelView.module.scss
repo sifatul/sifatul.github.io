@@ -198,7 +198,7 @@ $ExtraLarge: 1200px;
 }
 
 .channelIntro {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   @media screen and (max-width: $Medium) {
@@ -207,7 +207,6 @@ $ExtraLarge: 1200px;
   }
 }
 .ChannelIntroIconWrapper {
-  background-color: #f4ede4;
   border-radius: 5px;
   width: 40px;
   height: 40px;
@@ -215,8 +214,9 @@ $ExtraLarge: 1200px;
   justify-content: center;
   align-items: center;
   img {
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .title:not(.isLink) {

@@ -57,6 +57,8 @@ $ExtraLarge: 1200px;
   @include channelListCommon();
   .channelIcon {
     height: 20px;
+    width: 20px;
+    object-fit: cover;
   }
   .labelOnly .channelIcon {
     height: 15px;
@@ -70,6 +72,8 @@ $ExtraLarge: 1200px;
   }
   .channelIcon {
     height: 20px;
+    width: 20px;
+    object-fit: cover;
   }
 
   .labelOnly .channelIcon {
@@ -151,4 +155,9 @@ $ExtraLarge: 1200px;
     z-index: 4;
     min-height: 100vh;
   }
+}
+.extraLabel {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #c7b7c6;
 }

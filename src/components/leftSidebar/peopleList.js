@@ -1,10 +1,12 @@
 import AddChannel from "./addChannel"
 import ChannelLabel from "./labelChannel"
 import ChannelItem from "./channelItem"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Style from "./leftSidebar.module.scss"
 import { useStore } from '../../store';
 import { MY_INFO } from "../../constants/index"
+import { GetData } from '../../helpers/httpClient.helper';
+
 export const peopleArr = [
   {
     label: MY_INFO.name,
@@ -15,9 +17,13 @@ export const peopleArr = [
 const ChannelList = () => {
 
   const [open, setOpen] = useState(true)
-  const { setActiveSidebar, activeSidebarItem } = useStore();
+  const { setActiveSidebar, activeSidebarItem, setSenders, senders } = useStore();
 
   const { activeSidebarLabel } = activeSidebarItem
+
+
+
+
 
 
   return <>
@@ -31,13 +37,14 @@ const ChannelList = () => {
       />
 
       {open && <>
-        {peopleArr.map(channel => {
+        {senders.map(channel => {
+          const { name: label } = channel
           return <ChannelItem
-            key={channel.label}
-
+            key={label}
+            label={label}
             {...channel}
-            active={activeSidebarLabel === channel.label}
-            onClick={e => setActiveSidebar(channel.label, channel.imgSrc)}
+            active={activeSidebarLabel === label}
+            onClick={e => setActiveSidebar(label, channel.imgSrc)}
           />
         })}
         <AddChannel label="Add teammates" />

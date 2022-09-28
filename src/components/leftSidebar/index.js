@@ -33,7 +33,6 @@ const LeftSidebar = () => {
       <div className={`${Style.channelListSection} ${Style.huddle}`}>
 
         <ChannelItem
-
           label="Huddle" imgSrc="https://img.icons8.com/small/16/c7b7c6/radio-tower.png"
         />
 

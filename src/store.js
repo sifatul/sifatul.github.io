@@ -9,7 +9,15 @@ const initalState = {
     open: null
   },
   profileVisible: null,
-  introMessages: IntroDefaultData
+  introMessages: IntroDefaultData,
+  senders: [
+    {
+      name: MY_INFO.name,
+      imgSrc: MY_INFO.avatar,
+      extraLabel: ''
+
+    }
+  ]
 }
 
 const useStore = create(set => ({
@@ -52,6 +60,16 @@ const useStore = create(set => ({
     const allmessage = [...state.introMessages, message]
 
     return { ...state, introMessages: allmessage }
+  }),
+  setSenders: ({ name, imgSrc, extraLabel }) => set(state => {
+    const guestInfo = {
+      imgSrc,
+      name,
+      extraLabel,
+    }
+    const allSenders = [...state.senders, guestInfo]
+
+    return { ...state, senders: allSenders }
   }),
 
 }))

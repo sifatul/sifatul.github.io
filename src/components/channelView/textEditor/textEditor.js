@@ -8,26 +8,21 @@ import { GetData } from '../../../helpers/httpClient.helper';
 
 
 
-const TextEditor = (props) => {
-  const { addNewIntroMessage } = useStore();
+const TextEditor = () => {
+  const { addNewIntroMessage, senders } = useStore();
   const editorRef = useRef(null);
-  const [senderInfo, setSenderInfo] = useState({
-    senderAvatar: '',
-    senderName: 'Happy Panda',
-  })
+  const [senderInfo, setSenderInfo] = useState(null)
 
   useEffect(() => {
-    GetData('https://some-random-api.ml/animal/panda').then((res = {}) => {
-      const { image } = res
-      setSenderInfo({
-        senderAvatar: image,
-        senderName: 'Happy Panda',
-      })
+    if (senders.length < 2) return
+    const senderYou = senders.filter(person => person.extraLabel)?.pop()
+    console.log("senderYou: ", senderYou)
+    setSenderInfo({
+      senderAvatar: senderYou.imgSrc,
+      senderName: senderYou.name,
     })
+  }, [senders.length])
 
-
-  }, [])
-  console.log(senderInfo)
 
 
   const submitText = useCallback(() => {
