@@ -56,6 +56,8 @@ $ExtraLarge: 1200px;
     width: 100%;
     border-bottom: $border;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
     .floatingTimeWrapper {
       justify-content: center;
       left: 0;
@@ -94,7 +96,7 @@ $ExtraLarge: 1200px;
     height: auto;
     // border:1px solid red;
     display: flex;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
     .username {
       color: #1d1c1d;
       font-weight: bold;
@@ -103,10 +105,13 @@ $ExtraLarge: 1200px;
       }
     }
     .avatarContainer {
-      width: 40px;
-      min-width: 40px;
+      width: 50px;
+      height: 50px;
+
       img {
-        width: 100%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
         border-radius: 8px;
       }
     }

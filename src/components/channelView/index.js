@@ -5,7 +5,7 @@ import { peopleArr } from '../leftSidebar/peopleList'
 import { apps } from '../leftSidebar/appList'
 import Style from './channelView.module.scss'
 import Header from "./header"
-import IntroMessage from "./introMessage"
+import IntroMessage from "./intro/introMessage"
 import Projects from './projects'
 import Experiences from './experiences'
 import TextEditor from "./textEditor/textEditor"

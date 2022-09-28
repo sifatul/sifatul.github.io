@@ -1,5 +1,6 @@
 import create from 'zustand'
 import { MY_INFO } from "./constants/index"
+import IntroDefaultData from "./components/channelView/intro/introTexts.json"
 
 const initalState = {
   activeSidebarItem: {
@@ -7,7 +8,8 @@ const initalState = {
     activeSidebarIcon: MY_INFO.avatar,
     open: null
   },
-  profileVisible: null
+  profileVisible: null,
+  introMessages: IntroDefaultData
 }
 
 const useStore = create(set => ({
@@ -46,6 +48,12 @@ const useStore = create(set => ({
 
     return { ...state, profileVisible: activeProfileName }
   }),
+  addNewIntroMessage: (message) => set(state => {
+    const allmessage = [...state.introMessages, message]
+
+    return { ...state, introMessages: allmessage }
+  }),
+
 }))
 
 export { useStore }

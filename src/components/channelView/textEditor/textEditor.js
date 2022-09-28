@@ -1,20 +1,48 @@
 import Style from './textEditor.module.scss'
 import Image from "../../global/image"
 
-import React, { useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import { useStore } from '../../../store';
+import { GetData } from '../../../helpers/httpClient.helper';
 
 
-const TextEditor = () => {
 
+const TextEditor = (props) => {
+  const { addNewIntroMessage } = useStore();
   const editorRef = useRef(null);
-  const log = () => {
-    debugger
-    console.log("editorRef.current: ", editorRef.current)
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
+  const [senderInfo, setSenderInfo] = useState({
+    senderAvatar: '',
+    senderName: 'Happy Panda',
+  })
+
+  useEffect(() => {
+    GetData('https://some-random-api.ml/animal/panda').then((res = {}) => {
+      const { image } = res
+      setSenderInfo({
+        senderAvatar: image,
+        senderName: 'Happy Panda',
+      })
+    })
+
+
+  }, [])
+  console.log(senderInfo)
+
+
+  const submitText = useCallback(() => {
+    if (!editorRef?.current) return
+    const text = editorRef.current.getContent()
+    console.log({
+      data: text
+    });
+    addNewIntroMessage({
+      message: text,
+      senderInfo
+    })
+
+
+  }, [editorRef.current, senderInfo])
 
   const onchange_callback = (inst) => {
     console.log("typing" + inst)
@@ -32,13 +60,16 @@ const TextEditor = () => {
         initialValue=""
 
         onEditorChange={onchange_callback}
+        plugins='autoresize link'
 
         init={{
           statusbar: false,
-          height: 100,
+          height: 50,
+          max_height: 300,
+          min_height: 50,
           menubar: false,
           branding: false,
-          toolbar: 'bold italic',
+          toolbar: 'bold italic link',
           placeholder: "Jot something down",
           content_style: 'body { border: none; font-family: "Noto Sans", sans-serif; font-size:14px}; '
         }}
@@ -53,12 +84,15 @@ const TextEditor = () => {
           <Image className={Style.editorItem} src="https://img.icons8.com/material-outlined/15/bcbbbc/microphone.png" alt="microphone" />
         </div>
 
-        <div className={Style.right}>
+        <div className={Style.right}
+
+          onClick={e => {
+            submitText()
+          }}
+        >
 
           <Image className={Style.editorItem} src="https://img.icons8.com/external-inkubators-glyph-inkubators/15/bcbbbc/external-send-ecommerce-user-interface-inkubators-glyph-inkubators.png" alt="send-icon"
-            onClick={e => {
-              log()
-            }}
+
           />
         </div>
 

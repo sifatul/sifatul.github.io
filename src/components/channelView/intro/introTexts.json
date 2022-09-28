@@ -1,0 +1,15 @@
+[
+  {
+    "message": "<div class=\"block\">Hello there!</div>\n<div class=\"block\">My name is Md Sifatul Islam. I have been working as a fullstack developer for around 4 years. Currently I am working as technical lead playing the role as the main developer to oversee all development projects at TeraComix.</div>\n<div class=\"block\">For TeraArk &amp; TeraComix I lead the development, built CI/CD pipelines, code review and manage a team of six remote developers; I also have a proven track record of working with the project from planning to deployment.</div>"
+  },
+  {
+    "message": "<div>\n<div>I work with NodeJs (Express/NestJs) in backend, ReactJs (NextJs) using JavaScript / TypeScript, Java for competitive programming, Docker, MongoDB or MySQL for database. I am very comfortable in working with AWS cloud services like RDS, S3, ECS, EC2 etc and hold AWS solution associate certification too.</div>\n</div>"
+  },
+  {
+    "message": "<div>\n<div>This project is to represent my portfolio in a fun and interactive manner. Feel free to click around, explore through the platform to know more about me.</div>\n<div>&nbsp;</div>\n</div>",
+    "time": "Today"
+  },
+  {
+    "message": "<div class=\"block\">You might also want to take a look into my CV.</div>\n<div class=\"block\"><a class=\"isLink\" href=\"https://drive.google.com/file/d/1VqbG5y01zuoqt8Dc1QyvkA37NQnr4KuL/view?usp=sharing\" target=\"_blank\" rel=\"noopener\">https://drive.google.com/file/d/1VqbG5y01zuoqt8Dc1QyvkA37NQnr4KuL/view?usp=sharing</a></div>"
+  }
+]
