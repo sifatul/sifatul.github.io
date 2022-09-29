@@ -1,6 +1,5 @@
 import create from 'zustand'
 import { MY_INFO } from "./constants/index"
-import IntroDefaultData from "./components/channelView/intro/introTexts.json"
 
 const initalState = {
   activeSidebarItem: {

@@ -1,18 +1,19 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useMemo, useRef } from 'react';
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
 import Image from "../../global/image";
+import { peopleArr } from '../../leftSidebar/peopleList';
 import Style from './textEditor.module.scss';
-
-
 
 
 const askEmailText = "<p><span data-preserver-spaces=\"true\">As&nbsp;</span><strong><span data-preserver-spaces=\"true\">Sifatul&nbsp;</span></strong><span data-preserver-spaces=\"true\">is't online. It's best to start conversation by stating your email address so that he may get back to you later.</span></p>"
 const TextEditor = () => {
-  const { addNewIntroMessage, sifatulInfo, myInfo } = useStore();
+  const { addNewIntroMessage, sifatulInfo, myInfo, activeSidebarItem } = useStore();
   const editorRef = useRef(null);
   const { saveDataInFirebase } = RealtimeDatabaseManage()
+  const { activeSidebarLabel } = activeSidebarItem;
+
 
 
 
@@ -30,6 +31,9 @@ const TextEditor = () => {
   const onchange_callback = (inst) => {
     console.log("typing" + inst)
   }
+  const readOnly = useMemo(() => {
+    return activeSidebarLabel !== peopleArr[0].label
+  }, [activeSidebarLabel])
 
   return <div className={Style.textEditor}>
 
@@ -37,14 +41,35 @@ const TextEditor = () => {
 
     <div className={Style.container}>
 
-      <Editor
+      {readOnly && <Editor
+        scriptLoading={{ async: true }}
+        id={activeSidebarLabel}
         apiKey='komrzg34a2lv8vctis70lapeo1i7k7dfjkp99hy6rqwxr8dh'
         onInit={(evt, editor) => editorRef.current = editor}
         initialValue=""
-
-        onEditorChange={onchange_callback}
         plugins='autoresize link'
+        disabled
+        init={{
+          statusbar: false,
+          height: 50,
+          max_height: 300,
+          min_height: 50,
+          menubar: false,
+          branding: false,
+          toolbar: 'bold italic link',
+          placeholder: "Message is not enabled in this channel",
+          content_style: 'body {border: none; font-family: "Noto Sans", sans-serif; font-size:14px}; '
+        }}
 
+      />}
+      {!readOnly && <Editor
+
+        scriptLoading={{ async: true }}
+        id={activeSidebarLabel}
+        apiKey='komrzg34a2lv8vctis70lapeo1i7k7dfjkp99hy6rqwxr8dh'
+        onInit={(evt, editor) => editorRef.current = editor}
+        initialValue=""
+        plugins='autoresize link'
         init={{
           statusbar: false,
           height: 50,
@@ -54,10 +79,10 @@ const TextEditor = () => {
           branding: false,
           toolbar: 'bold italic link',
           placeholder: "Message Sifatul",
-          content_style: 'body { border: none; font-family: "Noto Sans", sans-serif; font-size:14px}; '
+          content_style: 'body {border: none; font-family: "Noto Sans", sans-serif; font-size:14px}; ',
         }}
 
-      />
+      />}
 
       <div className={Style.actionItemContainer}>
         <div className={Style.left}>
