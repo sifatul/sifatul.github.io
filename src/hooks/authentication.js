@@ -11,14 +11,15 @@ const AnonymousLogin = () => {
 
   const { setSenders } = useStore();
   const setUserProfile = useCallback(async (userId) => {
-    // const getProfileImage = GetData('https://some-random-api.ml/animal/panda')
-    const getRandomUser = await GetData('https://randomuser.me/api/');
-    const { results = [] } = getRandomUser
+    const getProfileImage = GetData('https://some-random-api.ml/animal/panda')
+    const getRandomUser = GetData('https://randomuser.me/api/');
+    const promises = await Promise.all([getProfileImage, getRandomUser])
+    const { results = [] } = promises[1]
 
     try {
 
       const name = results[0].name.first
-      const image = results[0].picture.large
+      const image = promises[0].image
 
       setSenders({
         imgSrc: image,
