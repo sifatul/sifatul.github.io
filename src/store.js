@@ -9,15 +9,14 @@ const initalState = {
     open: null
   },
   profileVisible: null,
-  introMessages: IntroDefaultData,
-  senders: [
-    {
-      name: MY_INFO.name,
-      imgSrc: MY_INFO.avatar,
-      extraLabel: ''
-
-    }
-  ]
+  introMessages: [],
+  sifatulInfo: {
+    name: MY_INFO.name,
+    imgSrc: MY_INFO.avatar,
+    extraLabel: '',
+    userId: 'sifatul'
+  },
+  myInfo: null
 }
 
 const useStore = create(set => ({
@@ -61,15 +60,15 @@ const useStore = create(set => ({
 
     return { ...state, introMessages: allmessage }
   }),
-  setSenders: ({ name, imgSrc, extraLabel }) => set(state => {
+  setSenders: ({ name, imgSrc, extraLabel, userId }) => set(state => {
     const guestInfo = {
       imgSrc,
       name,
       extraLabel,
+      userId
     }
-    const allSenders = [...state.senders, guestInfo]
 
-    return { ...state, senders: allSenders }
+    return { ...state, myInfo: guestInfo }
   }),
 
 }))

@@ -17,9 +17,16 @@ export const peopleArr = [
 const ChannelList = () => {
 
   const [open, setOpen] = useState(true)
-  const { setActiveSidebar, activeSidebarItem, setSenders, senders } = useStore();
+  const { setActiveSidebar, activeSidebarItem, sifatulInfo, myInfo } = useStore();
 
   const { activeSidebarLabel } = activeSidebarItem
+
+  const [senders, setSenders] = useState([sifatulInfo])
+  useEffect(() => {
+    if (!myInfo) return
+    setSenders([sifatulInfo, myInfo])
+
+  }, [myInfo])
 
 
 

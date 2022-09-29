@@ -4,12 +4,66 @@ import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
 import TextEditor from "../textEditor/textEditor";
 import PersonIntro from "../personIntro"
-
+import { useEffect, useState } from "react";
+import IntroDefaultData from "../intro/introTexts.json"
+import { getDatabase, ref, onValue } from "firebase/database";
+import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 
 const IntroMessage = () => {
 
 
-  const { introMessages } = useStore();
+  const { introMessages, myInfo, addNewIntroMessage } = useStore();
+  const [firstMsg, setFirstMsg] = useState('')
+  const { databaseListener } = RealtimeDatabaseManage()
+  console.log("introMessages: ", introMessages)
+
+
+  const [messages, setMessage] = useState(IntroDefaultData)
+  useEffect(() => {
+    setMessage([...IntroDefaultData, ...introMessages])
+  }, [introMessages.length])
+
+  useEffect(() => {
+    if (!myInfo) return
+    const callback = (data) => {
+      console.log("callback: ", data)
+      addNewIntroMessage({
+        message: data.text,
+        senderInfo: {
+          senderAvatar: myInfo.imgSrc,
+          senderName: myInfo.name,
+        }
+      })
+
+
+    }
+    databaseListener(callback)
+
+  }, [myInfo])
+
+  // useEffect(() => {
+  //   if (!firstMsg) return
+  //   const hasEmail = checkIfEmailInString(firstMsg)
+  //   if (hasEmail) return
+  //   const timer = setTimeout(() => {
+  //     addNewIntroMessage({
+  //       message: askEmailText,
+  //       senderInfo: {
+  //         senderAvatar: sifatulInfo.imgSrc,
+  //         senderName: sifatulInfo.name,
+  //       }
+  //     })
+  //   }, 1000)
+
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+
+
+  // }, [firstMsg])
+
+
+
 
 
 
@@ -34,7 +88,7 @@ const IntroMessage = () => {
       imgSrc={MY_INFO.avatar}
 
     />
-    {introMessages.map((msgItem, idx) => {
+    {messages.map((msgItem, idx) => {
       const { message, time, senderInfo = MyInfo } = msgItem
       return <div key={idx}>
         {time && <TimeCapsule time={time} />}
@@ -45,8 +99,6 @@ const IntroMessage = () => {
         />
       </div>
     })}
-    <TextEditor />
-
   </>
 
 }

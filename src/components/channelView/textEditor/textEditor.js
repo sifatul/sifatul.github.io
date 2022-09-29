@@ -1,32 +1,18 @@
-import Style from './textEditor.module.scss'
-import Image from "../../global/image"
-
-import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import React, { useCallback, useRef } from 'react';
+import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
-import { GetData } from '../../../helpers/httpClient.helper';
-import { checkIfEmailInString } from '../../../helpers/string.helper';
-import { MY_INFO } from '../../../constants';
+import Image from "../../global/image";
+import Style from './textEditor.module.scss';
 
-const MyInfo = {
-  senderAvatar: MY_INFO.avatar,
-  senderName: MY_INFO.name,
-}
+
+
+
 const askEmailText = "<p><span data-preserver-spaces=\"true\">As&nbsp;</span><strong><span data-preserver-spaces=\"true\">Sifatul&nbsp;</span></strong><span data-preserver-spaces=\"true\">is't online. It's best to start conversation by stating your email address so that he may get back to you later.</span></p>"
 const TextEditor = () => {
-  const { addNewIntroMessage, senders } = useStore();
+  const { addNewIntroMessage, sifatulInfo, myInfo } = useStore();
   const editorRef = useRef(null);
-  const [senderInfo, setSenderInfo] = useState(null)
-  const [firstMsg, setFirstMsg] = useState('')
-
-  useEffect(() => {
-    if (senders.length < 2) return
-    const senderYou = senders.filter(person => person.extraLabel)?.pop()
-    setSenderInfo({
-      senderAvatar: senderYou.imgSrc,
-      senderName: senderYou.name,
-    })
-  }, [senders.length])
+  const { saveDataInFirebase } = RealtimeDatabaseManage()
 
 
 
@@ -35,32 +21,11 @@ const TextEditor = () => {
     const text = editorRef.current.getContent()
     console.log({ text })
 
-    addNewIntroMessage({
-      message: text,
-      senderInfo
-    })
-    if (!firstMsg) setFirstMsg(text)
+    saveDataInFirebase(text)
+
+  }, [editorRef.current, myInfo])
 
 
-  }, [editorRef.current, senderInfo, firstMsg])
-
-  useEffect(() => {
-    if (!firstMsg) return
-    const hasEmail = checkIfEmailInString(firstMsg)
-    if (hasEmail) return
-    const timer = setTimeout(() => {
-      addNewIntroMessage({
-        message: askEmailText,
-        senderInfo: MyInfo
-      })
-    }, 1000)
-
-    return () => {
-      clearTimeout(timer);
-    };
-
-
-  }, [firstMsg])
 
   const onchange_callback = (inst) => {
     console.log("typing" + inst)

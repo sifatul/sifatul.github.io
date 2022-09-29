@@ -48,7 +48,9 @@ const ChannelView = () => {
       <div className={Style.wrapper}>
         {activePage}
 
+
       </div>
+      {activeSidebarLabel == peopleArr[0].label && <TextEditor />}
 
     </div>
 
