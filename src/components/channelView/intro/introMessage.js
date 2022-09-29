@@ -1,13 +1,12 @@
+import { useEffect, useState } from "react";
 import { MY_INFO } from "../../../constants";
+import { slackTimelineformat } from "../../../helpers/time.helper";
+import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
+import IntroDefaultData from "../intro/introTexts.json";
+import PersonIntro from "../personIntro";
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
-import TextEditor from "../textEditor/textEditor";
-import PersonIntro from "../personIntro"
-import { useEffect, useState } from "react";
-import IntroDefaultData from "../intro/introTexts.json"
-import { getDatabase, ref, onValue } from "firebase/database";
-import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 
 const IntroMessage = () => {
 
@@ -16,7 +15,7 @@ const IntroMessage = () => {
   const [firstMsg, setFirstMsg] = useState('')
   const { databaseListener } = RealtimeDatabaseManage()
   console.log("introMessages: ", introMessages)
-
+  let lastRepoTime = '';
 
   const [messages, setMessage] = useState(IntroDefaultData)
   useEffect(() => {
@@ -29,6 +28,7 @@ const IntroMessage = () => {
       console.log("callback: ", data)
       addNewIntroMessage({
         message: data.text,
+        time: data.created_at,
         senderInfo: {
           senderAvatar: myInfo.imgSrc,
           senderName: myInfo.name,
@@ -89,11 +89,15 @@ const IntroMessage = () => {
 
     />
     {messages.map((msgItem, idx) => {
-      const { message, time, senderInfo = MyInfo } = msgItem
+      const { message, time: created_at, senderInfo = MyInfo } = msgItem
+      let time = created_at ? slackTimelineformat(created_at) : ''
+      const today = slackTimelineformat(new Date().toISOString())
+      if (time == today) time = "Today"
+      const showTime = lastRepoTime !== time;
+      lastRepoTime = time;
       return <div key={idx}>
-        {time && <TimeCapsule time={time} />}
+        {showTime && <TimeCapsule time={time} />}
         <TextMessage
-
           message={message}
           senderInfo={senderInfo}
         />

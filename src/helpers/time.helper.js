@@ -26,7 +26,12 @@ function slackTimelineformat(date) {
   const d = new Date(date)
   const year = d.getFullYear() // 2019
   const monthIdx = d.getMonth() // 2019
+  const dateIdx = d.getDate() // 2019
   const monthName = months[monthIdx]
-  return `${monthName} ${year}`
+  let postFix = 'th'
+  if (dateIdx == 1) postFix = 'st'
+  if (dateIdx == 2) postFix = 'nd'
+  if (dateIdx == 3) postFix = 'rd'
+  return `${monthName} ${year}, ${dateIdx + postFix}`
 }
 export { formatAMPM, slackTimelineformat }

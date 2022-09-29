@@ -12,7 +12,9 @@ function RealtimeDatabaseManage() {
     const db = getDatabase();
 
     push(ref(db, 'messages/' + myInfo.userId), {
-      text
+      text,
+      created_at: new Date().toISOString()
+
     });
 
   }, [myInfo])

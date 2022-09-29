@@ -50,7 +50,7 @@ const ChannelView = () => {
 
 
       </div>
-      {activeSidebarLabel == peopleArr[0].label && <TextEditor />}
+      <TextEditor />
 
     </div>
 
