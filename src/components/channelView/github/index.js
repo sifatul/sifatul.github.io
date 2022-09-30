@@ -23,8 +23,8 @@ const GithubPage = () => {
 
   }, [])
   const senderInfo = {
-    senderAvatar: 'https://img.icons8.com/ios-glyphs/30/000000/github.png',
-    senderName: 'Github',
+    avatar: 'https://img.icons8.com/ios-glyphs/30/000000/github.png',
+    name: 'Github',
   }
   const reposSorted = useMemo(() => {
 

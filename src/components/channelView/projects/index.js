@@ -7,10 +7,7 @@ import TeraArkProjects from "./teraark.project"
 const Projects = () => {
 
 
-  const senderInfo = {
-    senderAvatar: MY_INFO.avatar,
-    senderName: MY_INFO.name,
-  }
+
 
   return <>
     {/* <LinkMessage {...blog} /> */}

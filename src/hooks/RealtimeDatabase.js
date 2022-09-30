@@ -1,4 +1,4 @@
-import { getDatabase, onValue, push, ref, onChildAdded, child, get, set } from "firebase/database";
+import { get, getDatabase, onChildAdded, push, ref, set } from "firebase/database";
 import { useCallback } from "react";
 import { useStore } from "../store";
 
@@ -7,11 +7,14 @@ function RealtimeDatabaseManage() {
   const { myInfo } = useStore();
 
 
-  const saveDataInFirebase = useCallback((text) => {
+  const saveDataInFirebase = useCallback((text, receiverId) => {
     if (!myInfo) return
     const db = getDatabase();
+    const sender = myInfo.userId;
 
-    push(ref(db, 'messages/' + myInfo.userId), {
+    push(ref(db, 'messages/' + sender), {
+      sender,
+      receiver: receiverId,
       text,
       created_at: new Date().toISOString()
 
@@ -60,6 +63,8 @@ function RealtimeDatabaseManage() {
 
   }, [])
 
+
+
   const saveUserInfo = useCallback((userInfo) => {
 
     const db = getDatabase();
@@ -71,9 +76,39 @@ function RealtimeDatabaseManage() {
   }, [])
 
 
+  const getAllUsers = useCallback(async (userId) => {
+    const db = getDatabase();
+    const starCountRef = ref(db, `users/`);
+
+    return new Promise(resolve => {
+
+      try {
+        get(starCountRef).then((snapshot) => {
+
+          if (snapshot.exists()) {
+            console.log(snapshot.val());
+            resolve(snapshot.val())
+          } else {
+            console.log("No data available");
+            resolve({})
+          }
+        }).catch((error) => {
+
+          console.error(error);
+          resolve({})
+        });
+      } catch (e) {
+        resolve({})
+      }
 
 
-  return { saveDataInFirebase, databaseListener, getUserInfo, saveUserInfo }
+    })
+
+  }, [])
+
+
+
+  return { saveDataInFirebase, databaseListener, getUserInfo, saveUserInfo, getAllUsers }
 
 }
 

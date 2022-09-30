@@ -8,8 +8,8 @@ const TeraArkProjects = () => {
   const { blog, teracomix, pointAvenue } = data
 
   const senderTeraArk = {
-    senderAvatar: TERAARK_INFO.favicon,
-    senderName: TERAARK_INFO.name,
+    avatar: TERAARK_INFO.favicon,
+    name: TERAARK_INFO.name,
   }
   return <>
     <TextMessage

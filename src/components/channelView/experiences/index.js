@@ -9,10 +9,7 @@ import MghExperience from "./mgh.experience.json"
 
 const Projects = () => {
 
-  const senderInfo = {
-    senderAvatar: MY_INFO.avatar,
-    sernderName: MY_INFO.name,
-  }
+
   const companies = [...DurbarExperience, ...MghExperience, ...MoneybrainExperience, ...TeracomixExperience]
 
   return <>
@@ -36,7 +33,7 @@ const Projects = () => {
           {item.msg && <TextMessage
 
             message={item.msg}
-            senderInfo={{ senderName: name, senderAvatar: avatar }}
+            senderInfo={{ name: name, avatar: avatar }}
 
 
           />}

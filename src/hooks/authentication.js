@@ -10,7 +10,7 @@ import RealtimeDatabaseManage from "../hooks/RealtimeDatabase"
 
 const AnonymousLogin = () => {
 
-  const { setSenders } = useStore();
+  const { addUsers } = useStore();
   const { getUserInfo, saveUserInfo } = RealtimeDatabaseManage()
 
   const setUserProfile = useCallback(async (userId) => {
@@ -28,8 +28,8 @@ const AnonymousLogin = () => {
         const image = promises[0].image
 
         userInfo = {
-          imgSrc: image,
-          name,
+          avatar: image,
+          name: name,
           userId
         }
         saveUserInfo(userInfo)
@@ -42,9 +42,11 @@ const AnonymousLogin = () => {
 
 
     if (userInfo) {
-      setSenders({
-        ...userInfo,
-        extraLabel: "you",
+      addUsers({
+        [userInfo.userId]: {
+          ...userInfo,
+          extraLabel: "you",
+        }
       })
 
     }

@@ -3,7 +3,7 @@ import React, { useCallback, useMemo, useRef, useEffect } from 'react';
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
 import Image from "../../global/image";
-import { peopleArr } from '../../leftSidebar/peopleList';
+import { SIFATUL_INFO } from '../../leftSidebar/peopleList';
 import Style from './textEditor.module.scss';
 
 
@@ -24,10 +24,7 @@ const TextEditor = () => {
       addNewIntroMessage({
         message: askEmailText,
         time: new Date().toISOString(),
-        senderInfo: {
-          senderAvatar: sifatulInfo.imgSrc,
-          senderName: sifatulInfo.name,
-        }
+
       })
     }, 1000)
 
@@ -39,7 +36,7 @@ const TextEditor = () => {
     const text = editorRef.current.getContent()
     console.log({ text })
 
-    saveDataInFirebase(text)
+    saveDataInFirebase(text, sifatulInfo.userId)
 
     editorRef.current.setContent("");
     sendEmailRequestMessage()
@@ -50,7 +47,7 @@ const TextEditor = () => {
 
 
   const readOnly = useMemo(() => {
-    return activeSidebarLabel !== peopleArr[0].label
+    return activeSidebarLabel !== SIFATUL_INFO.label
   }, [activeSidebarLabel])
 
   return <div className={Style.textEditor}>

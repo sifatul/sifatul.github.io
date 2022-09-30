@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { MY_INFO } from "../../../constants";
 import { slackTimelineformat } from "../../../helpers/time.helper";
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
@@ -11,17 +11,21 @@ import TimeCapsule from "../singleMessage/timeCapsule";
 const IntroMessage = () => {
 
 
-  const { introMessages, myInfo, addNewIntroMessage } = useStore();
+  const { introMessages, myInfo, addNewIntroMessage, users } = useStore();
   const [firstMsg, setFirstMsg] = useState('')
   const { databaseListener } = RealtimeDatabaseManage()
   const elementRef = useRef(null);
   let lastRepoTime = '';
 
-  const [messages, setMessage] = useState(IntroDefaultData)
 
-  useEffect(() => {
-    setMessage([...IntroDefaultData, ...introMessages])
-  }, [introMessages.length])
+  const defaultFormattedMsg = useMemo(() => {
+    return mapUsersAndMessage(users, IntroDefaultData)
+  }, [])
+  const messages = useMemo(() => {
+    const formatted = mapUsersAndMessage(users, introMessages);
+    return [...defaultFormattedMsg, ...formatted]
+  }, [introMessages, defaultFormattedMsg])
+
 
   useEffect(() => elementRef.current.scrollIntoView());
 
@@ -32,10 +36,10 @@ const IntroMessage = () => {
       addNewIntroMessage({
         message: data.text,
         time: data.created_at,
-        senderInfo: {
-          senderAvatar: myInfo.imgSrc,
-          senderName: myInfo.name,
-        }
+        // senderInfo: {
+        //   senderAvatar: myInfo.imgSrc,
+        //   senderName: myInfo.name,
+        // }
       })
 
 
@@ -43,13 +47,6 @@ const IntroMessage = () => {
     databaseListener(callback)
 
   }, [myInfo])
-
-
-
-
-
-
-
 
 
   const blogLink = {
@@ -62,10 +59,8 @@ const IntroMessage = () => {
     favicon: "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png",
   }
 
-  const MyInfo = {
-    senderAvatar: MY_INFO.avatar,
-    senderName: MY_INFO.name,
-  }
+  console.log("messages", messages)
+
   return <>
     <PersonIntro
       channelName={"activeSidebarLabel"}
@@ -73,11 +68,10 @@ const IntroMessage = () => {
       imgSrc={MY_INFO.avatar}
 
     />
+
     {messages.map((msgItem, idx) => {
-      const { message, time: created_at, senderInfo = MyInfo } = msgItem
-      let time = created_at ? slackTimelineformat(created_at) : ''
-      const today = slackTimelineformat(new Date().toISOString())
-      if (time == today) time = "Today"
+      const { message, time: created_at, senderInfo = {} } = msgItem
+      let time = timeFormat(created_at)
       const showTime = lastRepoTime !== time;
       lastRepoTime = time;
       return <div key={idx} ref={elementRef}>
@@ -93,3 +87,24 @@ const IntroMessage = () => {
 
 }
 export default IntroMessage
+
+function timeFormat(created_at) {
+  let time = created_at ? slackTimelineformat(created_at) : ''
+  const today = slackTimelineformat(new Date().toISOString())
+  if (time == today) time = "Today"
+  return time
+}
+function mapUsersAndMessage(users, message) {
+  const updateMessages = message.map(singleMessage => {
+    const { sender: senderUserId } = singleMessage
+    if (!senderUserId) {
+      singleMessage.senderInfo = users.sifatul
+    } else {
+      singleMessage.senderInfo = users[senderUserId]
+    }
+    return singleMessage
+  })
+  return updateMessages
+
+
+}

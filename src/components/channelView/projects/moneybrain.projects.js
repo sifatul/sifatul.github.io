@@ -8,8 +8,8 @@ const MoneyBrainProjects = () => {
   const { speakNow, AIStudios } = data
 
   const senderMoneyBrain = {
-    senderAvatar: MONEYBRAIN_INFO.favicon,
-    senderName: MONEYBRAIN_INFO.name,
+    avatar: MONEYBRAIN_INFO.favicon,
+    name: MONEYBRAIN_INFO.name,
   }
   return <>
 

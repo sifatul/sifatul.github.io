@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useStore } from '../../store'
 import { channels } from "../leftSidebar/channelList"
-import { peopleArr } from '../leftSidebar/peopleList'
+import { SIFATUL_INFO } from '../leftSidebar/peopleList'
 import { apps } from '../leftSidebar/appList'
 import Style from './channelView.module.scss'
 import Header from "./header"
@@ -21,7 +21,7 @@ const ChannelView = () => {
 
   const activePage = useMemo(() => {
     switch (activeSidebarLabel) {
-      case peopleArr[0].label:
+      case SIFATUL_INFO.label:
         return <IntroMessage />;
       case channels[0].label:
         return <Projects />

@@ -15,7 +15,15 @@ const initalState = {
     extraLabel: '',
     userId: 'sifatul'
   },
-  myInfo: null
+  myInfo: null,
+  users: {
+    'sifatul': {
+      name: MY_INFO.name,
+      avatar: MY_INFO.avatar,
+      extraLabel: '',
+      userId: 'sifatul'
+    }
+  }
 }
 
 const useStore = create(set => ({
@@ -68,6 +76,10 @@ const useStore = create(set => ({
     }
 
     return { ...state, myInfo: guestInfo }
+  }),
+  addUsers: (userList) => set(state => {
+
+    return { ...state, users: { ...state.users, ...userList } }
   }),
 
 }))

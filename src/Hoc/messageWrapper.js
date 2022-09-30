@@ -5,7 +5,7 @@ import { formatAMPM } from '../helpers/time.helper';
 
 
 const MessageWrapper = (props) => {
-  const { children, senderName, senderAvatar, created_at = new Date().toISOString() } = props
+  const { children, name, avatar, created_at = new Date().toISOString() } = props
   const { showUserProfile } = useStore();
   const timeVal = formatAMPM(created_at)
 
@@ -13,13 +13,13 @@ const MessageWrapper = (props) => {
     <div className={Style.singleMessage}>
       <div
         className={`${Style.col} ${Style.avatarContainer}`}    >
-        <Image src={senderAvatar} alt="hash-icon" />
+        <Image src={avatar} alt="hash-icon" />
       </div>
       <div className={Style.col}>
         <div className={Style.row}>
           <span className={`hasLink ${Style.username}`}
-            onClick={e => showUserProfile(senderName)}
-          > {senderName} </span>
+            onClick={e => showUserProfile(name)}
+          > {name} </span>
           <span className={Style.userMessageTime}>{timeVal}</span>
         </div>
         <div
