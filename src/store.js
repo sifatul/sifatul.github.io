@@ -67,19 +67,12 @@ const useStore = create(set => ({
 
     return { ...state, introMessages: allmessage }
   }),
-  setSenders: ({ name, imgSrc, extraLabel, userId }) => set(state => {
-    const guestInfo = {
-      imgSrc,
-      name,
-      extraLabel,
-      userId
-    }
 
-    return { ...state, myInfo: guestInfo }
-  }),
   addUsers: (userList) => set(state => {
-
-    return { ...state, users: { ...state.users, ...userList } }
+    const guestUserId = Object.keys(userList).filter(userId => userList[userId]?.extraLabel !== '')
+    const myInfo = userList[guestUserId] || state.myInfo
+    console.log("myInfo:", myInfo)
+    return { ...state, users: { ...userList, ...state.users }, myInfo }
   }),
 
 }))

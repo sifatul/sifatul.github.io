@@ -27,11 +27,13 @@ const ChannelList = () => {
   const { getAllUsers } = RealtimeDatabaseManage();
   const handleUserList = useCallback(async () => {
     const users = await getAllUsers();
+    console.log("all users: ", users)
+
     addUsers(users);
-  }, [[myInfo]]);
+  }, []);
 
   useEffect(() => {
-    if (!myInfo) return;
+    if (!myInfo) return
     handleUserList();
   }, [myInfo]);
 

@@ -42,6 +42,7 @@ const AnonymousLogin = () => {
 
 
     if (userInfo) {
+
       addUsers({
         [userInfo.userId]: {
           ...userInfo,

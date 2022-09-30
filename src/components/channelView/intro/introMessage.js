@@ -22,9 +22,11 @@ const IntroMessage = () => {
     return mapUsersAndMessage(users, IntroDefaultData)
   }, [])
   const messages = useMemo(() => {
+    console.log("introMessages: ", introMessages)
     const formatted = mapUsersAndMessage(users, introMessages);
+    console.log("formatted: ", formatted)
     return [...defaultFormattedMsg, ...formatted]
-  }, [introMessages, defaultFormattedMsg])
+  }, [introMessages, defaultFormattedMsg, users])
 
 
   useEffect(() => elementRef.current.scrollIntoView());
@@ -33,13 +35,11 @@ const IntroMessage = () => {
     if (!myInfo) return
     const callback = (data) => {
       console.log("callback: ", data)
+      const { text, created_at, sender } = data
       addNewIntroMessage({
-        message: data.text,
-        time: data.created_at,
-        // senderInfo: {
-        //   senderAvatar: myInfo.imgSrc,
-        //   senderName: myInfo.name,
-        // }
+        message: text,
+        time: created_at,
+        sender
       })
 
 

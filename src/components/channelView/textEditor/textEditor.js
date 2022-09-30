@@ -7,7 +7,7 @@ import { SIFATUL_INFO } from '../../leftSidebar/peopleList';
 import Style from './textEditor.module.scss';
 
 
-const askEmailText = "<p>You may leave your email address to follow up with this conversation.</p>"
+const askEmailText = "<p>I may leave your email address or come back later to follow up with this conversation.</p>"
 const TextEditor = () => {
   const { myInfo, activeSidebarItem, introMessages, addNewIntroMessage, sifatulInfo } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
