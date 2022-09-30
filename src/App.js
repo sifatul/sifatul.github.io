@@ -13,7 +13,7 @@ function App() {
   AnonymousLogin()
 
 
-  if (!myInfo) return <></>
+
 
   return (
     <div className="container">

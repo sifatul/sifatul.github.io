@@ -18,7 +18,7 @@ const initalState = {
       userId: 'sifatul'
     }
   },
-  // isAdmin: true
+  isAdmin: true
 }
 
 const useStore = create(set => ({

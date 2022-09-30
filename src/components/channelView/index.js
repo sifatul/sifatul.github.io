@@ -16,7 +16,7 @@ import HackerRankPage from './hackerrank'
 import GuestPage from "./guestPage"
 const ChannelView = () => {
 
-  const { activeSidebarItem } = useStore();
+  const { activeSidebarItem, myInfo } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
 
   const activePage = useMemo(() => {
@@ -46,11 +46,11 @@ const ChannelView = () => {
       <Header />
 
       <div className={Style.wrapper}>
-        {activePage}
+        {myInfo && activePage}
 
 
       </div>
-      <TextEditor />
+      {myInfo && <TextEditor />}
 
     </div>
 
