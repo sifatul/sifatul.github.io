@@ -1,52 +1,98 @@
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MY_INFO } from "../../../constants";
-import { slackTimelineformat } from "../../../helpers/time.helper";
+import { mapUsersAndMessage, timeFormat } from "../../../helpers/messageHelper";
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
 import IntroDefaultData from "../intro/introTexts.json";
 import PersonIntro from "../personIntro";
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
+const askEmailText = "<p>If you may leave your email address or come back later to follow up with this conversation.</p>"
 
 const IntroMessage = () => {
 
 
-  const { introMessages, myInfo, addNewIntroMessage, users } = useStore();
-  const [firstMsg, setFirstMsg] = useState('')
-  const { databaseListener } = RealtimeDatabaseManage()
+  const { myInfo, users, activeSidebarItem } = useStore();
+  const { activeSidebarLabel, activeSidebarIcon } = activeSidebarItem;
+
+  const { databaseListener, allMessageListener } = RealtimeDatabaseManage()
   const elementRef = useRef(null);
   let lastRepoTime = '';
+  const [messages, addNewIntroMessage] = useState([])
 
+  const sendEmailRequestMessage = useCallback(() => {
+    const newMessage = {
+      message: askEmailText,
+      time: new Date().toISOString(),
+    }
+    const formatted = mapUsersAndMessage(users, [newMessage])
+    setTimeout(() => {
+      addNewIntroMessage(prev => [...prev, ...formatted])
+    }, 1000)
 
-  const defaultFormattedMsg = useMemo(() => {
-    return mapUsersAndMessage(users, IntroDefaultData)
   }, [])
-  const messages = useMemo(() => {
-    console.log("introMessages: ", introMessages)
-    const formatted = mapUsersAndMessage(users, introMessages);
-    console.log("formatted: ", formatted)
-    return [...defaultFormattedMsg, ...formatted]
-  }, [introMessages, defaultFormattedMsg, users])
 
-
-  useEffect(() => elementRef.current.scrollIntoView());
 
   useEffect(() => {
-    if (!myInfo) return
+
+    const formatted = mapUsersAndMessage(users, IntroDefaultData)
+    addNewIntroMessage(prev => [...prev, ...formatted])
+
+  }, [])
+
+
+
+  useEffect(() => elementRef?.current?.scrollIntoView());
+  const userMessageHandler = useCallback(() => {
+    if (myInfo.name == activeSidebarLabel) return
+    debugger
     const callback = (data) => {
-      console.log("callback: ", data)
-      const { text, created_at, sender } = data
-      addNewIntroMessage({
-        message: text,
+      const { message, created_at, sender } = data
+      const newMessage = {
+        message,
         time: created_at,
         sender
-      })
+      }
+      const formatted = mapUsersAndMessage(users, [newMessage])
+      addNewIntroMessage(prev => [...prev, ...formatted])
+      if (messages.length === IntroDefaultData.length + 3) sendEmailRequestMessage()
 
 
     }
-    databaseListener(callback)
+    databaseListener(null, callback)
 
-  }, [myInfo])
+  }, [myInfo, messages, activeSidebarLabel])
+
+  const allMessageHandler = useCallback(async () => {
+
+    const data = await allMessageListener()
+
+    const userList = [];
+
+    for (let user in data) {
+      userList.push(data[user])
+    }
+    const arr = [];
+    userList.map(item => {
+      for (let keys in item) {
+        arr.push(item[keys])
+      }
+    })
+
+    const formatted = mapUsersAndMessage(users, arr)
+
+
+    addNewIntroMessage(prev => [...prev, ...formatted])
+
+  }, [messages, users])
+
+
+
+
+  useEffect(() => {
+    userMessageHandler()
+    // if (isAdmin) allMessageHandler()
+  }, [])
 
 
   const blogLink = {
@@ -59,7 +105,8 @@ const IntroMessage = () => {
     favicon: "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png",
   }
 
-  console.log("messages", messages)
+
+
 
   return <>
     <PersonIntro
@@ -88,23 +135,4 @@ const IntroMessage = () => {
 }
 export default IntroMessage
 
-function timeFormat(created_at) {
-  let time = created_at ? slackTimelineformat(created_at) : ''
-  const today = slackTimelineformat(new Date().toISOString())
-  if (time == today) time = "Today"
-  return time
-}
-function mapUsersAndMessage(users, message) {
-  const updateMessages = message.map(singleMessage => {
-    const { sender: senderUserId } = singleMessage
-    if (!senderUserId) {
-      singleMessage.senderInfo = users.sifatul
-    } else {
-      singleMessage.senderInfo = users[senderUserId]
-    }
-    return singleMessage
-  })
-  return updateMessages
 
-
-}

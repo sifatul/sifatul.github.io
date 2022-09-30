@@ -7,31 +7,61 @@ function RealtimeDatabaseManage() {
   const { myInfo } = useStore();
 
 
-  const saveDataInFirebase = useCallback((text, receiverId) => {
+  const saveDataInFirebase = useCallback((text, destination, source) => {
     if (!myInfo) return
     const db = getDatabase();
-    const sender = myInfo.userId;
 
-    push(ref(db, 'messages/' + sender), {
-      sender,
-      receiver: receiverId,
-      text,
+    push(ref(db, 'messages/' + destination), {
+      sender: source,
+      receiver: destination,
+      message: text,
       created_at: new Date().toISOString()
 
     });
 
   }, [myInfo])
 
-  const databaseListener = useCallback((callback) => {
+  const databaseListener = useCallback((userId, callback) => {
+
     if (!myInfo) return
+    if (!userId) userId = myInfo.userId
     const db = getDatabase();
-    const starCountRef = ref(db, 'messages/' + myInfo.userId);
+    const starCountRef = ref(db, 'messages/' + userId);
     onChildAdded(starCountRef, (snapshot) => {
       const data = snapshot.val();
       callback(data)
 
     });
   }, [myInfo])
+
+
+  const allMessageListener = useCallback(() => {
+    const db = getDatabase();
+    const starCountRef = ref(db, `messages/`);
+
+    return new Promise(resolve => {
+
+      try {
+        get(starCountRef).then((snapshot) => {
+
+          if (snapshot.exists()) {
+            resolve(snapshot.val())
+          } else {
+            resolve(null)
+          }
+        }).catch((error) => {
+
+          console.error(error);
+          resolve(null)
+        });
+      } catch (e) {
+        resolve(null)
+      }
+
+
+    })
+
+  }, [])
 
   const getUserInfo = useCallback(async (userId) => {
     const db = getDatabase();
@@ -43,10 +73,8 @@ function RealtimeDatabaseManage() {
         get(starCountRef).then((snapshot) => {
 
           if (snapshot.exists()) {
-            console.log(snapshot.val());
             resolve(snapshot.val())
           } else {
-            console.log("No data available");
             resolve(null)
           }
         }).catch((error) => {
@@ -86,10 +114,8 @@ function RealtimeDatabaseManage() {
         get(starCountRef).then((snapshot) => {
 
           if (snapshot.exists()) {
-            console.log(snapshot.val());
             resolve(snapshot.val())
           } else {
-            console.log("No data available");
             resolve({})
           }
         }).catch((error) => {
@@ -108,7 +134,7 @@ function RealtimeDatabaseManage() {
 
 
 
-  return { saveDataInFirebase, databaseListener, getUserInfo, saveUserInfo, getAllUsers }
+  return { saveDataInFirebase, databaseListener, getUserInfo, saveUserInfo, getAllUsers, allMessageListener }
 
 }
 

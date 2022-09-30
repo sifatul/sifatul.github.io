@@ -7,7 +7,6 @@ const LeetCodePage = () => {
 
   useEffect(() => {
     GetData('https://codies.vercel.app/api/leetcode/find?userName=sifatul2020').then(res => {
-      console.log(" res: ", res)
     })
   }, [])
   return <>

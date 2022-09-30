@@ -9,12 +9,6 @@ const initalState = {
   },
   profileVisible: null,
   introMessages: [],
-  sifatulInfo: {
-    name: MY_INFO.name,
-    imgSrc: MY_INFO.avatar,
-    extraLabel: '',
-    userId: 'sifatul'
-  },
   myInfo: null,
   users: {
     'sifatul': {
@@ -23,7 +17,8 @@ const initalState = {
       extraLabel: '',
       userId: 'sifatul'
     }
-  }
+  },
+  // isAdmin: true
 }
 
 const useStore = create(set => ({
@@ -50,7 +45,7 @@ const useStore = create(set => ({
       ...state.activeSidebarItem,
       open: true
     }
-    console.log("activeSidebarItem: ", activeSidebarItem)
+
     return { ...state, activeSidebarItem }
   }),
 
@@ -70,8 +65,8 @@ const useStore = create(set => ({
 
   addUsers: (userList) => set(state => {
     const guestUserId = Object.keys(userList).filter(userId => userList[userId]?.extraLabel !== '')
-    const myInfo = userList[guestUserId] || state.myInfo
-    console.log("myInfo:", myInfo)
+    const myInfo = state.myInfo || userList[guestUserId]
+
     return { ...state, users: { ...userList, ...state.users }, myInfo }
   }),
 

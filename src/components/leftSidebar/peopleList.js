@@ -16,10 +16,10 @@ const ChannelList = () => {
   const {
     setActiveSidebar,
     activeSidebarItem,
-    sifatulInfo,
     myInfo,
     users,
     addUsers,
+    isAdmin
   } = useStore();
 
   const { activeSidebarLabel } = activeSidebarItem;
@@ -27,23 +27,21 @@ const ChannelList = () => {
   const { getAllUsers } = RealtimeDatabaseManage();
   const handleUserList = useCallback(async () => {
     const users = await getAllUsers();
-    console.log("all users: ", users)
-
     addUsers(users);
   }, []);
 
   useEffect(() => {
-    if (!myInfo) return
-    handleUserList();
-  }, [myInfo]);
+    if (isAdmin) handleUserList();
+  }, []);
 
   const senders = useMemo(() => {
     return Object.keys(users).map((userID) => {
-      return users[userID];
+      const extraLabel = myInfo?.userId === userID ? 'you' : ''
+      console.log(myInfo, userID)
+      return { ...users[userID], extraLabel }
     });
-  }, [users]);
+  }, [users, myInfo]);
 
-  console.log("senders: ", senders)
 
   return (
     <>

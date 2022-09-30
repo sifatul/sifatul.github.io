@@ -5,50 +5,41 @@ import { useStore } from '../../../store';
 import Image from "../../global/image";
 import { SIFATUL_INFO } from '../../leftSidebar/peopleList';
 import Style from './textEditor.module.scss';
+import { apps } from '../../leftSidebar/appList';
+import { channels } from '../../leftSidebar/channelList';
 
 
-const askEmailText = "<p>I may leave your email address or come back later to follow up with this conversation.</p>"
 const TextEditor = () => {
-  const { myInfo, activeSidebarItem, introMessages, addNewIntroMessage, sifatulInfo } = useStore();
+  const { myInfo, activeSidebarItem, introMessages, addNewIntroMessage, users, isAdmin } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
 
   const editorRef = useRef(null);
   const { saveDataInFirebase } = RealtimeDatabaseManage()
-
-
-
-  const sendEmailRequestMessage = useCallback(() => {
-    if (introMessages.length !== 0) return
-
-    setTimeout(() => {
-      addNewIntroMessage({
-        message: askEmailText,
-        time: new Date().toISOString(),
-
-      })
-    }, 1000)
-
-  }, [introMessages])
+  const currentUser = useMemo(() => {
+    const key = Object.keys(users).find(userId => users[userId].name === activeSidebarLabel)
+    const singleUser = users[key]
+    return singleUser
+  }, [users, activeSidebarLabel])
 
 
   const submitText = useCallback(() => {
     if (!editorRef?.current) return
     const text = editorRef.current.getContent()
-    console.log({ text })
 
-    saveDataInFirebase(text, sifatulInfo.userId)
+    let source = myInfo.userId
+    let destination = isAdmin ? currentUser.userId : myInfo.userId
+    saveDataInFirebase(text, destination, source)
 
     editorRef.current.setContent("");
-    sendEmailRequestMessage()
 
-  }, [editorRef.current, myInfo, introMessages])
-
-
+  }, [editorRef.current, myInfo, isAdmin, currentUser])
 
 
   const readOnly = useMemo(() => {
-    return activeSidebarLabel !== SIFATUL_INFO.label
-  }, [activeSidebarLabel])
+    const appLevels = [...apps, ...channels].map(item => item.label)
+    return activeSidebarLabel == myInfo.name || appLevels.includes(activeSidebarLabel)
+
+  }, [activeSidebarLabel, isAdmin, myInfo])
 
   return <div className={Style.textEditor}>
 
@@ -77,7 +68,7 @@ const TextEditor = () => {
         }}
 
       />}
-      {!readOnly && <Editor
+      {(!readOnly) && <Editor
 
         scriptLoading={{ async: true }}
         id={activeSidebarLabel}
