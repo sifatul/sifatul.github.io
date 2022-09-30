@@ -4,7 +4,7 @@ import { textToLinkMarkup } from "../../../helpers/string.helper"
 
 
 const TextMessage = (props) => {
-  let { message, senderInfo } = props
+  let { message, senderInfo, created_at } = props
 
 
 
@@ -14,6 +14,7 @@ const TextMessage = (props) => {
   return <>
     <MessageWrapper
       {...senderInfo}
+      created_at={created_at}
     >
       <> {messageArr.map((text, idx) => {
         return <div className="block" key={idx}

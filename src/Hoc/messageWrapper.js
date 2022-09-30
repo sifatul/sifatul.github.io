@@ -1,11 +1,13 @@
 import Style from '../components/channelView/channelView.module.scss';
 import { useStore } from "../store";
 import Image from "../components/global/image"
+import { formatAMPM } from '../helpers/time.helper';
 
 
 const MessageWrapper = (props) => {
-  const { children, senderName, senderAvatar } = props
+  const { children, senderName, senderAvatar, created_at = new Date().toISOString() } = props
   const { showUserProfile } = useStore();
+  const timeVal = formatAMPM(created_at)
 
   return <>
     <div className={Style.singleMessage}>
@@ -18,7 +20,7 @@ const MessageWrapper = (props) => {
           <span className={`hasLink ${Style.username}`}
             onClick={e => showUserProfile(senderName)}
           > {senderName} </span>
-          <span className={Style.userMessageTime}>8:06 AM</span>
+          <span className={Style.userMessageTime}>{timeVal}</span>
         </div>
         <div
 

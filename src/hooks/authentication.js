@@ -4,33 +4,50 @@ import { useEffect } from "react";
 import { useStore } from '../store';
 import { useCallback } from "react";
 import { GetData } from "../helpers/httpClient.helper";
+import RealtimeDatabaseManage from "../hooks/RealtimeDatabase"
 
 
 
 const AnonymousLogin = () => {
 
   const { setSenders } = useStore();
+  const { getUserInfo, saveUserInfo } = RealtimeDatabaseManage()
+
   const setUserProfile = useCallback(async (userId) => {
-    const getProfileImage = GetData('https://some-random-api.ml/animal/panda')
-    const getRandomUser = GetData('https://randomuser.me/api/');
-    const promises = await Promise.all([getProfileImage, getRandomUser])
-    const { results = [] } = promises[1]
+    let userInfo = await getUserInfo(userId)
+    if (!userInfo) {
 
-    try {
+      const getProfileImage = GetData('https://some-random-api.ml/animal/panda')
+      const getRandomUser = GetData('https://randomuser.me/api/');
+      const promises = await Promise.all([getProfileImage, getRandomUser])
+      const { results = [] } = promises[1]
 
-      const name = results[0].name.first
-      const image = promises[0].image
+      try {
 
-      setSenders({
-        imgSrc: image,
-        name,
-        extraLabel: "you",
-        userId
-      })
-    } catch (e) {
+        const name = results[0].name.first
+        const image = promises[0].image
+
+        userInfo = {
+          imgSrc: image,
+          name,
+          userId
+        }
+        saveUserInfo(userInfo)
+
+      } catch (e) {
+
+      }
 
     }
 
+
+    if (userInfo) {
+      setSenders({
+        ...userInfo,
+        extraLabel: "you",
+      })
+
+    }
 
 
   }, [])

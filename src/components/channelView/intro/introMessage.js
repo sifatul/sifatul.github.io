@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { MY_INFO } from "../../../constants";
 import { slackTimelineformat } from "../../../helpers/time.helper";
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
@@ -14,13 +14,16 @@ const IntroMessage = () => {
   const { introMessages, myInfo, addNewIntroMessage } = useStore();
   const [firstMsg, setFirstMsg] = useState('')
   const { databaseListener } = RealtimeDatabaseManage()
-  console.log("introMessages: ", introMessages)
+  const elementRef = useRef(null);
   let lastRepoTime = '';
 
   const [messages, setMessage] = useState(IntroDefaultData)
+
   useEffect(() => {
     setMessage([...IntroDefaultData, ...introMessages])
   }, [introMessages.length])
+
+  useEffect(() => elementRef.current.scrollIntoView());
 
   useEffect(() => {
     if (!myInfo) return
@@ -41,26 +44,8 @@ const IntroMessage = () => {
 
   }, [myInfo])
 
-  // useEffect(() => {
-  //   if (!firstMsg) return
-  //   const hasEmail = checkIfEmailInString(firstMsg)
-  //   if (hasEmail) return
-  //   const timer = setTimeout(() => {
-  //     addNewIntroMessage({
-  //       message: askEmailText,
-  //       senderInfo: {
-  //         senderAvatar: sifatulInfo.imgSrc,
-  //         senderName: sifatulInfo.name,
-  //       }
-  //     })
-  //   }, 1000)
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
 
 
-  // }, [firstMsg])
 
 
 
@@ -95,11 +80,12 @@ const IntroMessage = () => {
       if (time == today) time = "Today"
       const showTime = lastRepoTime !== time;
       lastRepoTime = time;
-      return <div key={idx}>
+      return <div key={idx} ref={elementRef}>
         {showTime && <TimeCapsule time={time} />}
         <TextMessage
           message={message}
           senderInfo={senderInfo}
+          created_at={created_at}
         />
       </div>
     })}

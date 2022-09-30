@@ -1,5 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useMemo, useRef, useEffect } from 'react';
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
 import Image from "../../global/image";
@@ -7,14 +7,31 @@ import { peopleArr } from '../../leftSidebar/peopleList';
 import Style from './textEditor.module.scss';
 
 
-const askEmailText = "<p><span data-preserver-spaces=\"true\">As&nbsp;</span><strong><span data-preserver-spaces=\"true\">Sifatul&nbsp;</span></strong><span data-preserver-spaces=\"true\">is't online. It's best to start conversation by stating your email address so that he may get back to you later.</span></p>"
+const askEmailText = "<p>You may leave your email address to follow up with this conversation.</p>"
 const TextEditor = () => {
-  const { addNewIntroMessage, sifatulInfo, myInfo, activeSidebarItem } = useStore();
-  const editorRef = useRef(null);
-  const { saveDataInFirebase } = RealtimeDatabaseManage()
+  const { myInfo, activeSidebarItem, introMessages, addNewIntroMessage, sifatulInfo } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
 
+  const editorRef = useRef(null);
+  const { saveDataInFirebase } = RealtimeDatabaseManage()
 
+
+
+  const sendEmailRequestMessage = useCallback(() => {
+    if (introMessages.length !== 0) return
+
+    setTimeout(() => {
+      addNewIntroMessage({
+        message: askEmailText,
+        time: new Date().toISOString(),
+        senderInfo: {
+          senderAvatar: sifatulInfo.imgSrc,
+          senderName: sifatulInfo.name,
+        }
+      })
+    }, 1000)
+
+  }, [introMessages])
 
 
   const submitText = useCallback(() => {
@@ -24,13 +41,14 @@ const TextEditor = () => {
 
     saveDataInFirebase(text)
 
-  }, [editorRef.current, myInfo])
+    editorRef.current.setContent("");
+    sendEmailRequestMessage()
+
+  }, [editorRef.current, myInfo, introMessages])
 
 
 
-  const onchange_callback = (inst) => {
-    console.log("typing" + inst)
-  }
+
   const readOnly = useMemo(() => {
     return activeSidebarLabel !== peopleArr[0].label
   }, [activeSidebarLabel])
