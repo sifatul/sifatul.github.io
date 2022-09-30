@@ -37,7 +37,7 @@ const ChannelList = () => {
   const senders = useMemo(() => {
     return Object.keys(users).map((userID) => {
       const extraLabel = myInfo?.userId === userID ? 'you' : ''
-      console.log(myInfo, userID)
+      // console.log(myInfo, userID)
       return { ...users[userID], extraLabel }
     });
   }, [users, myInfo]);

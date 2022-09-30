@@ -27,7 +27,8 @@ const GuestPage = () => {
     setUserInfo(singleUser)
     setMessage([])
 
-  }, [])
+  }, [activeSidebarLabel])
+
 
 
   const userMessageHandler = useCallback(() => {
