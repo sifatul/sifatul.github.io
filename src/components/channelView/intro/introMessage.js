@@ -7,7 +7,7 @@ import IntroDefaultData from "../intro/introTexts.json";
 import PersonIntro from "../personIntro";
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
-const askEmailText = "<p>If you may leave your email address or come back later to follow up with this conversation.</p>"
+const askEmailText = "<p>Feel free to leave a message and come back later to follow up with this conversation. \\n You may also leave your email address. </p>"
 
 const IntroMessage = () => {
 
@@ -37,6 +37,7 @@ const IntroMessage = () => {
 
     const formatted = mapUsersAndMessage(users, IntroDefaultData)
     addNewIntroMessage(prev => [...prev, ...formatted])
+    sendEmailRequestMessage()
 
   }, [])
 
@@ -55,7 +56,6 @@ const IntroMessage = () => {
       }
       const formatted = mapUsersAndMessage(users, [newMessage])
       addNewIntroMessage(prev => [...prev, ...formatted])
-      if (messages.length === IntroDefaultData.length + 3) sendEmailRequestMessage()
 
 
     }
