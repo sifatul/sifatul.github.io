@@ -25,12 +25,8 @@ const GuestPage = () => {
     const key = Object.keys(users).find(userId => users[userId].name === activeSidebarLabel)
     const singleUser = users[key]
     setUserInfo(singleUser)
-    const newMessage = {
-      message: 'Hello there!\\n Please feel to leave a message. I will get back to you.',
-      time: new Date(),
-      senderInfo: users.sifatul
-    }
-    setMessage([newMessage])
+
+    setMessage([])
 
   }, [activeSidebarLabel])
 
