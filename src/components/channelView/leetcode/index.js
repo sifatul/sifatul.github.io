@@ -65,13 +65,15 @@ const LeetCodePage = () => {
     ]
 
 
-    setLeetcodeInfo([...leetCodeInfo, ...items])
+    setLeetcodeInfo(prevState => {
+      return [...items, ...prevState,]
+    })
 
   }, [leetCodeInfo])
 
   const getHackerRankInfo = useCallback(async () => {
     const senderInfo = {
-      avatar: 'https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png',
+      avatar: HackerrankSvg,
       name: 'HackerRank',
     }
     const res = await GetData('https://codies.net/api/hackerrank/find?userName=sifatul')
@@ -89,7 +91,10 @@ const LeetCodePage = () => {
       },
 
     ]
-    setLeetcodeInfo([...leetCodeInfo, ...message])
+    setLeetcodeInfo(prevState => {
+      return [...prevState, ...message]
+    })
+
 
   }, [leetCodeInfo])
   useEffect(() => {
@@ -97,7 +102,7 @@ const LeetCodePage = () => {
     getHackerRankInfo()
 
   }, [])
-  console.log("HackerrankSvg", HackerrankSvg)
+
   const imgUrl = ["https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png", HackerrankSvg]
   return <>
     <ChannelIntro
