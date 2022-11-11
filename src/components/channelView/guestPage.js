@@ -25,7 +25,12 @@ const GuestPage = () => {
     const key = Object.keys(users).find(userId => users[userId].name === activeSidebarLabel)
     const singleUser = users[key]
     setUserInfo(singleUser)
-    setMessage([])
+    const newMessage = {
+      message: 'Hello there!\\n Please feel to leave a message. I will get back to you.',
+      time: new Date(),
+      senderInfo: users.sifatul
+    }
+    setMessage([newMessage])
 
   }, [activeSidebarLabel])
 
@@ -44,8 +49,6 @@ const GuestPage = () => {
       }
       mapUsersAndMessage(users, [newMessage]);
       setMessage(prev => [...prev, newMessage])
-
-
     }
     databaseListener(userInfo.userId, callback)
 
