@@ -45,7 +45,7 @@ const IntroMessage = () => {
   useEffect(() => elementRef?.current?.scrollIntoView());
   const userMessageHandler = useCallback(() => {
     if (myInfo.name == activeSidebarLabel) return
-    debugger
+
     const callback = (data) => {
       const { message, created_at, sender } = data
       const newMessage = {

@@ -5,6 +5,7 @@ import TimeCapsule from "../singleMessage/timeCapsule"
 import { GetData } from "../../../helpers/httpClient.helper"
 import { slackTimelineformat } from "../../../helpers/time.helper"
 import GithubRepos from "./githubData.json"
+import GithubImg from "../../../github.svg"
 
 
 const GithubPage = () => {
@@ -23,7 +24,7 @@ const GithubPage = () => {
 
   }, [])
   const senderInfo = {
-    avatar: 'https://img.icons8.com/ios-glyphs/30/000000/github.png',
+    avatar: GithubImg,
     name: 'Github',
   }
   const reposSorted = useMemo(() => {
@@ -40,7 +41,7 @@ const GithubPage = () => {
     <ChannelIntro
       channelName="github"
       body="This channel holds history of projects created in https://github.com/sifatul."
-      imgSrc="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+      imgSrc={[GithubImg]}
     />
 
     {reposSorted.sort().map(repo => {

@@ -12,7 +12,6 @@ import TextEditor from "./textEditor/textEditor"
 import Github from "./github"
 import GithubPage from './github'
 import LeetCodePage from './leetcode'
-import HackerRankPage from './hackerrank'
 import GuestPage from "./guestPage"
 const ChannelView = () => {
 
@@ -27,8 +26,7 @@ const ChannelView = () => {
         return <Projects />
       case channels[1].label:
         return <Experiences />
-      case apps[2].label:
-        return <HackerRankPage />
+
       case apps[0].label:
         return <GithubPage />
       case apps[1].label:

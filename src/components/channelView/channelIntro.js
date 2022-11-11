@@ -6,11 +6,15 @@ const ChannelIntro = (props) => {
   const { channelName, body, imgSrc } = props
   const message = textToLinkMarkup(body)
   return <div className={`${Style.channelIntro}`}>
-    <div className={`${Style.singleMessage} ${Style.channelIntro}`}>
+    <div className={`${Style.singleMessage} ${Style.channelIntro}`} style={{ flexDirection: 'column' }}>
       <div
         className={`${Style.col} `}    >
         <div className={Style.ChannelIntroIconWrapper}>
-          <Image src={imgSrc} alt="hash-icon" />
+          {imgSrc.map(src => {
+            return <Image key={src} src={src} alt="hash-icon" />
+          })
+
+          }
         </div>
 
       </div>
