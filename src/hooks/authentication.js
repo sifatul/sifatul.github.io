@@ -16,18 +16,17 @@ const ManageAuth = () => {
 
   const setUserProfile = useCallback(async (userId) => {
     let userInfo = isAdmin ? users.sifatul : await getUserInfo(userId)
-    console.log(" login: ", userInfo)
-    if (!userInfo) {
-
-      const getProfileImage = GetData('https://some-random-api.ml/animal/panda')
-      const getRandomUser = GetData('https://randomuser.me/api/?gender=male');
-      const promises = await Promise.all([getProfileImage, getRandomUser])
-      const { results = [] } = promises[1]
+    console.log(" login: ", userInfo, users, isAdmin)
+    if (!userInfo) {  
 
       try {
+         
+        const getRandomUser = await GetData('https://randomuser.me/api/?gender=male');
+  
+        const { results = [] } = getRandomUser 
 
         const name = results[0].name.first
-        const image = promises[0].image
+        const image = results[0].picture.thumbnail
 
         userInfo = {
           avatar: image,
@@ -35,8 +34,10 @@ const ManageAuth = () => {
           userId
         }
         saveUserInfo(userInfo)
+        console.log("saved userInfo", userInfo)
 
       } catch (e) {
+        console.log("error while saving user info", e)
 
       }
 
@@ -73,12 +74,15 @@ const ManageAuth = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ...
+        console.error(errorMessage)
       });
   }, [])
 
   useEffect(() => {
-    if (!FierbaseApp) return
+    if (!FierbaseApp) {
+      console.debug("Fierbase not found")
+      return
+    }
     const app = FierbaseApp()
     const auth = getAuth(app);
 
@@ -89,8 +93,10 @@ const ManageAuth = () => {
         // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
         setUserProfile(uid)
+        console.log("set user profile")
         // ...
       } else {
+        console.log("User is signed out")
         // User is signed out
         // ...
       }

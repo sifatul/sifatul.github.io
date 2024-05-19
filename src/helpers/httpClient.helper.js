@@ -1,15 +1,13 @@
-const GetData = (url) => {
-  return new Promise((resolve) => {
-    fetch(url, { method: 'GET' })
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (json) {
-        resolve(json);
-      })
-      .catch((e) => {
-        throw e;
-      });
-  });
+const GetData = async (url) => {
+  try {
+    
+    const response = await fetch(url, { method: 'GET'});
+    const json = await response.json();
+    return json;
+  } catch (e) {
+    console.error("Failed to fetch", e);
+    throw e;
+  }
 };
-export { GetData }
+
+export { GetData };
