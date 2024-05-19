@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.2c91ec92.css",
-    "main.js": "/static/js/main.2a24a67a.js",
+    "main.js": "/static/js/main.1689282f.js",
     "static/js/787.b2239b68.chunk.js": "/static/js/787.b2239b68.chunk.js",
     "static/media/leetcodeImg.png": "/static/media/leetcodeImg.ea4d412df31479e57e1d.png",
     "static/media/hackerrank.svg": "/static/media/hackerrank.01f25f6a6251ecdb52a77ed140ab57e3.svg",
     "static/media/github.svg": "/static/media/github.7c2b277031fc9aeb24c033ff9332c319.svg",
     "index.html": "/index.html",
     "main.2c91ec92.css.map": "/static/css/main.2c91ec92.css.map",
-    "main.2a24a67a.js.map": "/static/js/main.2a24a67a.js.map",
+    "main.1689282f.js.map": "/static/js/main.1689282f.js.map",
     "787.b2239b68.chunk.js.map": "/static/js/787.b2239b68.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c91ec92.css",
-    "static/js/main.2a24a67a.js"
+    "static/js/main.1689282f.js"
   ]
 }
