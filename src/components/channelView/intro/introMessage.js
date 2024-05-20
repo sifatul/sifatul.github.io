@@ -3,7 +3,7 @@ import { MY_INFO } from "../../../constants";
 import { mapUsersAndMessage, timeFormat } from "../../../helpers/messageHelper";
 import RealtimeDatabaseManage from "../../../hooks/RealtimeDatabase";
 import { useStore } from '../../../store';
-import IntroDefaultData from "../intro/introTexts.json";
+// import IntroDefaultData from "../intro/introTexts.json";
 import PersonIntro from "../personIntro";
 import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
@@ -34,10 +34,14 @@ const IntroMessage = () => {
 
 
   useEffect(() => {
-
+    const IntroDefaultData = [
+      {
+        "message": "<div class=\"block\">Hello there!</div>\n<div class=\"block\">My name is Md Sifatul Islam. I have been working as a fullstack developer for around 5 years.</div>"
+      }
+    ]
     const formatted = mapUsersAndMessage(users, IntroDefaultData)
     addNewIntroMessage(prev => [...prev, ...formatted])
-    sendEmailRequestMessage()
+    // sendEmailRequestMessage()
 
   }, [])
 
@@ -89,10 +93,10 @@ const IntroMessage = () => {
 
 
 
-  useEffect(() => {
-    userMessageHandler()
-    // if (isAdmin) allMessageHandler()
-  }, [])
+  // useEffect(() => {
+  //   userMessageHandler()
+  //   // if (isAdmin) allMessageHandler()
+  // }, [])
 
 
   const blogLink = {
