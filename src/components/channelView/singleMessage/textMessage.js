@@ -50,11 +50,13 @@ const TextMessage = (props) => {
   useEffect(() => {
    
     const splittedMsg = splitDOMString(message)
-     
+    const tags =['<div>','</div>','<b>','</b>']
+    const regex = new RegExp(tags.join('|'), 'g'); // Combine tags with "|" an
+     console.log(splittedMsg)
     async function testType(){
       for (const text of splittedMsg) {
 
-        if(text.includes('div')){
+        if (regex.test(text)) {
           setRevealedMessage((prevRevealedMessage) => prevRevealedMessage + text);
         }else{
           for (const char of text) {

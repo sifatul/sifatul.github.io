@@ -9,9 +9,13 @@ import TextMessage from "../singleMessage/textMessage";
 import TimeCapsule from "../singleMessage/timeCapsule";
 const askEmailText = "<p>Feel free to leave a message and come back later to follow up with this conversation. \\n You may also leave your email address. </p>"
 
+const msgList = [
+  {msg: "<div class=\"block\">Hello there!</div>\n<div class=\"block\">My name is <b>Md Sifatul Islam</b>. I have been working as a fullstack developer for around 5 years.</div>", delay: 0},
+  {msg: "For years, I've crafted scalable user-centric apps with Next.js and React.<div>I specialize in building modern web applications using technologies like Next.js, React, Node.js, and more.</div>", delay: 8000},
+  {msg: "Let me leverage my expertise to build a robust and intuitive web solution for you.", delay: 7000},
+  {msg: "Feel free to ask me about my skills, projects, or experience.", delay: 8000}
+]
 const IntroMessage = () => {
-
-
   const { myInfo, users, activeSidebarItem } = useStore();
   const { activeSidebarLabel, activeSidebarIcon } = activeSidebarItem;
 
@@ -19,6 +23,8 @@ const IntroMessage = () => {
   const elementRef = useRef(null);
   let lastRepoTime = '';
   const [messages, addNewIntroMessage] = useState([])
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const sendEmailRequestMessage = useCallback(() => {
     const newMessage = {
@@ -34,16 +40,22 @@ const IntroMessage = () => {
 
 
   useEffect(() => {
-    const IntroDefaultData = [
-      {
-        "message": "<div class=\"block\">Hello there!</div>\n<div class=\"block\">My name is Md Sifatul Islam. I have been working as a fullstack developer for around 5 years.</div>"
-      }
-    ]
-    const formatted = mapUsersAndMessage(users, IntroDefaultData)
-    addNewIntroMessage(prev => [...prev, ...formatted])
-    // sendEmailRequestMessage()
+    
+    const {msg, delay} = msgList[currentIndex] || {}
+    if(!msg) return
+    const IntroDefaultData = [  { "message": msg }]
 
-  }, [])
+    
+    const formatted = mapUsersAndMessage(users, IntroDefaultData)
+    console.log("formatted", formatted)
+    // addNewIntroMessage(prev => [...prev, ...formatted])
+    setTimeout(() => {
+      addNewIntroMessage(prev => [...prev, ...formatted])
+      setCurrentIndex(currentIndex+1)
+    }, delay)
+
+  }, [currentIndex])
+  
 
 
 
@@ -99,15 +111,15 @@ const IntroMessage = () => {
   // }, [])
 
 
-  const blogLink = {
-    link: "https://dev.to/sifatul/create-package-in-github-registry-51p9",
-    previewImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--VC0V3bMa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a3t917ikhl3szi5lff1a.png",
-    platformName: "DEV Community",
-    title: "Simple guide to create package in Github registry",
-    description: "Creating a package in the GitHub registry is very simple. Firstly package.json needs to be updated;... (32 kB)",
-    message: "you can checkout my blog too. Here is a good article to start with.",
-    favicon: "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png",
-  }
+  // const blogLink = {
+  //   link: "https://dev.to/sifatul/create-package-in-github-registry-51p9",
+  //   previewImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--VC0V3bMa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a3t917ikhl3szi5lff1a.png",
+  //   platformName: "DEV Community",
+  //   title: "Simple guide to create package in Github registry",
+  //   description: "Creating a package in the GitHub registry is very simple. Firstly package.json needs to be updated;... (32 kB)",
+  //   message: "you can checkout my blog too. Here is a good article to start with.",
+  //   favicon: "https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png",
+  // }
 
 
 
