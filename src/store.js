@@ -1,6 +1,13 @@
 import create from 'zustand'
 import { MY_INFO } from "./constants/index"
+ 
 
+const ADMIN_INFO = {
+  name: MY_INFO.name,
+  avatar: MY_INFO.avatar,
+  extraLabel: '',
+  userId: 'sifatul'
+}
 const initalState = {
   activeSidebarItem: {
     activeSidebarLabel: MY_INFO.name,
@@ -11,12 +18,7 @@ const initalState = {
   introMessages: [],
   myInfo: null,
   users: {
-    'sifatul': {
-      name: MY_INFO.name,
-      avatar: MY_INFO.avatar,
-      extraLabel: '',
-      userId: 'sifatul'
-    }
+    'sifatul': ADMIN_INFO
   },
   isAdmin: false
 }

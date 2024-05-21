@@ -50,7 +50,7 @@ const TextMessage = (props) => {
   useEffect(() => {
    
     const splittedMsg = splitDOMString(message)
-    const tags =['<div>','</div>','<b>','</b>']
+    const tags =['<div>','</div>','<b>','</b>','<p>','</p>']
     const regex = new RegExp(tags.join('|'), 'g'); // Combine tags with "|" an
      console.log(splittedMsg)
     async function testType(){

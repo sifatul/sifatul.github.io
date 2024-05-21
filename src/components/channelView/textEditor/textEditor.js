@@ -6,10 +6,12 @@ import Image from "../../global/image";
 import { apps } from '../../leftSidebar/appList';
 import { channels } from '../../leftSidebar/channelList';
 import Style from './textEditor.module.scss';
+import { mapUsersAndMessage, timeFormat } from "../../../helpers/messageHelper";
 
 
 const TextEditor = () => {
-  const { myInfo, activeSidebarItem, users, isAdmin } = useStore();
+  // const { myInfo, activeSidebarItem, users, isAdmin } = useStore();
+  const { myInfo, users, activeSidebarItem, addNewIntroMessage, isAdmin } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
 
   const editorRef = useRef(null);
@@ -25,9 +27,13 @@ const TextEditor = () => {
     if (!editorRef?.current) return
     const text = editorRef.current.getContent()
 
-    let source = myInfo.userId
-    let destination = isAdmin ? currentUser.userId : myInfo.userId
-    saveDataInFirebase(text, destination, source)
+    // let source = myInfo.userId
+    // let destination = isAdmin ? currentUser.userId : myInfo.userId
+    // saveDataInFirebase(text, destination, source)
+
+    // const formatted = mapUsersAndMessage(users, [text])
+    const newMsg = { "message": text, senderInfo: users[myInfo.userId], delay: 0}
+    addNewIntroMessage(newMsg)
 
     editorRef.current.setContent("");
 
