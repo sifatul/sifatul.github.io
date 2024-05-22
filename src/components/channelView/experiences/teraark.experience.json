@@ -52,5 +52,34 @@
         "msg": "Managing and leading a team of six develoeprs, built CI/CD pipelines with Github action, AWS ECR, ECS, and ALB which increased daily deploy count by 200%."
       }
     ]
+  },
+  {
+    "name": "Teracomix",
+    "avatar": "https://teracomix.com/favicon.ico",
+    "messages": [
+      {
+        "time": "November 2022",
+        "msg": "left #experiences along with TeraArk"
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "msg": "Moving out of South Korea."
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "time": "November 2022",
+        "msg": "Migrated to Kuala Lumpur, Malaysia"
+      }
+    ]
   }
 ]

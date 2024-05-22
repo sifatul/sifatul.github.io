@@ -63,3 +63,8 @@ export const TERACOMIX_INFO = {
 
 
 
+export const introMsgList = [
+  {msg: "Hello there!<div>My name is <b>Md Sifatul Islam</b>. I have been working as a fullstack developer for around 5 years.</div>", delay: 8000},
+  {msg: "For years, I've crafted scalable user-centric apps with Next.js and React.<div>I specialize in building modern web applications using technologies like Next.js, React, Node.js, and more.</div>", delay: 8000},
+  {msg: "Feel free to explore through projects, or experience channels to know more.", delay: 7000},
+]

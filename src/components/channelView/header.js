@@ -8,7 +8,6 @@ const Header = () => {
   const { activeSidebarItem, hideSidebar, showSidebar } = useStore();
 
   const { activeSidebarLabel, activeSidebarIcon, open } = activeSidebarItem;
-  console.log("activeSidebarLabel: ", activeSidebarLabel)
 
   const toggleSidebar = useCallback(() => {
     return open ? hideSidebar() : showSidebar()

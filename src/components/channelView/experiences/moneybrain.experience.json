@@ -54,17 +54,33 @@
     ]
   },
 
-
   {
     "name": "MoneyBrain",
-    "avatar": "https://www.deepbrainai.io/favicon.ico",
+    "avatar": "https://assets-global.website-files.com/63da3362f67ed6f71c9489c1/63da3362f67ed681af948b53_favicon.ico",
     "messages": [
       {
         "time": "December 2020",
         "msg": "rebranding as DeepBrain."
-      },
+      }
+    ]
+  },
+  {
+    "name": "MoneyBrain",
+    "avatar": "https://assets-global.website-files.com/63da3362f67ed6f71c9489c1/63da3362f67ed681af948b53_favicon.ico",
+    "messages": [
       {
-        "msg": "left #experiences along with SpeanNow and AI STUDIOS."
+        "msg": "was removed from #experiences by Sifatul."
+        
+      }
+    ]
+  },
+  {
+    "name": "SpeakNow",
+    "avatar": "https://www.speaknow.ai/webapp/img/favicon.ico",
+    "messages": [
+      {
+        "msg": "left #experiences along with AI STUDIOS"
+        
       }
     ]
   }

@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { MY_INFO } from "../../constants/index";
-import RealtimeDatabaseManage from "../../hooks/RealtimeDatabase";
 import { useStore } from "../../store";
 import AddChannel from "./addChannel";
 import ChannelItem from "./channelItem";
@@ -16,31 +15,15 @@ const ChannelList = () => {
   const {
     setActiveSidebar,
     activeSidebarItem,
-    myInfo,
     users,
-    addUsers,
-    isAdmin
   } = useStore();
 
   const { activeSidebarLabel } = activeSidebarItem;
 
-  const { getAllUsers } = RealtimeDatabaseManage();
-  const handleUserList = useCallback(async () => {
-    const users = await getAllUsers();
-    addUsers(users);
-  }, []);
 
-  useEffect(() => {
-    if (isAdmin) handleUserList();
-  }, []);
 
-  const senders = useMemo(() => {
-    return Object.keys(users).map((userID) => {
-      const extraLabel = myInfo?.userId === userID ? 'you' : ''
-      // console.log(myInfo, userID)
-      return { ...users[userID], extraLabel }
-    });
-  }, [users, myInfo]);
+  const senders = [users.sifatul]
+
 
 
   return (
@@ -62,8 +45,6 @@ const ChannelList = () => {
                   key={name}
                   label={name}
                   imgSrc={avatar}
-                  active
-                  onClick
                   extraLabel={extraLabel}
                   active={activeSidebarLabel === name}
                   onClick={(e) => setActiveSidebar(name, avatar)}

@@ -13,7 +13,6 @@ const LeftSidebar = () => {
   const { activeSidebarItem, hideSidebar } = useStore();
   const { open } = activeSidebarItem
 
-
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef, hideSidebar);
 

@@ -1,4 +1,4 @@
-import { getApp } from "firebase/app";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ChannelView from "./components/channelView";
 import LeftSidebar from "./components/leftSidebar";
 import UserProfile from "./components/userProfile";
@@ -10,7 +10,10 @@ function App() {
   const { myInfo, } = useStore();
 
   const { AnonymousLogin } = ManageAuth()
-  AnonymousLogin()
+  useEffect(()=>{
+    AnonymousLogin()
+
+  },[])
 
 
 

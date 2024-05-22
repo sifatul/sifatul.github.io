@@ -1,5 +1,5 @@
 import create from 'zustand'
-import { MY_INFO } from "./constants/index"
+import { MY_INFO, introMsgList } from "./constants/index"
  
 
 const ADMIN_INFO = {
@@ -9,10 +9,13 @@ const ADMIN_INFO = {
   userId: 'sifatul'
 }
 const initalState = {
+  unseenMessages: introMsgList.map(({msg,delay}) => {
+    return  { "message": msg, senderInfo: ADMIN_INFO, delay: delay, isSeen: false };
+   }),
   activeSidebarItem: {
     activeSidebarLabel: MY_INFO.name,
     activeSidebarIcon: MY_INFO.avatar,
-    open: null
+    open: true
   },
   profileVisible: null,
   introMessages: [],
@@ -31,7 +34,6 @@ const useStore = create(set => ({
       activeSidebarIcon: icon,
       open: null
     }
-
     return { ...state, activeSidebarItem }
   }),
   hideSidebar: () => set(state => {
@@ -60,7 +62,9 @@ const useStore = create(set => ({
     return { ...state, profileVisible: activeProfileName }
   }),
   addNewIntroMessage: (message) => set(state => {
-    const allmessage = [...state.introMessages, message]
+
+    const prevMessages = state.introMessages.map(item=>{return {...item, isSeen: true}})
+    const allmessage = [...prevMessages, message]
 
     return { ...state, introMessages: allmessage }
   }),
@@ -70,6 +74,16 @@ const useStore = create(set => ({
     const myInfo = state.myInfo || userList[guestUserId]
 
     return { ...state, users: { ...userList, ...state.users }, myInfo }
+  }),
+  updateUnseenMsg: (messages) => set(state => {
+    if(messages.length ==0){
+      const allIntro = state.introMessages.map(item=>{return {...item, isSeen: true}})
+      return { ...state, unseenMessages: [], introMessages: allIntro}
+    }
+    return { ...state, unseenMessages: messages}
+  }),
+  addUnseenMsg: (message) => set(state => {
+    return { ...state, unseenMessages: [...state.unseenMessages, message] }
   }),
 
 }))

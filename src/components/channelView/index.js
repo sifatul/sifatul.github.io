@@ -12,7 +12,7 @@ import TextEditor from "./textEditor/textEditor"
 import Github from "./github"
 import GithubPage from './github'
 import LeetCodePage from './leetcode'
-import GuestPage from "./guestPage"
+// import GuestPage from "./guestPage"
 const ChannelView = () => {
 
   const { activeSidebarItem, myInfo } = useStore();
@@ -26,29 +26,30 @@ const ChannelView = () => {
         return <Projects />
       case channels[1].label:
         return <Experiences />
-
       case apps[0].label:
         return <GithubPage />
       case apps[1].label:
         return <LeetCodePage />
-      default:
-        return <GuestPage />
+      // default:
+      //   return <GuestPage />
     }
 
   }, [activeSidebarLabel])
 
+  const isIntroPage = activeSidebarLabel === SIFATUL_INFO.label
+
 
   return <>
 
-    <div className={Style.channelView}>
+    <div className={Style.channelView} >
       <Header />
 
-      <div className={Style.wrapper}>
+      <div className={Style.wrapper} style={{height: isIntroPage? 'calc(100vh - 250px)':'90vh'}}>
         {myInfo && activePage}
 
 
       </div>
-      {myInfo && <TextEditor />}
+      {myInfo &&  isIntroPage && <TextEditor />}
 
     </div>
 

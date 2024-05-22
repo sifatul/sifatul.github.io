@@ -1,0 +1,53 @@
+[
+  {
+    "name": "AirAsia SuperApp",
+    "avatar": "https://www.airasia.com/static/img/favicon.ico",
+    "messages": [
+      {
+        "time": "December 2022",
+        "msg": "Joined airAsia SuperApp"
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "msg": "added to Discount Engine team by AirAsia SuperApp"
+      },
+      {
+        "msg": "<div>1. Refactored discount engine to improve latency by 5X times</div><div>2. Reduced 15% bills by reducing number of calls made to Datastore and Redis</div>"
+      }
+    ]
+  },
+  {
+    "name": "AirAsia SuperApp",
+    "avatar": "https://www.airasia.com/static/img/favicon.ico",
+    "messages": [
+      {
+        "time": "March 2023",
+        "msg": "rebranding as AirAsia MOVE"
+      }
+    ]
+  },
+  {
+    "name": "AirAsia Ride",
+    "avatar": "https://static.stgairasia.com/design/icons/product-tile/app/v6/ride.png",
+    "messages": [
+      {
+        "time": "April 2024",
+        "msg": "added by AirAsia MOVE"
+      }
+    ]
+  },
+  {
+    "name": "Sifatul",
+    "avatar": "https://avatars.githubusercontent.com/u/10746740?v=4",
+    "messages": [
+      {
+        "msg": "joined to AirAsia Ride as Technology Lead"
+      }
+    ]
+  }
+]

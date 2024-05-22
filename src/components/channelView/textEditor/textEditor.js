@@ -11,33 +11,31 @@ import { mapUsersAndMessage, timeFormat } from "../../../helpers/messageHelper";
 
 const TextEditor = () => {
   // const { myInfo, activeSidebarItem, users, isAdmin } = useStore();
-  const { myInfo, users, activeSidebarItem, addNewIntroMessage, isAdmin } = useStore();
+  const { myInfo, users, activeSidebarItem, addNewIntroMessage, isAdmin, addUnseenMsg } = useStore();
   const { activeSidebarLabel } = activeSidebarItem;
 
   const editorRef = useRef(null);
-  const { saveDataInFirebase } = RealtimeDatabaseManage()
-  const currentUser = useMemo(() => {
-    const key = Object.keys(users).find(userId => users[userId].name === activeSidebarLabel)
-    const singleUser = users[key]
-    return singleUser
-  }, [users, activeSidebarLabel])
+  // const { saveDataInFirebase } = RealtimeDatabaseManage()
+ 
 
+  const addReplyBasedOnContext = ()=>{
+    const newMsg = { "message": "I am not online at this moment but we can connect in <a href='https://www.linkedin.com/in/mdsifatulislam/'>LinkedIn</a> for any farther communication", senderInfo: users.sifatul, delay: 0, isSeen: false}
+    addNewIntroMessage(newMsg)
+
+  }
 
   const submitText = useCallback(() => {
     if (!editorRef?.current) return
     const text = editorRef.current.getContent()
-
-    // let source = myInfo.userId
-    // let destination = isAdmin ? currentUser.userId : myInfo.userId
-    // saveDataInFirebase(text, destination, source)
-
-    // const formatted = mapUsersAndMessage(users, [text])
-    const newMsg = { "message": text, senderInfo: users[myInfo.userId], delay: 0}
+    
+    const newMsg = { "message": text, senderInfo: users[myInfo.userId], delay: 0, isSeen: true}
     addNewIntroMessage(newMsg)
 
-    editorRef.current.setContent("");
 
-  }, [editorRef.current, myInfo, isAdmin, currentUser])
+    editorRef.current.setContent("");
+    addReplyBasedOnContext(text)
+
+  }, [editorRef.current, myInfo, isAdmin])
 
 
   const readOnly = useMemo(() => {

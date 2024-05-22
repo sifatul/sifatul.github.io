@@ -1,14 +1,14 @@
 import MessageWrapper from "../../../Hoc/messageWrapper";
 
-import { textToLinkMarkup } from "../../../helpers/string.helper"
+import { textToLinkMarkup } from "../../../helpers/string.helper";
 
 
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 const TextMessage = (props) => {
-  const { message, senderInfo, created_at, typingSpeed = 50 } = props;
-
-  // State to manage the progressively revealed message
+  const { message, senderInfo, created_at, typingSpeed = 50, isSeen=true } = props;
+  
   const [revealedMessage, setRevealedMessage] = useState('');
 
   function splitDOMString(domString) {
@@ -40,19 +40,18 @@ const TextMessage = (props) => {
     return output;
 }
 
-// const domString = '<div class="container" style="background:red"> hello this is text </div>';
-// const output = splitDOMString(domString);
-
-// console.log(output);
-
-
-  // Simulate typing effect using `useEffect` for performance
   useEffect(() => {
+  
+ 
+    if(isSeen){
+      return setRevealedMessage((prevRevealedMessage) => prevRevealedMessage + message);
+    }
+    
    
     const splittedMsg = splitDOMString(message)
-    const tags =['<div>','</div>','<b>','</b>','<p>','</p>']
+    const tags =['<div>','</div>','<b>','</b>','<p>','</p>','<a>','</a>']
     const regex = new RegExp(tags.join('|'), 'g'); // Combine tags with "|" an
-     console.log(splittedMsg)
+     console.log("splittedMsg", splittedMsg)
     async function testType(){
       for (const text of splittedMsg) {
 
@@ -66,6 +65,7 @@ const TextMessage = (props) => {
         }
   
       }
+
     }
   
 
@@ -75,7 +75,6 @@ const TextMessage = (props) => {
 
   const messageArr = textToLinkMarkup(revealedMessage).trim().split(/\r?\\n/);
 
-  // console.log("messageArr", messageArr)
 
   return (
     <>

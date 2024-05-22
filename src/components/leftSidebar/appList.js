@@ -14,12 +14,6 @@ export const apps = [
     imgSrcDark: GithubImg,
     label: "Github",
   },
-  {
-    imgSrc: LeetcodeImg,
-    label: "Leetcode, Hackerrank",
-  },
-
-
 
 ]
 const ChannelList = () => {

@@ -6,11 +6,12 @@ import DurbarExperience from "./dubar.experience.json"
 import MoneybrainExperience from "./moneybrain.experience.json"
 import TeracomixExperience from "./teraark.experience.json"
 import MghExperience from "./mgh.experience.json"
+import airAsiaExperience from "./move.experience.json"
 
 const Projects = () => {
 
 
-  const companies = [...DurbarExperience, ...MghExperience, ...MoneybrainExperience, ...TeracomixExperience]
+  const companies = [...DurbarExperience, ...MghExperience, ...MoneybrainExperience, ...TeracomixExperience,...airAsiaExperience]
 
   return <>
     {/* <LinkMessage {...blog} /> */}

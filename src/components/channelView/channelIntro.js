@@ -4,7 +4,6 @@ import { textToLinkMarkup } from "../../helpers/string.helper"
 
 const ChannelIntro = (props) => {
   const { channelName, body, imgSrc } = props
-  console.log(props)
   const message = textToLinkMarkup(body)
   return <div className={`${Style.channelIntro}`}>
     <div className={`${Style.singleMessage} ${Style.channelIntro}`} style={{ flexDirection: 'column' }}>
